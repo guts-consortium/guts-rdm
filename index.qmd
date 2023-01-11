@@ -1,0 +1,7 @@
+# Welcome {.unnumbered}
+
+This is the website for the **Research Data Management (RDM) Handbook** of the **Growing Up Together in Society (GUTS)** consortium.
+
+The goal of the GUTS RDM Handbook is to bring everything about data collection, data management, and data handling in the GUTS consortium together in a central and easily searchable place. First and foremost, the goal is to facilitate data management within the GUTS consortium. Second, we hope that this handbook might be useful for other projects. We are building upon resources and wisdom of many others, we hope to pay it forward by making this resource openly available.
+
+The GUTS consortium investigates youth from the perspective of societal neuroscience, and combines insights and expertise from neuroscience, psychology, psychiatry, and sociology. The consortium is funded by a Gravitation grant from the Ministry of Education, Culture and Science for a ten-year period (2023-2033). To learn more about GUTS visit <https://growinguptogetherinsociety.com/>.

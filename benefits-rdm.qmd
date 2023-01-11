@@ -1,0 +1,13 @@
+# The benefits of good RDM
+
+[Research Data Management](https://the-turing-way.netlify.app/afterword/glossary.html#term-Research-Data-Management) (RDM) considers the organisation, storage and preservation of data created during a research project. It covers a wide range of activities such as initial planning, day-to-day processes and long-term archiving and sharing. This means that the list of benefits of doing this well is quite extensive as well. Here we provide a non-exhaustive list of benefits:
+
+-   proper data storage and backup prevents data loss
+
+-   making data understandable for others (and your future self) allows reuse and collaboration
+
+-   proper data management is key to Open Science, since transparency and reuse of data is only possible using well-documented data
+
+-   good RDM also helps to prevent misconduct since it helps to show the integrity of the data collection process
+
+-   it makes research go more smoothly, allowing you as a researcher to focus on the problems of science rather than data administravia [@briney2020]

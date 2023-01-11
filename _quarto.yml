@@ -1,0 +1,39 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "GUTS RDM Handbook"
+  author: "Mark Mulder, Eduard Klapwijk"
+  date: "1/6/2023"
+  cover-image: cover.png
+  favicon: cover.png
+  chapters:
+    - index.qmd
+
+    - part: why-rdm.qmd
+      chapters:
+        - benefits-rdm.qmd
+        - fair-data.qmd
+        - planning.qmd
+      
+    - part: data-collection.qmd
+      chapters:
+        - data-formats.qmd
+        - metadata.qmd
+        - codebook.qmd
+        - file-naming.qmd
+      
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: yeti
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

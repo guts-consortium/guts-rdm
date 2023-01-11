@@ -1,0 +1,3 @@
+# Why invest in RDM?
+
+The first part of this handbook provides background on why it is important to invest time and resources in Research Data Management in a project like GUTS.
