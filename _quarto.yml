@@ -24,7 +24,6 @@ book:
         - codebook.qmd
         - file-naming.qmd
       
-    - summary.qmd
     - references.qmd
 
 bibliography: references.bib
