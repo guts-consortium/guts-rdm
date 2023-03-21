@@ -4,7 +4,7 @@
     "href": "how-to-save-your-data.html",
     "title": "4  How to save your data",
     "section": "",
-    "text": "proper data storage and backup prevents data loss\nmaking data understandable for others (and your future self) allows reuse and collaboration\nproper data management is key to Open Science, since transparency and reuse of data is only possible using well-documented data\ngood RDM also helps to prevent misconduct since it helps to show the integrity of the data collection process\nit makes research go more smoothly, allowing you as a researcher to focus on the problems of science rather than data administravia (Briney, Coates, and Goben 2020)\n\n\n\n\n\nBriney, Kristin, Heather Coates, and Abigail Goben. 2020. “Foundational Practices of Research Data Management.” Research Ideas and Outcomes 6 (July): e56508. https://doi.org/10.3897/rio.6.e56508."
+    "text": "Research Data Management (RDM) considers the organisation, storage and preservation of data created during a research project. It covers a wide range of activities such as initial planning, day-to-day processes and long-term archiving and sharing. This means that the list of benefits of doing this well is quite extensive as well. Here we provide a non-exhaustive list of benefits:\n\nproper data storage and backup prevents data loss\nmaking data understandable for others (and your future self) allows reuse and collaboration\nproper data management is key to Open Science, since transparency and reuse of data is only possible using well-documented data\ngood RDM also helps to prevent misconduct since it helps to show the integrity of the data collection process\nit makes research go more smoothly, allowing you as a researcher to focus on the problems of science rather than data administravia (Briney, Coates, and Goben 2020)\n\n\n\n\n\nBriney, Kristin, Heather Coates, and Abigail Goben. 2020. “Foundational Practices of Research Data Management.” Research Ideas and Outcomes 6 (July): e56508. https://doi.org/10.3897/rio.6.e56508."
   },
   {
     "objectID": "index.html",
@@ -32,7 +32,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Briney, Kristin, Heather Coates, and Abigail Goben. 2020.\n“Foundational Practices of Research Data Management.”\nResearch Ideas and Outcomes 6 (July): e56508. https://doi.org/10.3897/rio.6.e56508."
+    "text": "Briney, Kristin, Heather Coates, and Abigail Goben. 2020.\n“Foundational Practices of Research Data Management.”\nResearch Ideas and Outcomes 6 (July): e56508. https://doi.org/10.3897/rio.6.e56508.\n\n\nKlapwijk, Eduard. 2023. “Best Practices for Documenting and\nOrganizing Research Projects,” January. https://doi.org/10.5281/ZENODO.7551576."
   },
   {
     "objectID": "benefits-rdm.html",
@@ -40,5 +40,12 @@
     "title": "1  The benefits of good RDM",
     "section": "",
     "text": "proper data storage and backup prevents data loss\nmaking data understandable for others (and your future self) allows reuse and collaboration\nproper data management is key to Open Science, since transparency and reuse of data is only possible using well-documented data\ngood RDM also helps to prevent misconduct since it helps to show the integrity of the data collection process\nit makes research go more smoothly, allowing you as a researcher to focus on the problems of science rather than data administravia (Briney, Coates, and Goben 2020)\n\n\n\n\n\nBriney, Kristin, Heather Coates, and Abigail Goben. 2020. “Foundational Practices of Research Data Management.” Research Ideas and Outcomes 6 (July): e56508. https://doi.org/10.3897/rio.6.e56508."
+  },
+  {
+    "objectID": "file-naming.html",
+    "href": "file-naming.html",
+    "title": "8  File naming",
+    "section": "",
+    "text": "Good and structured file names will help you and your collaborators to easily navigate the content and status of files in your project. Within the GUTS consortium we use file naming conventions from the Brain Imaging Data Structure (BIDS) for MRI and related files. For all other files, we suggest the following best practices:\nIn general, good file names are (see also Klapwijk (2023)):\n\nMachine-readable:\n\nUse not much more than letters, numbers, hyphens and underscores. Avoid spaces, punctuation, accented characters, and case sensitivity\n\nFor example, paper_flanker-task_draft01.docx is preferred over paper “flanker task” draft01(1).docx\n\nDeliberately use delimiters. Use a hyphen (-) to mean \"different words that are part of the same chunk\", and underscore (_) to separate different chunks of metadata\n\nFor example, file names in the BIDS specification nicely follow this principle: the file sub-01_ses-02_task-feedback_run-01.nii contains instances of the “subject”, “ses(sion)”, “task” an “run” entities, making it evident from the filename alone that it contains the nii (nifti) feedback task data for run 01 from session 02 of subject 01\n\n\nHuman-readable:\n\nGood file names provide useful clues to the content, status and version of a file, uniquely identify a file and help in classifying and sorting files\nChoose keywords and file names that are sufficiently descriptive, e.g., analysis01_descriptive-statistics.R,analysis02_preregistered-analysis.R\n\nMake sorting and searching easy:\n\nUse YYYY-MM-DD date format (ISO 8601 standard)\nTo order files put date or number first, e.g., 2019-01-01_original-analysis.R, 2019-12-01_minor-changes-to-original.R, 01_original-analysis.R, 02_minor-changes-to-original.R\nInclude the version of the file, e.g., methodology-section _v1\n\n\n\n\n\n\nKlapwijk, Eduard. 2023. “Best Practices for Documenting and Organizing Research Projects,” January. https://doi.org/10.5281/ZENODO.7551576."
   }
 ]
