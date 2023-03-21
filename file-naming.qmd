@@ -1,1 +1,29 @@
 ## File naming
+
+Good and structured file names will help you and your collaborators to easily navigate the content and status of files in your project. Within the GUTS consortium we use file naming conventions from the Brain Imaging Data Structure (BIDS) for MRI and related files. For all other files, we suggest the following best practices:
+
+In general, good file names are (see also [@klapwijk2023]):
+
+-   Machine-readable:
+
+    -   Use not much more than letters, numbers, hyphens and underscores. Avoid spaces, punctuation, accented characters, and case sensitivity
+
+        -   For example, `paper_flanker-task_draft01.docx` is preferred over `paper “flanker task” draft01(1).docx`
+
+    -   Deliberately use delimiters. Use a hyphen (-) to mean \"different words that are part of the same chunk\", and underscore (\_) to separate different chunks of metadata
+
+        -   For example, file names in the [BIDS specification](https://bids.neuroimaging.io/) nicely follow this principle: the file `sub-01_ses-02_task-feedback_run-01.nii` contains instances of the "subject", "ses(sion)", "task" an "run" entities, making it evident from the filename alone that it contains the `nii` (nifti) feedback task data for run `01` from session `02` of subject `01`
+
+-   Human-readable:
+
+    -   Good file names provide useful clues to the content, status and version of a file, uniquely identify a file and help in classifying and sorting files
+
+    -   Choose keywords and file names that are sufficiently descriptive, e.g., `analysis01_descriptive-statistics.R`,`analysis02_preregistered-analysis.R`
+
+-   Make sorting and searching easy:
+
+    -   Use YYYY-MM-DD date format (ISO 8601 standard)
+
+    -   To order files put date or number first, e.g., `2019-01-01_original-analysis.R`, `2019-12-01_minor-changes-to-original.R`, `01_original-analysis.R`, `02_minor-changes-to-original.R`
+
+    -   Include the version of the file, e.g., `methodology-section _v1`
