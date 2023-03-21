@@ -19,6 +19,7 @@ book:
       
     - part: data-collection.qmd
       chapters:
+        - how-to-save-your-data.qmd
         - data-formats.qmd
         - metadata.qmd
         - codebook.qmd
