@@ -1,0 +1,31 @@
+# Glossary {.unnumbered}
+
+## A {#sec-a}
+
+**Accessible**
+
+One of the FAIR principles: Once a user finds the required data, they need to know how data can be accessed, possibly including authentication and authorisation.
+
+------------------------------------------------------------------------
+
+## B {#sec-b}
+
+**BIDS**
+
+BIDS is the [Brain Imaging Data Structure](https://bids.neuroimaging.io/). The specification is intentionally based on simple file formats and folder structures to reflect current lab practices and make it accessible to a wide range of scientists coming from different backgrounds.
+
+------------------------------------------------------------------------
+
+## G {#sec-g}
+
+**GUTS**
+
+The GUTS (Growing Up Together in Society) consortium investigates youth from the perspective of societal neuroscience, and combines insights and expertise from neuroscience, psychology, psychiatry, and sociology. The consortium is funded by a Gravitation grant from the Ministry of Education, Culture and Science for a ten-year period (2023-2033). To learn more about GUTS visit [the GUTS consortium website](https://growinguptogetherinsociety.com/)
+
+------------------------------------------------------------------------
+
+## R {#sec-r}
+
+**Research Data Management**
+
+Research Data Management (RDM) considers the organisation, storage and preservation of data created during a research project. It covers a wide range of activities such as initial planning, day-to-day processes and long-term archiving and sharing.

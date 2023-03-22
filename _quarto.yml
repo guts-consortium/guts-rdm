@@ -25,6 +25,8 @@ book:
         - codebook.qmd
         - file-naming.qmd
       
+    - glossary.qmd  
+
     - references.qmd
 
 bibliography: references.bib

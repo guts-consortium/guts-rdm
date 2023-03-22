@@ -173,7 +173,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, interior hidden, frame hidden, boxrule=0pt, sharp corners, enhanced, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, interior hidden, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -257,6 +257,35 @@ principles} / Patrick Hochstenbach /
 
 \part{Data collection}
 
+\hypertarget{how-to-save-your-data}{%
+\chapter{How to save your data}\label{how-to-save-your-data}}
+
+\href{https://the-turing-way.netlify.app/afterword/glossary.html\#term-Research-Data-Management}{Research
+Data Management} (RDM) considers the organisation, storage and
+preservation of data created during a research project. It covers a wide
+range of activities such as initial planning, day-to-day processes and
+long-term archiving and sharing. This means that the list of benefits of
+doing this well is quite extensive as well. Here we provide a
+non-exhaustive list of benefits:
+
+\begin{itemize}
+\item
+  proper data storage and backup prevents data loss
+\item
+  making data understandable for others (and your future self) allows
+  reuse and collaboration
+\item
+  proper data management is key to Open Science, since transparency and
+  reuse of data is only possible using well-documented data
+\item
+  good RDM also helps to prevent misconduct since it helps to show the
+  integrity of the data collection process
+\item
+  it makes research go more smoothly, allowing you as a researcher to
+  focus on the problems of science rather than data administravia
+  (Briney, Coates, and Goben 2020)
+\end{itemize}
+
 \hypertarget{data-formats}{%
 \chapter{Data formats}\label{data-formats}}
 
@@ -319,6 +348,148 @@ education & education level & categorical &
 \hypertarget{file-naming}{%
 \chapter{File naming}\label{file-naming}}
 
+Good and structured file names will help you and your collaborators to
+easily navigate the content and status of files in your project. Within
+the GUTS consortium we use file naming conventions from the Brain
+Imaging Data Structure (BIDS) for MRI and related files. For all other
+files, we suggest the following best practices:
+
+In general, good file names are (see also Klapwijk (2023)):
+
+\begin{itemize}
+\item
+  Machine-readable:
+
+  \begin{itemize}
+  \item
+    Use not much more than letters, numbers, hyphens and underscores.
+    Avoid spaces, punctuation, accented characters, and case sensitivity
+
+    \begin{itemize}
+    \tightlist
+    \item
+      For example, \texttt{paper\_flanker-task\_draft01.docx} is
+      preferred over \texttt{paper\ “flanker\ task”\ draft01(1).docx}
+    \end{itemize}
+  \item
+    Deliberately use delimiters. Use a hyphen (-) to mean "different
+    words that are part of the same chunk", and underscore (\_) to
+    separate different chunks of metadata
+
+    \begin{itemize}
+    \tightlist
+    \item
+      For example, file names in the
+      \href{https://bids.neuroimaging.io/}{BIDS specification} nicely
+      follow this principle: the file
+      \texttt{sub-01\_ses-02\_task-feedback\_run-01.nii} contains
+      instances of the ``subject'', ``ses(sion)'', ``task'' an ``run''
+      entities, making it evident from the filename alone that it
+      contains the \texttt{nii} (nifti) feedback task data for run
+      \texttt{01} from session \texttt{02} of subject \texttt{01}
+    \end{itemize}
+  \end{itemize}
+\item
+  Human-readable:
+
+  \begin{itemize}
+  \item
+    Good file names provide useful clues to the content, status and
+    version of a file, uniquely identify a file and help in classifying
+    and sorting files
+  \item
+    Choose keywords and file names that are sufficiently descriptive,
+    e.g.,
+    \texttt{analysis01\_descriptive-statistics.R},\texttt{analysis02\_preregistered-analysis.R}
+  \end{itemize}
+\item
+  Make sorting and searching easy:
+
+  \begin{itemize}
+  \item
+    Use YYYY-MM-DD date format (ISO 8601 standard)
+  \item
+    To order files put date or number first, e.g.,
+    \texttt{2019-01-01\_original-analysis.R},
+    \texttt{2019-12-01\_minor-changes-to-original.R},
+    \texttt{01\_original-analysis.R},
+    \texttt{02\_minor-changes-to-original.R}
+  \item
+    Include the version of the file, e.g.,
+    \texttt{methodology-section\ \_v1}
+  \end{itemize}
+\end{itemize}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{glossary}{%
+\chapter*{Glossary}\label{glossary}}
+\addcontentsline{toc}{chapter}{Glossary}
+
+\markboth{Glossary}{Glossary}
+
+\hypertarget{sec-a}{%
+\section*{A}\label{sec-a}}
+\addcontentsline{toc}{section}{A}
+
+\markright{A}
+
+\textbf{Accessible}
+
+One of the FAIR principles: Once a user finds the required data, they
+need to know how data can be accessed, possibly including authentication
+and authorisation.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{sec-b}{%
+\section*{B}\label{sec-b}}
+\addcontentsline{toc}{section}{B}
+
+\markright{B}
+
+\textbf{BIDS}
+
+BIDS is the \href{https://bids.neuroimaging.io/}{Brain Imaging Data
+Structure}. The specification is intentionally based on simple file
+formats and folder structures to reflect current lab practices and make
+it accessible to a wide range of scientists coming from different
+backgrounds.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{sec-g}{%
+\section*{G}\label{sec-g}}
+\addcontentsline{toc}{section}{G}
+
+\markright{G}
+
+\textbf{GUTS}
+
+The GUTS (Growing Up Together in Society) consortium investigates youth
+from the perspective of societal neuroscience, and combines insights and
+expertise from neuroscience, psychology, psychiatry, and sociology. The
+consortium is funded by a Gravitation grant from the Ministry of
+Education, Culture and Science for a ten-year period (2023-2033). To
+learn more about GUTS visit
+\href{https://growinguptogetherinsociety.com/}{the GUTS consortium
+website}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{sec-r}{%
+\section*{R}\label{sec-r}}
+\addcontentsline{toc}{section}{R}
+
+\markright{R}
+
+\textbf{Research Data Management}
+
+Research Data Management (RDM) considers the organisation, storage and
+preservation of data created during a research project. It covers a wide
+range of activities such as initial planning, day-to-day processes and
+long-term archiving and sharing.
+
 \bookmarksetup{startatroot}
 
 \hypertarget{references}{%
@@ -334,6 +505,11 @@ Briney, Kristin, Heather Coates, and Abigail Goben. 2020.
 {``Foundational Practices of Research Data Management.''} \emph{Research
 Ideas and Outcomes} 6 (July): e56508.
 \url{https://doi.org/10.3897/rio.6.e56508}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-klapwijk2023}{}}%
+Klapwijk, Eduard. 2023. {``Best Practices for Documenting and Organizing
+Research Projects,''} January.
+\url{https://doi.org/10.5281/ZENODO.7551576}.
 
 \end{CSLReferences}
 
