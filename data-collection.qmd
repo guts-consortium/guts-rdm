@@ -1,1 +1,7 @@
 ## Data collection
+
+In the following pages you can find more information about what is important during data collection for data management. We will discuss how to save your data in a harmonized way within the consortium. This means the use of specific data formats, metadata, and file names, and in the codebook we describe all variable names used in GUTS.
+
+[![](images/data-collection.png){fig-align="center" width="350"}](https://www.flaticon.com/free-icons/data-collection)
+
+[Data collection icons created by Becris - Flaticon](https://www.flaticon.com/free-icons/data-collection)
