@@ -1,29 +1,46 @@
-## File naming
+## Specific naming conventions
 
-Good and structured file names will help you and your collaborators to easily navigate the content and status of files in your project. Within the GUTS consortium we use file naming conventions from the Brain Imaging Data Structure (BIDS) for MRI and related files. For all other files, we suggest the following best practices:
+As mentioned in the general naming conventions section, naming should be both human as well as machine readable. Most of this can be solved by using BIDS as explained in the previous section, however there are some GUTS-specific naming conventions that need to be adhered to.
 
-In general, good file names are (see also @klapwijk2023):
+**Measure names in file names**
 
--   Machine-readable:
+To adhere to the machine-readable condition, file names of measure data should always include `"_task-[]_"`. The short name [(here you can find a list of all measure names)]{.underline} of the measure should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index has short name "`iri`". Its filename will therefore always include `"_task-iri_"`.
 
-    -   Use not much more than letters, numbers, hyphens and underscores. Avoid spaces, punctuation, accented characters, and case sensitivity
+**Collection site in names**
 
-        -   For example, `paper_flanker-task_draft01.docx` is preferred over `paper “flanker task” draft01(1).docx`
+##### **Subject IDs**
 
-    -   Deliberately use delimiters. Use a hyphen (-) to mean \"different words that are part of the same chunk\", and underscore (\_) to separate different chunks of metadata
+The subject ID naming convention differs slightly for each of the four data collection sites/working packages. To prevent accidental overlap between collected data between WPs, an abbreviation of the location site will be added to each subject ID, as can been seen below.
 
-        -   For example, file names in the [BIDS specification](https://bids.neuroimaging.io/) nicely follow this principle: the file `sub-01_ses-02_task-feedback_run-01.nii` contains instances of the "subject", "ses(sion)", "task" an "run" entities, making it evident from the filename alone that it contains the `nii` (nifti) feedback task data for run `01` from session `02` of subject `01`
+As approximately 600 subjects will participate at each location, we advise to use a number between 0 and 600. ~\[Or 0-1000 for loc 1, 1001-2000 for loc 2, etc.\].~ The subject id number should always consists of three numbers, e.g., subject 1 will get the number 001, subject 15 will get the number 015.
 
--   Human-readable:
+| Data collection location          | Subject ID naming convention | Example         |
+|-------------------------|------------------------|------------------------|
+| Erasmus University Rotterdam      | subguts-eur-#                | subguts-eur-001 |
+| Leiden University - Groningen     | subguts-lei-#                | subguts-lei-001 |
+| Vrije Universiteit Amsterdam (VU) | subguts-vu-#                 | subguts-vu-001  |
+| Universiteit van Amsterdam (UVA)  | subguts-uva-#                | subguts-uva-001 |
 
-    -   Good file names provide useful clues to the content, status and version of a file, uniquely identify a file and help in classifying and sorting files
+##### **File names**
 
-    -   Choose keywords and file names that are sufficiently descriptive, e.g., `analysis01_descriptive-statistics.R`,`analysis02_preregistered-analysis.R`
+To prevent duplicate file names, each data collection site has to add their abbreviation to the file name. For brain imaging data, the location will be included in the subjectid in the file name, e.g., `subguts-001-eur_ses-02_task-feedback_run-01.nii`. For other data the location needs to be added separately. The file name for the Interpersonal Reactivity Index could, for example, be `loc-lei_task-iri.tsv`~\[or\ without\ the\ loc\]~`.` Here loc stands for 'location' and lei for Leiden University.
 
--   Make sorting and searching easy:
+**Variables**
 
-    -   Use YYYY-MM-DD date format (ISO 8601 standard)
+We propose the following naming conventions for tabular data. The variable- and value labels can be added to either an SPSS file and later be converted to a .tsv file + .json file, or be manually added to a .json file directly. For more information, about how to make .json files see \[\].
 
-    -   To order files put date or number first, e.g., `2019-01-01_original-analysis.R`, `2019-12-01_minor-changes-to-original.R`, `01_original-analysis.R`, `02_minor-changes-to-original.R`
+`[session]_[task]_[subpart task]_q/t[question/trial #]`
 
-    -   Include the version of the file, e.g., `methodology-section _v1`
+-   **Names:** lowercase letters with all distinct information separated by an_underscore
+
+-   **Labels:** Full sentences starting with a capital letter.
+
+-   **Value labels:** lowercase letters
+
+| Variable name               | Variable label                                                                                                                                | Value labels                                                    |
+|----------------------|----------------------|----------------------------|
+| ses-02_iri_pt_q3            | Interpersonal Reactivity Index - Perspective taking scale Q3: I sometimes find it difficult to see things from the other guy's point of view. | 0 = does not describe me very well, 4 = described me very well  |
+| ses-02_dailyhassles_freq_q4 | Parenting Daily Hassles scale - Frequency Q4: The kids won't listen or do what they are asked without being nagged.                           | 1 = never, 2 = rarely, 3 = sometimes, 4 = often, 5 = constantly |
+| ses-05_pcg_exb1_perc_to2    | Prosocial Cyberball Task - Exclusion Block 1: Percentage of throws to player 2.                                                               |                                                                 |
+| ses-05_dd_money_ind_day180  | Delay Discounting Money: Indifference point day 180: Prefer to receive this amount of money now than 10 euros in 180 days.                    |                                                                 |
+| ses-02_saliva_cort_d1_m1    | Saliva Samples -Cortisol: Mean cortisol in nmol/l day 1, measurement 1.                                                                       |                                                                 |
