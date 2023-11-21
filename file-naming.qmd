@@ -23,7 +23,7 @@ As approximately 600 subjects will participate at each location, we advise to us
 
 ##### **File names**
 
-To prevent duplicate file names, each data collection site has to add their abbreviation to the file name. For brain imaging data, the location will be included in the subjectid in the file name, e.g., `subguts-001-eur_ses-02_task-feedback_run-01.nii`. For other data the location needs to be added separately. The file name for the Interpersonal Reactivity Index could, for example, be `loc-lei_task-iri.tsv`~\[or\ without\ the\ loc\]~`.` Here loc stands for 'location' and lei for Leiden University.
+To prevent duplicate file names, each data collection site has to add their abbreviation to the file name. For brain imaging data, the location will be included in the subjectid in the file name, e.g., `subguts-001-eur_ses-02_task-feedback_run-01.nii`. For other data the location needs to be added separately. The file name for the Interpersonal Reactivity Index could, for example, be `guts-lei_task-iri.tsv`~\[or\ without\ the\ guts?\]~`.` Here loc stands for 'location' and lei for Leiden University.
 
 **Variables**
 
