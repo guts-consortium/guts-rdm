@@ -4,7 +4,7 @@
 
 **Accessible**
 
-One of the FAIR principles: Once a user finds the required data, they need to know how data can be accessed, possibly including authentication and authorization.
+One of the FAIR principles: Once a user finds the required data, they need to know how data can be accessed, possibly including authentication and authorisation.
 
 ------------------------------------------------------------------------
 
