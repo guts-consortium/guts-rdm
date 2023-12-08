@@ -7,8 +7,8 @@ book:
   author: "Mark Mulder, Simone Mulder, Eduard Klapwijk"
   date: today
   date-format: '[January 6, 2023; last modified: ] MMMM DD, YYYY '
-  cover-image: cover.png
-  favicon: cover.png
+  cover-image: guts-logo.png
+  favicon: guts-logo-small.png
   chapters:
     - index.qmd
 
