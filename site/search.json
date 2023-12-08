@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "data-collection.html",
+    "href": "data-collection.html",
+    "title": "Data collection",
+    "section": "",
+    "text": "In the following pages you can find more information about what is important during data collection for data management. We will discuss how to save your data in a harmonized way within the consortium. This means the use of specific data formats, metadata, and file names, and in the codebook we describe all variable names used in GUTS.\n\n\n\n\n\nData collection icons created by Becris - Flaticon"
+  },
+  {
+    "objectID": "how-to-save-your-data.html",
+    "href": "how-to-save-your-data.html",
+    "title": "4  How to convert your data to Yoda standards",
+    "section": "",
+    "text": "Questionnaire data\n\nAll variables that give unnecessary information like longitude/latitude values should be deleted including:\n\n\nStartDate\nEndDate\nStatus\nIPAddress\nProgress\nDuration__in_seconds\nFinished\nRecordedDate\n……\n\n\nMake sure that all duplicates are removed and that if both entries have the same amount of progress, only the last entry should remain. Also remove all entries without data, this includes entries that only provided demographic data but did not respond to any questionnaire.\nAll data coming in from qualtrics will have to be anonymized. Make sure to remove any directly identifying information including:\n\n\nName(s)\nSurname(s)\nEmail address\n……\n\nMRI data"
+  },
+  {
+    "objectID": "metadata.html",
+    "href": "metadata.html",
+    "title": "6  Metadata",
+    "section": "",
+    "text": "All data is accompanied by metadata, or data about data. Metadata is of importance to every step in the FAIR principle;\n\nMetadata makes data Findable by being able to search for certain metadata ‘chunks’.\nAccessibility to the data is determined by or can be found in the metadata.\nMetadata makes data Interoperable so you can have your data operate with other systems, in our case a metadata explorer and our storage/distribution system.\nMetadata describes the data in such a way that you can reliably Re-use the data for your/their own research.\n\n\n\n\n\n\nPicture: [FAIR principles](https://www.ugent.be/img/doza/beleid/fair-data.png) / Patrick Hochstenbach / [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)\n\n6.0.1 GUTS\nThe way that data is structured within GUTS results in metadata being present in three different ways.\n\nIn the name of the file (file naming conventions can be found here)\nIn the folder location\nIn an accompanying file (e.g. a .JSON file)\n\nThe table below presents an overview of all data types and where their metadata can be found.\n\n\n\n\n\n\n\n\n\nData source\nData Type\nMetadata\nMetadata format\n\n\nEEG data\nBioSemi Data Format (.bdf)\nCan be found in the name of the file (e.g. sub-guts0001_ses01_X.bdf), or in the folder location (e.g. data/sub-guts0001/eeg/*, meaning a file regarding the anatomical scans), or in an accompanying file with the same name as the original file (e.g. sub-guts0001_ses01_X.json)\nFilename, folder location, .json file\n\n\nEEG tasks\nE-Prime experiment file (.ebs)\n*\n*\n\n\nEEG behavioral data\nTabular (.tsv)\nCan be found in the name of the file (e.g. xxx), or in an accompanying file with the same name (e.g. xxx).\nFilename, .json file\n\n\nMRI scans\nNIfTI files (.nii.gz)\nCan be found in the name of the file (e.g. sub-guts0001_ses01_inplaneT2.nii.gz), or in the folder location (e.g. data/sub-guts0001/anat/*, meaning a file regarding the anatomical scans), or in an accompanying file with the same name as the original file (e.g. sub-guts0001_ses01_inplaneT2.json)\nFilename, folder location, .json file\n\n\nfMRI tasks\nE-Prime/OpenSesame/Presentation\n*\n*\n\n\nfMRI behavioral data\nNIfTI files (.nii.gz)\nCan be found in the name of the file (e.g. sub-guts0001_ses01_task-x_bold.nii.gz or task-x_events.tsv), or in the folder location (e.g. data/sub-guts0001/func/*, meaning a file regarding the functional scans), or in an accompanying file with the same name as the original file (e.g. sub-guts0001_ses01_task-x_bold.json)\nFilename, folder location, .json file\n\n\nESM\nTabular (.tsv)\nCan be found in the name of the file (e.g. sub-guts0001_ses01_esmday01.tsv), or in an accompanying file with the same name (e.g. sub-guts0001_ses-1_esmday01.json).\nFilename, .json file\n\n\nQuestionnaires\nTabular (.tsv)\nCan be found in the name of the file (e.g. aiss.tsv), or in an accompanying file with the same name (e.g. aiss.json).\nFilename, .json file\n\n\nHormonal data\nTabular (.tsv)\nCan be found in the accompanying file (e.g. x.tsv), or in an accompanying file with the same name (e.g. x.json).\nFilename, .json file\n\n\n\nHow to create this metadata will be explained in the page How to convert your data to Yoda standards\n\n\n6.0.2 Metadata Explorer\nOur metadata is shown in our metadata explorer [insert HTML link] and is divided in the following ways;\n\nGeneral overview of the data including waves and general description\nParticipant information including N, number of dropouts and other general participant information per wave\nMeasure overview including measure name, category, description and type per measure and per wave\n\nThis explorer will include a search function to find and select variables required for your research. These variables along with certain preset filters (age, wave, gender, etc.) can then be made into a package which and be requested for analysis."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Briney, Kristin, Heather Coates, and Abigail Goben. 2020.\n“Foundational Practices of Research Data Management.”\nResearch Ideas and Outcomes 6 (July): e56508. https://doi.org/10.3897/rio.6.e56508.\n\n\nKlapwijk, Eduard. 2023. “Best Practices for Documenting and\nOrganizing Research Projects,” January. https://doi.org/10.5281/ZENODO.7551576."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "GUTS RDM Handbook",
+    "section": "",
+    "text": "Welcome\nThis is the website for the Research Data Management (RDM) Handbook of the Growing Up Together in Society (GUTS) consortium.\nThe goal of the GUTS RDM Handbook is to bring everything about data collection, data management, and data handling in the GUTS consortium together in a central and easily searchable place. First and foremost, the goal is to facilitate data management within the GUTS consortium. Second, we hope that this handbook might be useful for other projects. We are building upon resources and wisdom of many others, we hope to pay it forward by making this resource openly available.\nThe GUTS consortium investigates youth from the perspective of societal neuroscience, and combines insights and expertise from neuroscience, psychology, psychiatry, and sociology. The consortium is funded by a Gravitation grant from the Ministry of Education, Culture and Science for a ten-year period (2023-2033). To learn more about GUTS visit https://growinguptogetherinsociety.com/."
+  },
+  {
+    "objectID": "fair-data.html",
+    "href": "fair-data.html",
+    "title": "2  FAIR data",
+    "section": "",
+    "text": "Picture: FAIR principles / Patrick Hochstenbach / CC0 1.0"
+  },
+  {
+    "objectID": "data-formats.html",
+    "href": "data-formats.html",
+    "title": "5  Data formats",
+    "section": "",
+    "text": "data_type\ndata_format\ndescription\nexample_variables\nlocation\n\n\n\n\nquestionnaires\ntab separated values/comma separated values (.tsv/.csv) accompanied by a JSON (.json) metadata file\nall data that can be represented in a table, including numerical, categorical or string data\nquestionnaires, hormonal data, fMRI behavioral data\non Yoda per wave\n\n\nphysical measures\ntab separated values (.tsv/.csv) accompanied by a JSON (.json) metadata file\nhormonal and physical test data represented in a table\ntestosterone, heart rate\non Yoda per wave\n\n\nanatomical and functional mri scans\nNIfTI-1 (.nii) accompanied by a JSON (.json) metadata file\nall anatomical and functional scan data represented in a preprocessed format\nbrain activity, cortical thickness\non Yoda per participant\n\n\nfunctional mri behavioral data\nNIfTI-1 (.nii) accompanied by a JSON (.json) metadata file\n\nreaction time\non Yoda per participant"
+  },
+  {
+    "objectID": "codebook.html",
+    "href": "codebook.html",
+    "title": "7  GUTS codebook",
+    "section": "",
+    "text": "name\nlabel\ndata_type\nvalue_labels\nmeasurement units\nminimum value\nmaximum value\n\n\n\n\nage\nage in years\nnumeric\n\nyears:months\n0\n116\n\n\neducation\neducation level\ncategorical\n\nmissing\nin high school\nfinished high school\nsome college\ncollege graduate\ngraduate degree"
+  },
+  {
+    "objectID": "file-naming.html",
+    "href": "file-naming.html",
+    "title": "8  File naming",
+    "section": "",
+    "text": "Good and structured file names will help you and your collaborators to easily navigate the content and status of files in your project. Within the GUTS consortium we use file naming conventions from the Brain Imaging Data Structure (BIDS) for MRI and related files. For all other files, we suggest the following best practices:\nIn general, good file names are (see also Klapwijk (2023)):\n\nMachine-readable:\n\nUse not much more than letters, numbers, hyphens and underscores. Avoid spaces, punctuation, accented characters, and case sensitivity\n\nFor example, paper_flanker-task_draft01.docx is preferred over paper “flanker task” draft01(1).docx\n\nDeliberately use delimiters. Use a hyphen (-) to mean “different words that are part of the same chunk”, and underscore (_) to separate different chunks of metadata\n\nFor example, file names in the BIDS specification nicely follow this principle: the file sub-01_ses-02_task-feedback_run-01.nii contains instances of the “subject”, “ses(sion)”, “task” an “run” entities, making it evident from the filename alone that it contains the nii (nifti) feedback task data for run 01 from session 02 of subject 01\n\n\nHuman-readable:\n\nGood file names provide useful clues to the content, status and version of a file, uniquely identify a file and help in classifying and sorting files\nChoose keywords and file names that are sufficiently descriptive, e.g., analysis01_descriptive-statistics.R,analysis02_preregistered-analysis.R\n\nMake sorting and searching easy:\n\nUse YYYY-MM-DD date format (ISO 8601 standard)\nTo order files put date or number first, e.g., 2019-01-01_original-analysis.R, 2019-12-01_minor-changes-to-original.R, 01_original-analysis.R, 02_minor-changes-to-original.R\nInclude the version of the file, e.g., methodology-section _v1\n\n\n\n\n\n\nKlapwijk, Eduard. 2023. “Best Practices for Documenting and Organizing Research Projects,” January. https://doi.org/10.5281/ZENODO.7551576."
+  },
+  {
+    "objectID": "glossary.html#sec-a",
+    "href": "glossary.html#sec-a",
+    "title": "Glossary",
+    "section": "A",
+    "text": "A\nAccessible\nOne of the FAIR principles: Once a user finds the required data, they need to know how data can be accessed, possibly including authentication and authorization."
+  },
+  {
+    "objectID": "glossary.html#sec-b",
+    "href": "glossary.html#sec-b",
+    "title": "Glossary",
+    "section": "B",
+    "text": "B\nBIDS\nBIDS is the Brain Imaging Data Structure. The specification is intentionally based on simple file formats and folder structures to reflect current lab practices and make it accessible to a wide range of scientists coming from different backgrounds."
+  },
+  {
+    "objectID": "glossary.html#sec-g",
+    "href": "glossary.html#sec-g",
+    "title": "Glossary",
+    "section": "G",
+    "text": "G\nGUTS\nThe GUTS (Growing Up Together in Society) consortium investigates youth from the perspective of societal neuroscience, and combines insights and expertise from neuroscience, psychology, psychiatry, and sociology. The consortium is funded by a Gravitation grant from the Ministry of Education, Culture and Science for a ten-year period (2023-2033). To learn more about GUTS visit the GUTS consortium website"
+  },
+  {
+    "objectID": "glossary.html#sec-r",
+    "href": "glossary.html#sec-r",
+    "title": "Glossary",
+    "section": "R",
+    "text": "R\nResearch Data Management\nResearch Data Management (RDM) considers the organisation, storage and preservation of data created during a research project. It covers a wide range of activities such as initial planning, day-to-day processes and long-term archiving and sharing."
+  },
+  {
+    "objectID": "metadata.html#guts",
+    "href": "metadata.html#guts",
+    "title": "6  Metadata",
+    "section": "6.1 GUTS",
+    "text": "6.1 GUTS\nThe way that data is structured within GUTS results in metadata being present in three different ways.\n\nIn the name of the file (file naming conventions can be found here)\nIn the folder location\nIn an accompanying file (e.g. a .JSON file)\n\nThe table below presents an overview of all data types and where their metadata can be found.\n\n\n\n\n\n\n\n\n\nData source\nData Type\nMetadata\nMetadata format\n\n\nEEG data\nBioSemi Data Format (.bdf)\nCan be found in the name of the file (e.g. sub-guts0001_ses01_X.bdf), or in the folder location (e.g. data/sub-guts0001/eeg/*, meaning a file regarding the anatomical scans), or in an accompanying file with the same name as the original file (e.g. sub-guts0001_ses01_X.json)\nFilename, folder location, .json file\n\n\nEEG tasks\nE-Prime experiment file (.ebs)\n*\n*\n\n\nEEG behavioral data\nTabular (.tsv)\nCan be found in the name of the file (e.g. xxx), or in an accompanying file with the same name (e.g. xxx).\nFilename, .json file\n\n\nMRI scans\nNIfTI files (.nii.gz)\nCan be found in the name of the file (e.g. sub-guts0001_ses01_inplaneT2.nii.gz), or in the folder location (e.g. data/sub-guts0001/anat/*, meaning a file regarding the anatomical scans), or in an accompanying file with the same name as the original file (e.g. sub-guts0001_ses01_inplaneT2.json)\nFilename, folder location, .json file\n\n\nfMRI tasks\nE-Prime/OpenSesame/Presentation\n*\n*\n\n\nfMRI behavioral data\nNIfTI files (.nii.gz)\nCan be found in the name of the file (e.g. sub-guts0001_ses01_task-x_bold.nii.gz or task-x_events.tsv), or in the folder location (e.g. data/sub-guts0001/func/*, meaning a file regarding the functional scans), or in an accompanying file with the same name as the original file (e.g. sub-guts0001_ses01_task-x_bold.json)\nFilename, folder location, .json file\n\n\nESM\nTabular (.tsv)\nCan be found in the name of the file (e.g. sub-guts0001_ses01_esmday01.tsv), or in an accompanying file with the same name (e.g. sub-guts0001_ses-1_esmday01.json).\nFilename, .json file\n\n\nQuestionnaires\nTabular (.tsv)\nCan be found in the name of the file (e.g. aiss.tsv), or in an accompanying file with the same name (e.g. aiss.json).\nFilename, .json file\n\n\nHormonal data\nTabular (.tsv)\nCan be found in the accompanying file (e.g. x.tsv), or in an accompanying file with the same name (e.g. x.json).\nFilename, .json file\n\n\n\nHow to create this metadata will be explained in the page How to convert your data to Yoda standards"
+  },
+  {
+    "objectID": "metadata.html#metadata-explorer",
+    "href": "metadata.html#metadata-explorer",
+    "title": "6  Metadata",
+    "section": "6.2 Metadata Explorer",
+    "text": "6.2 Metadata Explorer\nOur metadata is shown in our metadata explorer [insert HTML link] and is divided in the following ways;\n\nGeneral overview of the data including waves and general description\nParticipant information including N, number of dropouts and other general participant information per wave\nMeasure overview including measure name, category, description and type per measure and per wave\n\nThis explorer will include a search function to find and select variables required for your research. These variables along with certain preset filters (age, wave, gender, etc.) can then be made into a package which and be requested for analysis."
+  }
+]

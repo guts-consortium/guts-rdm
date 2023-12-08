@@ -1,6 +1,20 @@
-# How to save your data
+# How to convert your data to Yoda standards
 
-[Questionnaire data]{.underline}
+This chapter has been written in order to ensure that all GUTS data can be considered as one massive dataset, by having all sites convert their data in the same way. The following data types will be covered:
+
+-   EEG
+-   ESM
+-   (f)MRI
+-   Biological and Genetic data
+-   Questionnaires
+
+![](images/data_trap_2x.png){fig-align="right" width="200"}
+
+Picture: \[Data Conversion\](https://imgs.xkcd.com/comics/data_trap.png) / xkcd / \[CC BY-NC 2.5\](https://creativecommons.org/licenses/by-nc/2.5/)
+
+<details>
+
+<summary>[Questionnaire data]{.underline}</summary>
 
 1.  All variables that give unnecessary information like longitude/latitude values should be deleted including:
 
@@ -23,4 +37,12 @@
 -   Email address
 -   ......
 
-[MRI data]{.underline}
+</details>
+
+<details>
+
+<summary>MRI data</summary>
+
+1.  [MRI data]{.underline}
+
+</details>
