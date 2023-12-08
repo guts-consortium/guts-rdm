@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GUTS RDM Handbook - 1&nbsp; The benefits of good RDM</title>
+<title>GUTS RDM Handbook - Data processing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./fair-data.html" rel="next">
-<link href="./why-rdm.html" rel="prev">
+<link href="./general-naming-conventions.html" rel="next">
+<link href="./codebook.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -94,7 +75,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./why-rdm.html">Why invest in RDM?</a></li><li class="breadcrumb-item"><a href="./benefits-rdm.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The benefits of good RDM</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./processing-data.html">Data processing</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -136,7 +117,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./benefits-rdm.html" class="sidebar-item-text sidebar-link active">
+  <a href="./benefits-rdm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The benefits of good RDM</span></span></a>
   </div>
 </li>
@@ -185,7 +166,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./processing-data.html" class="sidebar-item-text sidebar-link">
+            <a href="./processing-data.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Data processing</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -243,7 +224,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The benefits of good RDM</span></h1>
+<h1 class="title">Data processing</h1>
 </div>
 
 
@@ -258,21 +239,9 @@ div.csl-indent {
 
 </header>
 
-<p><a href="https://the-turing-way.netlify.app/afterword/glossary.html#term-Research-Data-Management">Research Data Management</a> (RDM) considers the organisation, storage and preservation of data created during a research project. It covers a wide range of activities such as initial planning, day-to-day processes and long-term archiving and sharing. This means that the list of benefits of doing this well is quite extensive as well. Here we provide a non-exhaustive list of benefits:</p>
-<ul>
-<li><p>proper data storage and backup prevents data loss</p></li>
-<li><p>making data understandable for others (and your future self) allows reuse and collaboration</p></li>
-<li><p>proper data management is key to Open Science, since transparency and reuse of data is only possible using well-documented data</p></li>
-<li><p>good RDM also helps to prevent misconduct since it helps to show the integrity of the data collection process</p></li>
-<li><p>it makes research go more smoothly, allowing you as a researcher to focus on the problems of science rather than data administravia <span class="citation" data-cites="briney2020">(<a href="references.html#ref-briney2020" role="doc-biblioref">Briney, Coates, and Goben 2020</a>)</span></p></li>
-</ul>
+<p>In the following pages you can find more information about what is important during data processing shortly after data is collected. We will discuss naming conventions used within the consortium and how to save your data.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
-<div id="ref-briney2020" class="csl-entry" role="listitem">
-Briney, Kristin, Heather Coates, and Abigail Goben. 2020. <span>“Foundational Practices of Research Data Management.”</span> <em>Research Ideas and Outcomes</em> 6 (July): e56508. <a href="https://doi.org/10.3897/rio.6.e56508">https://doi.org/10.3897/rio.6.e56508</a>.
-</div>
-</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -510,13 +479,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./why-rdm.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Why invest in RDM?</span>
+      <a href="./codebook.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">GUTS Codebook</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./fair-data.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">FAIR data</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./general-naming-conventions.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Naming conventions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
