@@ -35,7 +35,7 @@ Picture: \[Data Conversion\](https://imgs.xkcd.com/comics/data_trap.png) / xkcd 
 -   Name(s)
 -   Surname(s)
 -   Email address
--   ......
+-   .
 
 </details>
 

@@ -1,6 +1,6 @@
 # Metadata
 
-All data is accompanied by metadata, or data about data and is important to every step in the FAIR principle;
+All data is accompanied by metadata, or data about data and is important to every step in the FAIR principle; 
 
 -   It makes data [Findable]{.underline} by being able to search for certain metadata 'chunks'.
 -   [Accessibility]{.underline} to the data is determined by or can be found in the metadata.

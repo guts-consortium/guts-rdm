@@ -1,3 +1,3 @@
 # Data Management Plans
 
-In a Data Management Plan, or DMP, a description is given on and how the data will be collected, stored, shared and managed, and by who. Questions that will be answered in a DMP cover every part of the research cycle, including legal arrangements, storage solutions, data sharing possibilities etc.
+In a Data Management Plan, or DMP, a description is given on and how the data will be collected, stored, shared and managed, and by who. Questions that will be answered in a DMP cover every part of the research cycle, including legal arrangements, storage solutions, data sharing possibilities etc. 
