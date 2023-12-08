@@ -1,0 +1,3 @@
+## Data structure
+
+GUTS' data structure will be based on BIDS principles, with some small adjustments to ensure a logical workflow. **Overview of the data structure is coming soon.**

@@ -1,14 +1,42 @@
-## GUTS codebook
+## GUTS Codebook
 
-+-----------+-----------------+-------------+--------------------------+-------------------+---------------+---------------+
-| name      | label           | data_type   | value_labels             | measurement units | minimum value | maximum value |
-+===========+=================+=============+==========================+===================+===============+===============+
-| age       | age in years    | numeric     |                          | years:months      | 0             | 116           |
-+-----------+-----------------+-------------+--------------------------+-------------------+---------------+---------------+
-| education | education level | categorical | 0.  missing              |                   |               |               |
-|           |                 |             | 1.  in high school       |                   |               |               |
-|           |                 |             | 2.  finished high school |                   |               |               |
-|           |                 |             | 3.  some college         |                   |               |               |
-|           |                 |             | 4.  college graduate     |                   |               |               |
-|           |                 |             | 5.  graduate degree      |                   |               |               |
-+-----------+-----------------+-------------+--------------------------+-------------------+---------------+---------------+
+Here you can find a preliminary version of all the GUTS measures. For now, you can find an overview of all measure names. Later, you will be able to find more information about the measures, the items, the labels and levels, etc. **Note that measures may still be changed.**
+
+```{python}
+#| echo: false
+#| warning: false
+import plotly.graph_objs as go
+import pandas as pd
+
+df = pd.read_excel("guts-measure-overview_v2.xlsx", index_col=0) 
+
+fig = go.Figure(data=[go.Table(
+    columnwidth=[150, 50],
+    header=dict(values=list(['<b>Measure<b>', "<b>Short name measure<b>", "<b>Data type<b>"]),
+                fill_color='gray',
+                align='left',
+                font = dict(color = 'black')),
+                cells=dict(
+                    values=[df['long-name'], df['short-name'], df['data-type']],
+                    align='left',
+                    fill_color=[['white', 'lightgray']*len(df)],
+                    height=30,
+                    font=dict(color= "black")
+                )
+
+)])
+
+unique_data_types = df['data-type'].unique()
+
+fig.update_layout(
+    height=500,
+    margin=dict(r=5, l=5, t=50, b=5),
+    font=dict(size=14),
+    title_text="<b>GUTS measures<b>",
+    title_xanchor="left",
+    clickmode="event + select",
+    hovermode="closest",
+)
+
+fig.show()
+```

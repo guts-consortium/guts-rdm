@@ -1,1 +1,33 @@
 ## Data formats
+
+The GUTS project follows a multi-method, multi-index approach. As a result, the GUTS data consists of various data types and formats. Below you can find an overview of all data types and formats during the two phases of data processing.
+
+1.  **Raw data**
+
+    The raw files are defined as the files that have not been through any processing. For example, the files that are exported from e-prime, qualtrics, mri, etc.
+
+    | Data type               | Data format                                 |
+    |-------------------------|---------------------------------------------|
+    | Qualtrics questionnaire | .csv or .sav                                |
+    | Demographics            | .csv or .sav                                |
+    | EEG                     | .bdf                                        |
+    | EEG behavioral          | .csv                                        |
+    | (f)MRI                  | .PAR + .REC + .nii or .dcm                  |
+    | fMRI behavioral         | eprime: .edat3, opensesame:, presentations: |
+    | ESM                     | .csv or .tsv                                |
+    | Physiological measures  | physical saliva and hair samples            |
+
+2.  **Processed data**
+
+    The processed files are the fully-cleaned files after all steps of processing. The processed files are uploaded to Yoda.
+
+    | Data type               | Data format                          |
+    |-------------------------|--------------------------------------|
+    | Qualtrics questionnaire | .tsv                                 |
+    | Demographics            | .tsv                                 |
+    | EEG                     | .bdf (bidsified with BIDScoiner)     |
+    | EEG behavioral          | .tsv                                 |
+    | (f)MRI                  | .nii conversion files: inplane and w |
+    | fMRI behavioral         | .tsv                                 |
+    | ESM                     | .tsv                                 |
+    | Physiological measures  | .tsv                                 |

@@ -1,4 +1,4 @@
-## File naming
+## Naming conventions
 
 Good and structured file names will help you and your collaborators to easily navigate the content and status of files in your project. Within the GUTS consortium we use file naming conventions from the Brain Imaging Data Structure (BIDS) for MRI and related files. For all other files, we suggest the following best practices:
 
