@@ -19,11 +19,15 @@ book:
       
     - part: data-collection.qmd
       chapters:
-        - how-to-save-your-data.qmd
         - data-formats.qmd
         - metadata.qmd
         - codebook.qmd
-        - file-naming.qmd
+    - part: processing-data.qmd
+      chapters:
+        - general-naming-conventions.qmd
+        - specific-naming-conventions.qmd
+        - data-structure.qmd
+        - how-to-save-your-data.qmd
       
     - glossary.qmd  
 
@@ -38,4 +42,5 @@ format:
     documentclass: scrreprt
 
 editor: visual
-
+plugins:
+  - iframe:
