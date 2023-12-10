@@ -4,7 +4,7 @@
     "href": "data-collection.html",
     "title": "Data collection",
     "section": "",
-    "text": "In the following pages you can find more information about what is important during data collection for data management. We will discuss how to save your data in a harmonized way within the consortium. This means the use of specific data formats, metadata, and file names, and in the codebook we describe all variable names used in GUTS.\n\n\n\n\n\nData collection icons created by Becris - Flaticon"
+    "text": "In the following pages you can find more information about what is important during data collection for data management. We will discuss how to save your data in a harmonized way within the consortium. This means the use of specific data formats, metadata, and file names, and in the codebook we describe all variable names used in GUTS.\n\n\n\n\n\nData collection icons created by Becris - Flaticon\n\nChapters:\nData formats\nMetadata\nGUTS Codebook"
   },
   {
     "objectID": "how-to-save-your-data.html",
@@ -60,7 +60,7 @@
     "href": "why-rdm.html",
     "title": "Why invest in RDM?",
     "section": "",
-    "text": "The first part of this handbook provides background on why it is important to invest time and resources in Research Data Management in a project like GUTS."
+    "text": "The first part of this handbook provides background on why it is important to invest time and resources in Research Data Management in a project like GUTS.\nChapters:\nThe benefits of good RDM\nFAIR data\nData management planning"
   },
   {
     "objectID": "data-formats.html",
@@ -116,7 +116,7 @@
     "href": "processing-data.html",
     "title": "Data processing",
     "section": "",
-    "text": "In the following pages you can find more information about what is important during data processing shortly after data is collected. We will discuss naming conventions used within the consortium and how to save your data."
+    "text": "In the following pages you can find more information about what is important during data processing shortly after data is collected. We will discuss naming conventions used within the consortium and how to save your data.\n\nChapters:\nNaming conventions\nSpecific naming conventions\nData structure\nHow to save your data"
   },
   {
     "objectID": "planning.html",
@@ -124,5 +124,19 @@
     "title": "3  Data management planning",
     "section": "",
     "text": "In a Data Management Plan (DMP), a description is given on and how the data will be collected, stored, shared and managed, and by who. Questions that will be answered in a DMP cover every part of the research cycle, including legal arrangements, storage solutions, data sharing possibilities etc.\nThe initial overall GUTS DMP was written in September 2022 and approved by NWO. We will update the plan regularly.\nFor specific GUTS projects, the project leads should write a project-specific DMP with more detail about how data will be handled within their project. We are planning to write guidelines for specific projects once the overall data management structure for GUTS is in place (Summer 2024)."
+  },
+  {
+    "objectID": "benefits-rdm.html#research-data-management",
+    "href": "benefits-rdm.html#research-data-management",
+    "title": "1  The benefits of good RDM",
+    "section": "1.1 Research data management",
+    "text": "1.1 Research data management\nResearch Data Management (RDM) considers the organisation, storage and preservation of data created during a research project. It covers a wide range of activities such as initial planning, day-to-day processes and long-term archiving and sharing. This means that the list of benefits of doing this well is quite extensive as well.\nHere we provide a non-exhaustive list of benefits:\n\nproper data storage and backup prevents data loss\nmaking data understandable for others (and your future self) allows reuse and collaboration\nproper data management is key to Open Science, since transparency and reuse of data is only possible using well-documented data\ngood RDM also helps to prevent misconduct since it allows you to show the integrity of the data collection process\nit makes research go more smoothly, allowing you as a researcher to focus on the problems of science rather than data administravia (Briney, Coates, and Goben 2020)"
+  },
+  {
+    "objectID": "benefits-rdm.html#data-management-in-guts",
+    "href": "benefits-rdm.html#data-management-in-guts",
+    "title": "1  The benefits of good RDM",
+    "section": "1.2 Data management in GUTS",
+    "text": "1.2 Data management in GUTS\nIn the GUTS project, data will be collected from different longitudinal cohorts at different locations in the Netherlands. This will encompass magnetic resonance imaging (MRI) data, questionnaire data (e.g. behavioral and social measures), and genetic data. A number of similar measures will be collected across all cohorts. This RDM Handbook and all other efforts to streamline the organization of the data within the GUTS consortium is all aimed to make working with this data as seamless as possible.\nOpen Science and collaboration are very important pillars of the GUTS project. Good data management is vital to facilitate collaboration within the consortium, and eventually also with researchers outside the consortium.\nWe are planning to use a “FAIR from the start” approach, which means that we are striving to unify data collection and data processing from the start. This will allow us to build a database including a metadata explorer that shows the data in various ways. In this way, once the data is collected and processed, it can be unlocked by researchers to analyse it thoroughly and safely.\n\n\n\n\nBriney, Kristin, Heather Coates, and Abigail Goben. 2020. “Foundational Practices of Research Data Management.” Research Ideas and Outcomes 6 (July): e56508. https://doi.org/10.3897/rio.6.e56508."
   }
 ]

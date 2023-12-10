@@ -39,7 +39,7 @@ bibliography: references.bib
 
 format:
   html:
-    theme: yeti
+    theme: flatly
   pdf:
     documentclass: scrreprt
 
