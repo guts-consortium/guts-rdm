@@ -1,3 +1,7 @@
-# Data Management Plans
+## Data management planning
 
-In a Data Management Plan, or DMP, a description is given on and how the data will be collected, stored, shared and managed, and by who. Questions that will be answered in a DMP cover every part of the research cycle, including legal arrangements, storage solutions, data sharing possibilities etc. 
+In a Data Management Plan (DMP), a description is given on and how the data will be collected, stored, shared and managed, and by who. Questions that will be answered in a DMP cover every part of the research cycle, including legal arrangements, storage solutions, data sharing possibilities etc.
+
+The initial overall GUTS DMP was written in September 2022 and approved by NWO. We will update the plan regularly.
+
+For specific GUTS projects, the project leads should write a project-specific DMP with more detail about how data will be handled within their project. We are planning to write guidelines for specific projects once the overall data management structure for GUTS is in place (Summer 2024).  

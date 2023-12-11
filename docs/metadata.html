@@ -32,7 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./codebook.html" rel="next">
 <link href="./data-formats.html" rel="prev">
-<link href="./cover.png" rel="icon" type="image/png">
+<link href="./guts-logo-small.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -194,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./how-to-save-your-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">How to save your data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">How to convert your data to Yoda standards</span></span></a>
   </div>
 </li>
       </ul>
@@ -217,7 +217,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#guts" id="toc-guts" class="nav-link active" data-scroll-target="#guts"><span class="header-section-number">5.1</span> GUTS</a></li>
+  <li><a href="#metadata-explorer" id="toc-metadata-explorer" class="nav-link" data-scroll-target="#metadata-explorer"><span class="header-section-number">5.2</span> Metadata Explorer</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -239,8 +246,108 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>All data is accompanied by metadata, or data about data and is important to every step in the FAIR principle;</p>
+<ul>
+<li>It makes data <u>Findable</u> by being able to search for certain metadata ‘chunks’.</li>
+<li><u>Accessibility</u> to the data is determined by or can be found in the metadata.</li>
+<li>It makes data <u>Interoperable</u> so you can have your data operate with other systems, in our case a metadata explorer and our storage/distribution system.</li>
+<li>It describes the data in such a way that you can reliably <u>Re-use</u> the data for your/their own research.</li>
+</ul>
+<p><img src="images/fair-data.png" class="img-fluid" width="400"></p>
+<p>Picture: <a href="https://www.ugent.be/img/doza/beleid/fair-data.png">FAIR principles</a> / Patrick Hochstenbach / <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></p>
+<section id="guts" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="guts"><span class="header-section-number">5.1</span> GUTS</h2>
+<p>The way that data is structured within GUTS results in metadata being present in three different ways.</p>
+<ul>
+<li>In the name of the file (file naming conventions can be found <a href="https://eduardklap.github.io/guts-rdm/file-naming.html">here</a>)</li>
+<li>In the folder location</li>
+<li>In an accompanying file (e.g.&nbsp;a .JSON file)</li>
+</ul>
+<p>The table below presents an overview of all data types and where their metadata can be found.</p>
+<table class="table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 50%">
+<col style="width: 16%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Data source</strong></td>
+<td><strong>Data Type</strong></td>
+<td><strong>Metadata</strong></td>
+<td><strong>Metadata format</strong></td>
+</tr>
+<tr class="even">
+<td>EEG data</td>
+<td>BioSemi Data Format (.bdf)</td>
+<td>Can be found in the <u><strong>name of the file</strong></u> (e.g.&nbsp;sub-guts0001_ses01_X.bdf), or in the <u><strong>folder location</strong></u> (e.g.&nbsp;data/sub-guts0001/eeg/*, meaning a file regarding the anatomical scans), or in an <u><strong>accompanying file</strong></u> with the same name as the original file (e.g.&nbsp;sub-guts0001_ses01_X.json)</td>
+<td>Filename, folder location, .json file</td>
+</tr>
+<tr class="odd">
+<td>EEG tasks</td>
+<td>E-Prime experiment file (.ebs)</td>
+<td>*</td>
+<td>*</td>
+</tr>
+<tr class="even">
+<td>EEG behavioral data</td>
+<td>Tabular (.tsv)</td>
+<td>Can be found in the <u><strong>name of the file</strong></u> (e.g.&nbsp;xxx), or in an <u><strong>accompanying file</strong></u> with the same name (e.g.&nbsp;xxx).</td>
+<td>Filename, .json file</td>
+</tr>
+<tr class="odd">
+<td>MRI scans</td>
+<td>NIfTI files (.nii.gz)</td>
+<td>Can be found in the <u><strong>name of the file</strong></u> (e.g.&nbsp;sub-guts0001_ses01_inplaneT2.nii.gz), or in the <u><strong>folder location</strong></u> (e.g.&nbsp;data/sub-guts0001/anat/*, meaning a file regarding the anatomical scans), or in an <u><strong>accompanying file</strong></u> with the same name as the original file (e.g.&nbsp;sub-guts0001_ses01_inplaneT2.json)</td>
+<td>Filename, folder location, .json file</td>
+</tr>
+<tr class="even">
+<td>fMRI tasks</td>
+<td>E-Prime/OpenSesame/Presentation</td>
+<td>*</td>
+<td>*</td>
+</tr>
+<tr class="odd">
+<td>fMRI behavioral data</td>
+<td>NIfTI files (.nii.gz)</td>
+<td>Can be found in the <u><strong>name of the file</strong></u> (e.g.&nbsp;sub-guts0001_ses01_task-x_bold.nii.gz or task-x_events.tsv), or in the <u><strong>folder location</strong></u> (e.g.&nbsp;data/sub-guts0001/func/*, meaning a file regarding the functional scans), or in an <u><strong>accompanying file</strong></u> with the same name as the original file (e.g.&nbsp;sub-guts0001_ses01_task-x_bold.json)</td>
+<td>Filename, folder location, .json file</td>
+</tr>
+<tr class="even">
+<td>ESM</td>
+<td>Tabular (.tsv)</td>
+<td>Can be found in the <u><strong>name of the file</strong></u> (e.g.&nbsp;sub-guts0001_ses01_esmday01.tsv), or in an <u><strong>accompanying file</strong></u> with the same name (e.g.&nbsp;sub-guts0001_ses-1_esmday01.json).</td>
+<td>Filename, .json file</td>
+</tr>
+<tr class="odd">
+<td>Questionnaires</td>
+<td>Tabular (.tsv)</td>
+<td>Can be found in the <u><strong>name of the file</strong></u> (e.g.&nbsp;aiss.tsv), or in an <u><strong>accompanying file</strong></u> with the same name (e.g.&nbsp;aiss.json).</td>
+<td>Filename, .json file</td>
+</tr>
+<tr class="even">
+<td>Hormonal data</td>
+<td>Tabular (.tsv)</td>
+<td>Can be found in the <u><strong>accompanying file</strong></u> (e.g.&nbsp;x.tsv), or in an <u><strong>accompanying file</strong></u> with the same name (e.g.&nbsp;x.json).</td>
+<td>Filename, .json file</td>
+</tr>
+</tbody>
+</table>
+<p>How to create this metadata will be explained in the page <a href="https://eduardklap.github.io/guts-rdm/how-to-save-your-data.html">How to convert your data to Yoda standards</a></p>
+</section>
+<section id="metadata-explorer" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="metadata-explorer"><span class="header-section-number">5.2</span> Metadata Explorer</h2>
+<p>Our metadata is shown in our metadata explorer [insert HTML link] and is divided in the following ways;</p>
+<ol type="1">
+<li><p><u>General overview</u> of the data including waves and general description.</p></li>
+<li><p><u>Participant information</u> including <em>N,</em> number of dropouts and other general participant information per wave.</p></li>
+<li><p><u>Measure overview</u> including measure name, category, description and type per measure and wave.</p></li>
+</ol>
+<p>This explorer will include a <u>search function</u> to find and select variables required for your research. These variables along with certain preset filters (age, wave, gender, etc.) can then be made into a package which and be requested for analysis.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

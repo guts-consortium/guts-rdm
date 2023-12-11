@@ -1,15 +1,15 @@
 # Metadata
 
-All data is accompanied by metadata, or data about data and is important to every step in the FAIR principle; 
+All data is accompanied by metadata, or data about data and is important to every step in the FAIR principle;
 
 -   It makes data [Findable]{.underline} by being able to search for certain metadata 'chunks'.
 -   [Accessibility]{.underline} to the data is determined by or can be found in the metadata.
 -   It makes data [Interoperable]{.underline} so you can have your data operate with other systems, in our case a metadata explorer and our storage/distribution system.
 -   It describes the data in such a way that you can reliably [Re-use]{.underline} the data for your/their own research.
 
-![](images/fair-data.png){fig-align="right" width="400"}
+![](images/fair-data.png){width="400"}
 
-Picture: \[FAIR principles\](https://www.ugent.be/img/doza/beleid/fair-data.png) / Patrick Hochstenbach / \[CC0 1.0\](https://creativecommons.org/publicdomain/zero/1.0/)
+Picture: [FAIR principles](https://www.ugent.be/img/doza/beleid/fair-data.png) / Patrick Hochstenbach / [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ## GUTS
 
@@ -22,7 +22,7 @@ The way that data is structured within GUTS results in metadata being present in
 The table below presents an overview of all data types and where their metadata can be found.
 
 |                      |                                 |                                                                                                                                                                                                                                                                                                                                                                                        |                                       |
-|---------|---------|----------------------------------------------|---------|
+|------------|------------|-------------------------------------|------------|
 | **Data source**      | **Data Type**                   | **Metadata**                                                                                                                                                                                                                                                                                                                                                                           | **Metadata format**                   |
 | EEG data             | BioSemi Data Format (.bdf)      | Can be found in the [**name of the file**]{.underline} (e.g. sub-guts0001_ses01_X.bdf), or in the [**folder location**]{.underline} (e.g. data/sub-guts0001/eeg/\*, meaning a file regarding the anatomical scans), or in an [**accompanying file**]{.underline} with the same name as the original file (e.g. sub-guts0001_ses01_X.json)                                              | Filename, folder location, .json file |
 | EEG tasks            | E-Prime experiment file (.ebs)  | \*                                                                                                                                                                                                                                                                                                                                                                                     | \*                                    |
@@ -38,7 +38,7 @@ How to create this metadata will be explained in the page [How to convert your d
 
 ## Metadata Explorer
 
-Our metadata is shown in our metadata explorer \[insert HTML link\] and is divided in the following ways;
+Our metadata is shown in our metadata explorer \[insert HTML link\] and is divided in the following ways:
 
 1.  [General overview]{.underline} of the data including waves and general description.
 
