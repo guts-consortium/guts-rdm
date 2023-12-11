@@ -30,6 +30,7 @@ book:
         - specific-naming-conventions.qmd
         - data-structure.qmd
         - how-to-save-your-data.qmd
+        - how-to-add-metadata.qmd
       
     - glossary.qmd  
 
