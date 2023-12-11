@@ -12,7 +12,7 @@ This chapter has been written in order to ensure that all GUTS data can be consi
 
 Picture: [Data Conversion](https://imgs.xkcd.com/comics/data_trap.png) / xkcd / [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)
 
-::: callout-note
+::: {.callout-note collapse="false"}
 # Questionnaire data
 
 1.  All variables that give unnecessary information like longitude/latitude values should be deleted including:
@@ -37,11 +37,10 @@ Picture: [Data Conversion](https://imgs.xkcd.com/comics/data_trap.png) / xkcd / 
 -   .
 :::
 
-::: callout-note
+::: {.callout-note collapse="true"}
 # MRI data
 
-1. MRI data
-
+1.  MRI data
 :::
 
 </details>
