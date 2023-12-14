@@ -5,3 +5,11 @@ In the following pages you can find more information about what is important dur
 [![](images/data-collection.png){fig-align="center" width="350"}](https://www.flaticon.com/free-icons/data-collection)
 
 [Data collection icons created by Becris - Flaticon](https://www.flaticon.com/free-icons/data-collection)
+
+#### Chapters:
+
+[Data formats](data-formats.qmd)
+
+[Metadata](metadata.qmd)
+
+[GUTS Codebook](codebook.qmd)

@@ -40,7 +40,7 @@ The subject ID naming convention differs slightly for each of the data storage l
 As approximately 400-800 subjects will participate at each location, we advise to use a number between 0 and 800. The subject id number should always consists of three numbers, e.g., subject 1 will get the number 001, subject 15 will get the number 015.
 
 | Data storage location              | Subject ID naming convention | Example          |
-|------------------------------|-------------------------|------------------|
+|-----------------------------|-------------------------|-------------------|
 | Erasmus University Rotterdam (EUR) | sub-guts-eur-#               | sub-guts-eur-001 |
 | Leiden University (LEI)            | sub-guts-lei-#               | sub-guts-lei-001 |
 | Vrije Universiteit Amsterdam (VU)  | sub-guts-vu-#                | sub-guts-vu-001  |
@@ -67,7 +67,7 @@ We propose the following naming conventions for tabular data. The variable- and 
 -   **Value labels:** lowercase letters
 
 | Variable name                | Variable label                                                                                                                                | Value labels                                                    |
-|----------------|---------------------------------------|-----------------|
+|------------------|------------------------------------|------------------|
 | ses-y02_iri_pt_q3            | Interpersonal Reactivity Index - Perspective taking scale Q3: I sometimes find it difficult to see things from the other guy's point of view. | 0 = does not describe me very well, 4 = described me very well  |
 | ses-y02_dailyhassles_freq_q4 | Parenting Daily Hassles scale - Frequency Q4: The kids won't listen or do what they are asked without being nagged.                           | 1 = never, 2 = rarely, 3 = sometimes, 4 = often, 5 = constantly |
 | ses-y05_pcg_exb1_perc_to2    | Prosocial Cyberball Task - Exclusion Block 1: Percentage of throws to player 2.                                                               |                                                                 |

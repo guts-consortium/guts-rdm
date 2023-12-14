@@ -1,13 +1,81 @@
-# How to save your data
+# How to convert your data to Yoda standards
 
-[Research Data Management](https://the-turing-way.netlify.app/afterword/glossary.html#term-Research-Data-Management) (RDM) considers the organisation, storage and preservation of data created during a research project. It covers a wide range of activities such as initial planning, day-to-day processes and long-term archiving and sharing. This means that the list of benefits of doing this well is quite extensive as well. Here we provide a non-exhaustive list of benefits:
+This chapter has been written in order to ensure that all GUTS data can be considered as one massive dataset, by having all sites convert their data in the same way. The following data types will be covered:
 
--   proper data storage and backup prevents data loss
+-   EEG
+-   ESM
+-   (f)MRI
+-   Biological and Genetic data
+-   Questionnaires
 
--   making data understandable for others (and your future self) allows reuse and collaboration
+![](images/data_trap_2x.png){width="200"}
 
--   proper data management is key to Open Science, since transparency and reuse of data is only possible using well-documented data
+Picture: [Data Conversion](https://imgs.xkcd.com/comics/data_trap.png) / xkcd / [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)
 
--   good RDM also helps to prevent misconduct since it helps to show the integrity of the data collection process
+::: {.callout-note collapse="false"}
+# Questionnaire data
 
--   it makes research go more smoothly, allowing you as a researcher to focus on the problems of science rather than data administravia [@briney2020]
+1.  All variables that give unnecessary information like longitude/latitude values should be deleted including:
+
+-   StartDate
+-   EndDate
+-   Status
+-   IPAddress
+-   Progress
+-   Duration\_\_in_seconds
+-   Finished
+-   RecordedDate
+-   ......
+
+2.  Make sure that all duplicates are removed and that if both entries have the same amount of progress, only the last entry should remain. Also remove all entries without data, this includes entries that only provided demographic data but did not respond to any questionnaire.
+
+3.  All data coming in from qualtrics will have to be anonymized. Make sure to remove any directly identifying information including:
+
+-   Name(s)
+-   Surname(s)
+-   Email address
+-   .
+:::
+
+::: {.callout-note collapse="true"}
+# MRI data
+
+1.  MRI data
+:::
+
+</details>
+
+<details>
+
+<summary>[Questionnaire data]{.underline}</summary>
+
+1.  All variables that give unnecessary information like longitude/latitude values should be deleted including:
+
+-   StartDate
+-   EndDate
+-   Status
+-   IPAddress
+-   Progress
+-   Duration\_\_in_seconds
+-   Finished
+-   RecordedDate
+-   ......
+
+2.  Make sure that all duplicates are removed and that if both entries have the same amount of progress, only the last entry should remain. Also remove all entries without data, this includes entries that only provided demographic data but did not respond to any questionnaire.
+
+3.  All data coming in from qualtrics will have to be anonymized. Make sure to remove any directly identifying information including:
+
+-   Name(s)
+-   Surname(s)
+-   Email address
+-   .
+
+</details>
+
+<details>
+
+<summary>MRI data</summary>
+
+1.  [MRI data]{.underline}
+
+</details>

@@ -4,10 +4,11 @@ project:
 
 book:
   title: "GUTS RDM Handbook"
-  author: "Mark Mulder, Eduard Klapwijk"
-  date: "1/6/2023"
-  cover-image: cover.png
-  favicon: cover.png
+  author: "Mark Mulder, Simone Mulder, Eduard Klapwijk"
+  date: today
+  date-format: '[January 6, 2023; last modified: ] MMMM DD, YYYY '
+  cover-image: guts-logo.png
+  favicon: guts-logo-small.png
   chapters:
     - index.qmd
 
@@ -22,6 +23,7 @@ book:
         - data-formats.qmd
         - metadata.qmd
         - codebook.qmd
+        
     - part: processing-data.qmd
       chapters:
         - general-naming-conventions.qmd
@@ -37,7 +39,7 @@ bibliography: references.bib
 
 format:
   html:
-    theme: yeti
+    theme: flatly
   pdf:
     documentclass: scrreprt
 

@@ -1,13 +1,25 @@
 # The benefits of good RDM
 
-[Research Data Management](https://the-turing-way.netlify.app/afterword/glossary.html#term-Research-Data-Management) (RDM) considers the organisation, storage and preservation of data created during a research project. It covers a wide range of activities such as initial planning, day-to-day processes and long-term archiving and sharing. This means that the list of benefits of doing this well is quite extensive as well. Here we provide a non-exhaustive list of benefits:
+## Research data management
 
--   proper data storage and backup prevents data loss
+[Research Data Management](https://the-turing-way.netlify.app/afterword/glossary.html#term-Research-Data-Management) (RDM) considers the organisation, storage and preservation of data created during a research project. It covers a wide range of activities such as initial planning, day-to-day processes and long-term archiving and sharing. This means that the list of benefits of doing this well is quite extensive as well.
 
--   making data understandable for others (and your future self) allows reuse and collaboration
+**Here we provide a non-exhaustive list of benefits:**
 
--   proper data management is key to Open Science, since transparency and reuse of data is only possible using well-documented data
+-   proper data storage and backup **prevents data loss**
 
--   good RDM also helps to prevent misconduct since it helps to show the integrity of the data collection process
+-   making data understandable for others (and your future self) **allows reuse and collaboration**
 
--   it makes research go more smoothly, allowing you as a researcher to focus on the problems of science rather than data administravia [@briney2020]
+-   proper data management is **key to Open Science**, since transparency and reuse of data is only possible using well-documented data
+
+-   good RDM also helps to **prevent misconduct** since it allows you to show the integrity of the data collection process
+
+-   it makes research go more smoothly, **allowing you as a researcher to focus on the problems of science** rather than data administravia [@briney2020]
+
+## Data management in GUTS
+
+In the GUTS project, data will be collected from different longitudinal cohorts at different locations in the Netherlands. This will encompass magnetic resonance imaging (MRI) data, questionnaire data (e.g. behavioral and social measures), and genetic data. A number of similar measures will be collected across all cohorts. This RDM Handbook and all other efforts to streamline the organization of the data within the GUTS consortium is all aimed to make working with this data as seamless as possible.
+
+Open Science and collaboration are very important pillars of the GUTS project. Good data management is vital to facilitate collaboration within the consortium, and eventually also with researchers outside the consortium.
+
+We are planning to use a "[FAIR](fair-data.qmd) from the start" approach, which means that we are striving to unify data collection and data processing from the start. This will allow us to build a database including a metadata explorer that shows the data in various ways. In this way, once the data is collected and processed, it can be unlocked by researchers to analyse it thoroughly and safely.
