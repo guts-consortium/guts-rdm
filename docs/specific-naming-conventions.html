@@ -240,31 +240,61 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>As mentioned in the general naming conventions section, naming should be both human as well as machine readable. Most of this can be solved by using BIDS as explained in the previous section, however there are some GUTS-specific naming conventions that need to be adhered to.</p>
-<details>
-<summary>
-<strong>Measure names in file names</strong>
-</summary>
-<p>To adhere to the machine-readable condition, file names of measure data should always include <code>"_task-[]_"</code>. The short name <u>(here you can find a list of all measure names)</u> of the measure should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index has short name “<code>iri</code>”. Its filename will therefore always include <code>"_task-iri_"</code>.</p>
-</details>
-<details>
-<summary>
-<strong>Sessions</strong>
-</summary>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Measure names in file names
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>To adhere to the machine-readable condition, file names of measure data should always include <code>"_task-[short name]_"</code>. The short name <u>(see codebook)</u> of the measure should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index has short name “<code>iri</code>”. Its filename will therefore always include <code>"_task-iri_"</code>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Sessions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>Sessions will be named according to the BIDS standard, meaning that they start with <code>'ses-'</code>.</p>
-<p>Cohorts <strong>A</strong>, <strong>B</strong>, and <strong>D</strong> will collect data in year 2, 5 and 8. The respective sessions will be called:</p>
-<p><code>'ses-y02'</code>, <code>'ses-y05'</code>, <code>'ses-y08'</code>.</p>
-<p>Cohort <strong>C</strong> will collect data twice a year from year 2 to 8:</p>
+<p>GUTS is a ten-year project; data collection will start in year 2, however we will start counting the sessions from the first year of data collection. The first data collection session will be therefore called ‘ses-y01’.</p>
+<p>Cohorts <strong>A</strong>, <strong>B</strong>, and <strong>D</strong> will collect data in year 1, 4 and 7. The respective sessions will be called:</p>
+<p><code>'ses-y01'</code>, <code>'ses-y04'</code>, <code>'ses-y07'</code>.</p>
+<p>Cohort <strong>C</strong> will collect data twice a year in year 1 and 2:</p>
 <ul>
 <li><p>For the first sessions of a year:</p>
-<p><code>ses-y02, ses-y03, ses-y04, ses-y05, ses-y06, ses-y07, ses-y08</code></p></li>
-<li><p>For the second sessions of a year:</p>
-<p><code>ses-y02-m2, ses-y03-m2,ses-y04-m2,ses-y05-m2,ses-y06-m2,ses-y07-m2,ses-y08-m2</code></p></li>
+<p><code>'ses-y01'</code><u>,</u> <code>'ses-y02'</code></p></li>
+<li><p>For the second sessions of a year, which take place 6 months after the first sessions:</p>
+<p><code>`ses-y01-m6'</code>, <code>'ses-y02-m6'</code></p></li>
 </ul>
-</details>
-<details>
-<summary>
-<strong>Subject IDs</strong>
-</summary>
+<p>In case of delays in data collection, the numbering can be changed. For example, if cohort A starts session 2 in year 5 instead of year 4, the session will become ‘<code>ses-y05</code>’ instead of ‘<code>ses-y04</code>’. If cohort B then still starts in year 4, they can leave their session name unchanged.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Subject IDs
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>The subject ID naming convention differs slightly for each of the data storage locations. To prevent accidental overlap between collected data between WPs, an abbreviation of the location will be added to each subject ID, as can been seen below.</p>
 <p>As approximately 400-800 subjects will participate at each location, we advise to use a number between 0 and 800. The subject id number should always consists of three numbers, e.g., subject 1 will get the number 001, subject 15 will get the number 015.</p>
 <table class="table">
@@ -303,17 +333,37 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-</details>
-<details>
-<summary>
-<strong>File names</strong>
-</summary>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+File names
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>To prevent duplicate file names, each data collection site has to add their abbreviation to the file name. For brain imaging data, the location will be included in the subjectid in the file name, e.g., <code>sub-guts-eur-001_ses-y02_task-feedback_run-01.nii</code>. For other data the location needs to be added separately. The file name for the Interpersonal Reactivity Index could, for example, be `<code>guts-lei_ses-y02_task-iri.tsv</code>’.</p>
-</details>
-<details>
-<summary>
-<strong>Variable naming conventions</strong>
-</summary>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Variable naming conventions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>We propose the following naming conventions for tabular data. The variable- and value labels can be added to either an SPSS file and later be converted to a .tsv file + .json file, or be manually added to a .json file directly. For more information, about how to make .json files see [].</p>
 <p><code>[session]_[task]_[subpart task]_q/t[question/trial #]</code></p>
 <ul>
@@ -362,7 +412,9 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-</details>
+</div>
+</div>
+</div>
 
 
 

@@ -2,39 +2,38 @@
 
 As mentioned in the general naming conventions section, naming should be both human as well as machine readable. Most of this can be solved by using BIDS as explained in the previous section, however there are some GUTS-specific naming conventions that need to be adhered to.
 
-<details>
+::: {.callout-tip collapse="false" appearance="simple" icon="false"}
+## Measure names in file names
 
-<summary>**Measure names in file names**</summary>
+To adhere to the machine-readable condition, file names of measure data should always include `"_task-[short name]_"`. The short name [(see codebook)]{.underline} of the measure should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index has short name "`iri`". Its filename will therefore always include `"_task-iri_"`.
+:::
 
-To adhere to the machine-readable condition, file names of measure data should always include `"_task-[]_"`. The short name [(here you can find a list of all measure names)]{.underline} of the measure should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index has short name "`iri`". Its filename will therefore always include `"_task-iri_"`.
-
-</details>
-
-<details>
-
-<summary>**Sessions**</summary>
+::: {.callout-tip collapse="true" icon="false"}
+## Sessions
 
 Sessions will be named according to the BIDS standard, meaning that they start with `'ses-'`.
 
-Cohorts **A**, **B**, and **D** will collect data in year 2, 5 and 8. The respective sessions will be called:
+GUTS is a ten-year project; data collection will start in year 2, however we will start counting the sessions from the first year of data collection. The first data collection session will be therefore called 'ses-y01'.
 
-`'ses-y02'`, `'ses-y05'`, `'ses-y08'`.
+Cohorts **A**, **B**, and **D** will collect data in year 1, 4 and 7. The respective sessions will be called:
 
-Cohort **C** will collect data twice a year from year 2 to 8:
+`'ses-y01'`, `'ses-y04'`, `'ses-y07'`.
+
+Cohort **C** will collect data twice a year in year 1 and 2:
 
 -   For the first sessions of a year:
 
-    `ses-y02, ses-y03, ses-y04, ses-y05, ses-y06, ses-y07, ses-y08`
+    `'ses-y01'`[,]{.underline} `'ses-y02'`
 
--   For the second sessions of a year:
+-   For the second sessions of a year, which take place 6 months after the first sessions:
 
-    `ses-y02-m2, ses-y03-m2,ses-y04-m2,ses-y05-m2,ses-y06-m2,ses-y07-m2,ses-y08-m2`
+    `` `ses-y01-m6' ``, `'ses-y02-m6'`
 
-</details>
+In case of delays in data collection, the numbering can be changed. For example, if cohort A starts session 2 in year 5 instead of year 4, the session will become '`ses-y05`' instead of '`ses-y04`'. If cohort B then still starts in year 4, they can leave their session name unchanged.
+:::
 
-<details>
-
-<summary>**Subject IDs**</summary>
+::: {.callout-tip collapse="true" icon="false"}
+## Subject IDs
 
 The subject ID naming convention differs slightly for each of the data storage locations. To prevent accidental overlap between collected data between WPs, an abbreviation of the location will be added to each subject ID, as can been seen below.
 
@@ -46,20 +45,16 @@ As approximately 400-800 subjects will participate at each location, we advise t
 | Leiden University (LEI)            | sub-guts-lei-#               | sub-guts-lei-001 |
 | Vrije Universiteit Amsterdam (VU)  | sub-guts-vu-#                | sub-guts-vu-001  |
 | Universiteit van Amsterdam (UVA)   | sub-guts-uva-#               | sub-guts-uva-001 |
+:::
 
-</details>
-
-<details>
-
-<summary>**File names**</summary>
+::: {.callout-tip collapse="true" icon="false"}
+## File names
 
 To prevent duplicate file names, each data collection site has to add their abbreviation to the file name. For brain imaging data, the location will be included in the subjectid in the file name, e.g., `sub-guts-eur-001_ses-y02_task-feedback_run-01.nii`. For other data the location needs to be added separately. The file name for the Interpersonal Reactivity Index could, for example, be \``guts-lei_ses-y02_task-iri.tsv`'.
+:::
 
-</details>
-
-<details>
-
-<summary>**Variable naming conventions**</summary>
+::: {.callout-tip collapse="true" icon="false"}
+## Variable naming conventions
 
 We propose the following naming conventions for tabular data. The variable- and value labels can be added to either an SPSS file and later be converted to a .tsv file + .json file, or be manually added to a .json file directly. For more information, about how to make .json files see \[\].
 
@@ -78,5 +73,4 @@ We propose the following naming conventions for tabular data. The variable- and 
 | ses-y05_pcg_exb1_perc_to2    | Prosocial Cyberball Task - Exclusion Block 1: Percentage of throws to player 2.                                                               |                                                                 |
 | ses-y05_dd_money_ind_day180  | Delay Discounting Money: Indifference point day 180: Prefer to receive this amount of money now than 10 euros in 180 days.                    |                                                                 |
 | ses-y02_saliva_cort_d1_m1    | Saliva Samples -Cortisol: Mean cortisol in nmol/l day 1, measurement 1.                                                                       |                                                                 |
-
-</details>
+:::
