@@ -88,7 +88,7 @@
     "href": "fair-data.html",
     "title": "2  FAIR data",
     "section": "",
-    "text": "Picture: FAIR principles / Patrick Hochstenbach / CC0 1.0"
+    "text": "Picture: FAIR principles / Patrick Hochstenbach / CC0 1.0\nIn the GUTS consortium, we are committed to the FAIR principles for research data. As can be seen in the picture above, FAIR is an abbreviation of Findable, Accessible, Interoperable and Reuseable. Here, we will give a quick overview of what those principles mean in practice and how we try to improve the FAIRness of the data collected by the GUTS consortium.\n\n2.0.1 Findable\nMetadata and data should be easy to find for both humans and computers. In the GUTS consortium, we plan to add machine-readable metadata from the start. Data is stored on SURF Yoda storage, a research data management system that facilitates and enforces adding structured metadata to your research data. More information about metadata standards can be found in the pages about metadata and GUTS standards.\n\n\n2.0.2 Accessible\nIn practice, this means that potential users of the data need to know how the data can be accessed. This does not mean that data should always be open or free. Given the sensitive nature of much of the GUTS data, the plan is in a later stage of the project to make the data available under strict access conditions to other researchers. For accessibility, we will clearly specify the conditions and procedure for access.\n\n\n2.0.3 Interoperable\nInteroperability is about how data integrates with other data and with tools for analysis, storage, and processing. The practical steps we take within GUTS is using open file formats for data, community standards for metadata, and publishing a GUTS schema to describe the data. These steps allow for a “common understanding” of digital objects for both humans and machines.\n\n\n2.0.4 Reusable\nTo cite the Go FAIR website:\n\nThe ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings.\n\nIn the GUTS consortium, we try to achieve this by richly describing the context under which the data was generated. For example, for MRI data we use the BIDS standard in which imaging data is accompanied by machine-readable metadata in sidecar JSON files."
   },
   {
     "objectID": "general-naming-conventions.html",
@@ -152,5 +152,33 @@
     "title": "5  Metadata",
     "section": "5.2 Metadata Explorer",
     "text": "5.2 Metadata Explorer\nOur metadata is shown in our metadata explorer [insert HTML link] and is divided in the following ways:\n\nGeneral overview of the data including waves and general description.\nParticipant information including N, number of dropouts and other general participant information per wave.\nMeasure overview including measure name, category, description and type per measure and wave.\n\nThis explorer will include a search function to find and select variables required for your research. These variables along with certain preset filters (age, wave, gender, etc.) can then be made into a package which and be requested for analysis."
+  },
+  {
+    "objectID": "fair-data.html#findable",
+    "href": "fair-data.html#findable",
+    "title": "2  FAIR data",
+    "section": "2.1 Findable",
+    "text": "2.1 Findable\nMetadata and data should be easy to find for both humans and computers. In the GUTS consortium, we plan to add machine-readable metadata from the start. Data is stored on SURF Yoda storage, a research data management system that facilitates and enforces adding structured metadata to your research data. More information about metadata standards can be found in the pages about metadata and GUTS standards."
+  },
+  {
+    "objectID": "fair-data.html#accessible",
+    "href": "fair-data.html#accessible",
+    "title": "2  FAIR data",
+    "section": "2.2 Accessible",
+    "text": "2.2 Accessible\nIn practice, this means that potential users of the data need to know how the data can be accessed. This does not mean that data should always be open or free. Given the sensitive nature of much of the GUTS data, the plan is in a later stage of the project to make the data available under strict access conditions to other researchers. For accessibility, we will clearly specify the conditions and procedure for access."
+  },
+  {
+    "objectID": "fair-data.html#interoperable",
+    "href": "fair-data.html#interoperable",
+    "title": "2  FAIR data",
+    "section": "2.3 Interoperable",
+    "text": "2.3 Interoperable\nInteroperability is about how data integrates with other data and with tools for analysis, storage, and processing. The practical steps we take within GUTS is using open file formats for data, community standards for metadata, and publishing a GUTS schema to describe the data. These steps allow for a “common understanding” of digital objects for both humans and machines."
+  },
+  {
+    "objectID": "fair-data.html#reusable",
+    "href": "fair-data.html#reusable",
+    "title": "2  FAIR data",
+    "section": "2.4 Reusable",
+    "text": "2.4 Reusable\nTo cite the Go FAIR website:\n\nThe ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings.\n\nIn the GUTS consortium, we try to achieve this by richly describing the context under which the data was generated. For example, for MRI data we use the BIDS standard in which imaging data is accompanied by machine-readable metadata in sidecar JSON files."
   }
 ]

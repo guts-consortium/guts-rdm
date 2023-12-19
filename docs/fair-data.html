@@ -217,7 +217,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#findable" id="toc-findable" class="nav-link active" data-scroll-target="#findable"><span class="header-section-number">2.1</span> Findable</a></li>
+  <li><a href="#accessible" id="toc-accessible" class="nav-link" data-scroll-target="#accessible"><span class="header-section-number">2.2</span> Accessible</a></li>
+  <li><a href="#interoperable" id="toc-interoperable" class="nav-link" data-scroll-target="#interoperable"><span class="header-section-number">2.3</span> Interoperable</a></li>
+  <li><a href="#reusable" id="toc-reusable" class="nav-link" data-scroll-target="#reusable"><span class="header-section-number">2.4</span> Reusable</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -241,8 +250,29 @@ ul.task-list li input[type="checkbox"] {
 
 <p><img src="https://www.ugent.be/img/doza/beleid/rdm/fair-data.png" class="img-fluid"></p>
 <p>Picture: <a href="https://www.ugent.be/img/doza/beleid/fair-data.png">FAIR principles</a> / Patrick Hochstenbach / <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></p>
+<p>In the GUTS consortium, we are committed to the <a href="https://www.go-fair.org/fair-principles/">FAIR principles for research data</a>. As can be seen in the picture above, FAIR is an abbreviation of Findable, Accessible, Interoperable and Reuseable. Here, we will give a quick overview of what those principles mean in practice and how we try to improve the FAIRness of the data collected by the GUTS consortium.</p>
+<section id="findable" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="findable"><span class="header-section-number">2.1</span> Findable</h2>
+<p>Metadata and data should be easy to find for both humans and computers. In the GUTS consortium, we plan to add machine-readable <a href="./metadata.html">metadata</a> from the start. Data is stored on <a href="https://www.eur.nl/en/research/research-services/research-data-management/tooling/surf-yoda">SURF Yoda</a> storage, a research data management system that facilitates and enforces adding structured metadata to your research data. More information about metadata standards can be found in the pages about <a href="./metadata.html">metadata</a> and <a href="./how-to-save-your-data.html">GUTS standards</a>.</p>
+</section>
+<section id="accessible" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="accessible"><span class="header-section-number">2.2</span> Accessible</h2>
+<p>In practice, this means that potential users of the data need to know how the data can be accessed. This does not mean that data should always be <em>open</em> or <em>free</em>. Given the sensitive nature of much of the GUTS data, the plan is in a later stage of the project to make the data available under strict access conditions to other researchers. For accessibility, we will clearly specify the conditions and procedure for access.</p>
+</section>
+<section id="interoperable" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="interoperable"><span class="header-section-number">2.3</span> Interoperable</h2>
+<p>Interoperability is about how data integrates with other data and with tools for analysis, storage, and processing. The practical steps we take within GUTS is using <a href="./data-formats.html">open file formats</a> for data, community standards for <a href="./metadata.html">metadata</a>, and publishing a <a href="https://guts-consortium.github.io/schema/">GUTS schema</a> to describe the data. These steps allow for a “common understanding” of digital objects for both humans and machines.</p>
+</section>
+<section id="reusable" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="reusable"><span class="header-section-number">2.4</span> Reusable</h2>
+<p>To cite the <a href="https://www.go-fair.org/fair-principles/">Go FAIR website</a>:</p>
+<blockquote class="blockquote">
+<p>The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings.</p>
+</blockquote>
+<p>In the GUTS consortium, we try to achieve this by richly describing the context under which the data was generated. For example, for MRI data we use the <a href="https://bids.neuroimaging.io/">BIDS standard</a> in which imaging data is accompanied by machine-readable metadata in sidecar JSON files.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

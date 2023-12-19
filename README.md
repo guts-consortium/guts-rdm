@@ -6,7 +6,7 @@ The goal of the GUTS RDM Handbook is to bring everything about data collection, 
 
 ## Getting started
 
-If you are here to read the Handbook, you are probably mostly satisfied with browsing the [published RDM Handbook](https://eduardklap.github.io/guts-rdm){.uri}. In case you are here to contribute to the Handbook, read on for some more information about the technical background.
+If you are here to read the Handbook, you are probably mostly satisfied with browsing the [published RDM Handbook](https://guts-consortium.github.io/guts-rdm). In case you are here to contribute to the Handbook, read on for some more information about the technical background.
 
 ### Using Quarto and RStudio
 
