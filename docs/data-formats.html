@@ -32,7 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./metadata.html" rel="next">
 <link href="./data-collection.html" rel="prev">
-<link href="./cover.png" rel="icon" type="image/png">
+<link href="./guts-logo-small.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -178,7 +178,6 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-
   <a href="./general-naming-conventions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Naming conventions</span></span></a>
   </div>
@@ -198,7 +197,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./how-to-save-your-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">How to save your data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">How to convert your data to GUTS standards</span></span></a>
   </div>
 </li>
       </ul>
@@ -247,96 +246,106 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><p><strong>Raw data</strong></p>
 <p>The raw files are defined as the files that have not been through any processing. For example, the files that are exported from e-prime, qualtrics, mri, etc.</p>
-<table class="table">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 64%">
-</colgroup>
+<div class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="1">
+<style type="text/css">
+</style>
+
+<table id="T_be15e" data-quarto-postprocess="true" class="table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th>Data type</th>
-<th>Data format</th>
+<th id="T_be15e_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Data type</th>
+<th id="T_be15e_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Data format</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Qualtrics questionnaire</td>
-<td>.csv or .sav</td>
+<td id="T_be15e_row0_col0" class="data row0 col0">Qualtrics questionnaire</td>
+<td id="T_be15e_row0_col1" class="data row0 col1">.csv or .sav</td>
 </tr>
 <tr class="even">
-<td>Demographics</td>
-<td>.csv or .sav</td>
+<td id="T_be15e_row1_col0" class="data row1 col0">Demographics</td>
+<td id="T_be15e_row1_col1" class="data row1 col1">.csv or .sav</td>
 </tr>
 <tr class="odd">
-<td>EEG</td>
-<td>.bdf</td>
+<td id="T_be15e_row2_col0" class="data row2 col0">EEG</td>
+<td id="T_be15e_row2_col1" class="data row2 col1">.bdf</td>
 </tr>
 <tr class="even">
-<td>EEG behavioral</td>
-<td>.csv</td>
+<td id="T_be15e_row3_col0" class="data row3 col0">EEG behavioral</td>
+<td id="T_be15e_row3_col1" class="data row3 col1">.csv</td>
 </tr>
 <tr class="odd">
-<td>(f)MRI</td>
-<td>.PAR + .REC + .nii or .dcm</td>
+<td id="T_be15e_row4_col0" class="data row4 col0">(f)MRI</td>
+<td id="T_be15e_row4_col1" class="data row4 col1">.PAR + .REC + .nii or .dcm</td>
 </tr>
 <tr class="even">
-<td>fMRI behavioral</td>
-<td>eprime: .edat3, opensesame:, presentations:</td>
+<td id="T_be15e_row5_col0" class="data row5 col0">(f)MRI behavioral</td>
+<td id="T_be15e_row5_col1" class="data row5 col1">eprime: .edat3, opensesame:, presentations:</td>
 </tr>
 <tr class="odd">
-<td>ESM</td>
-<td>.csv or .tsv</td>
+<td id="T_be15e_row6_col0" class="data row6 col0">ESM</td>
+<td id="T_be15e_row6_col1" class="data row6 col1">.csv or .tsv</td>
 </tr>
 <tr class="even">
-<td>Physiological measures</td>
-<td>physical saliva and hair samples</td>
+<td id="T_be15e_row7_col0" class="data row7 col0">Physiological measures</td>
+<td id="T_be15e_row7_col1" class="data row7 col1">physical saliva and hair samples</td>
 </tr>
 </tbody>
-</table></li>
+</table>
+</div>
+</div></li>
 <li><p><strong>Processed data</strong></p>
 <p>The processed files are the fully-cleaned files after all steps of processing. The processed files are uploaded to Yoda.</p>
-<table class="table">
+<div class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="2">
+<style type="text/css">
+</style>
+
+<table id="T_47576" data-quarto-postprocess="true" class="table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th>Data type</th>
-<th>Data format</th>
+<th id="T_47576_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Data type</th>
+<th id="T_47576_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Data format</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Qualtrics questionnaire</td>
-<td>.tsv</td>
+<td id="T_47576_row0_col0" class="data row0 col0">Qualtrics questionnaire</td>
+<td id="T_47576_row0_col1" class="data row0 col1">.tsv</td>
 </tr>
 <tr class="even">
-<td>Demographics</td>
-<td>.tsv</td>
+<td id="T_47576_row1_col0" class="data row1 col0">Demographics</td>
+<td id="T_47576_row1_col1" class="data row1 col1">.tsv</td>
 </tr>
 <tr class="odd">
-<td>EEG</td>
-<td>.bdf (bidsified with BIDScoiner)</td>
+<td id="T_47576_row2_col0" class="data row2 col0">EEG</td>
+<td id="T_47576_row2_col1" class="data row2 col1">.bdf (bidsified with BIDScoiner)</td>
 </tr>
 <tr class="even">
-<td>EEG behavioral</td>
-<td>.tsv</td>
+<td id="T_47576_row3_col0" class="data row3 col0">EEG behavioral</td>
+<td id="T_47576_row3_col1" class="data row3 col1">.tsv</td>
 </tr>
 <tr class="odd">
-<td>(f)MRI</td>
-<td>.nii&nbsp;conversion files:&nbsp;inplane&nbsp;and w</td>
+<td id="T_47576_row4_col0" class="data row4 col0">(f)MRI</td>
+<td id="T_47576_row4_col1" class="data row4 col1">.nii conversion files: inplane and w</td>
 </tr>
 <tr class="even">
-<td>fMRI behavioral</td>
-<td>.tsv</td>
+<td id="T_47576_row5_col0" class="data row5 col0">(f)MRI behavioral</td>
+<td id="T_47576_row5_col1" class="data row5 col1">.tsv</td>
 </tr>
 <tr class="odd">
-<td>ESM</td>
-<td>.tsv</td>
+<td id="T_47576_row6_col0" class="data row6 col0">ESM</td>
+<td id="T_47576_row6_col1" class="data row6 col1">.tsv</td>
 </tr>
 <tr class="even">
-<td>Physiological measures</td>
-<td>.tsv</td>
+<td id="T_47576_row7_col0" class="data row7 col0">Physiological measures</td>
+<td id="T_47576_row7_col1" class="data row7 col1">.tsv</td>
 </tr>
 </tbody>
-</table></li>
+</table>
+</div>
+</div></li>
 </ol>
 
 
