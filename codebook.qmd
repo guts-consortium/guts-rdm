@@ -8,16 +8,16 @@ Here you can find a preliminary version of all the GUTS measures. For now, you c
 import plotly.graph_objs as go
 import pandas as pd
 
-df = pd.read_excel("guts-measure-overview_v2.xlsx", index_col=0) 
+df = pd.read_excel("guts-measure-overview_v3.xlsx", index_col=0) 
 
 fig = go.Figure(data=[go.Table(
     columnwidth=[150, 50],
-    header=dict(values=list(['<b>Measure<b>', "<b>Short name measure<b>", "<b>Data type<b>"]),
+    header=dict(values=list(['<b>Measure<b>', "<b>Short name measure<b>", "<b>Data type<b>", "<b>Cohorts<b>"]),
                 fill_color='gray',
                 align='left',
                 font=dict(color='black')),
     cells=dict(
-        values=[df['long-name'], df['short-name'], df['data-type']],
+        values=[df['long-name'], df['short-name'], df['data-type'], df['cohort']],
         align='left',
         fill_color=[['white', 'lightgray']*len(df)],
         height=30,

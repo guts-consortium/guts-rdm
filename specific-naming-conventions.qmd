@@ -13,23 +13,25 @@ To adhere to the machine-readable condition, file names of measure data should a
 
 Sessions will be named according to the BIDS standard, meaning that they start with `'ses-'`.
 
-GUTS is a ten-year project; data collection will start in year 2, however we will start counting the sessions from the first year of data collection. The first data collection session will be therefore called 'ses-y01'.
+GUTS is a ten-year project; data collection will start in year 2.
 
-Cohorts **A**, **B**, and **D** will collect data in year 1, 4 and 7. The respective sessions will be called:
+Cohorts **A**, **B**, and **D** will collect data in year 2, 5 and 8. Their respective sessions will be called:
 
-`'ses-y01'`, `'ses-y04'`, `'ses-y07'`.
+`'ses-01'`, `'ses-02'`, `'ses-03'`.
 
-Cohort **C** will collect data twice a year in year 1 and 2:
+Cohort **C** will collect data twice a year in year 2 and 3:
 
 -   For the first sessions of a year:
 
-    `'ses-y01'`[,]{.underline} `'ses-y02'`
+    `'ses-01'`[,]{.underline} `'ses-02'`
 
--   For the second sessions of a year, which take place 6 months after the first sessions:
+-   For the second measurement of a year, which take place 6 months after the first sessions:
 
-    `` `ses-y01-m6' ``, `'ses-y02-m6'`
+    `` `ses-01-m2' ``, `'ses-02-m2'`
 
-In case of delays in data collection, the numbering can be changed. For example, if cohort A starts session 2 in year 5 instead of year 4, the session will become '`ses-y05`' instead of '`ses-y04`'. If cohort B then still starts in year 4, they can leave their session name unchanged.
+**Pilot**
+
+The pilot sessions will be named `'ses-pilot'`
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
@@ -40,17 +42,21 @@ The subject ID naming convention differs slightly for each of the data storage l
 As approximately 400-800 subjects will participate at each location, we advise to use a number between 0 and 800. The subject id number should always consists of three numbers, e.g., subject 1 will get the number 001, subject 15 will get the number 015.
 
 | Data storage location              | Subject ID naming convention | Example          |
-|-----------------------------|-------------------------|-------------------|
+|----------------------------|-------------------------|-------------------|
 | Erasmus University Rotterdam (EUR) | sub-guts-eur-#               | sub-guts-eur-001 |
 | Leiden University (LEI)            | sub-guts-lei-#               | sub-guts-lei-001 |
 | Vrije Universiteit Amsterdam (VU)  | sub-guts-vu-#                | sub-guts-vu-001  |
 | Universiteit van Amsterdam (UVA)   | sub-guts-uva-#               | sub-guts-uva-001 |
+
+**Subject IDs pilot**
+
+Subject IDs during the pilot will follow the convention: `'sub-guts-[location]-pilot-#'`
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## File names
 
-To prevent duplicate file names, each data collection site has to add their abbreviation to the file name. For brain imaging data, the location will be included in the subjectid in the file name, e.g., `sub-guts-eur-001_ses-y02_task-feedback_run-01.nii`. For other data the location needs to be added separately. The file name for the Interpersonal Reactivity Index could, for example, be \``guts-lei_ses-y02_task-iri.tsv`'.
+To prevent duplicate file names, each data collection site has to add their abbreviation to the file name. For brain imaging data, the location will be included in the subjectid in the file name, e.g., `sub-guts-eur-001_ses-02_task-feedback_run-01.nii`. For other data the location needs to be added separately. The file name for the Interpersonal Reactivity Index could, for example, be \``guts-lei_ses-02_task-iri.tsv`'.
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
@@ -67,10 +73,10 @@ We propose the following naming conventions for tabular data. The variable- and 
 -   **Value labels:** lowercase letters
 
 | Variable name                | Variable label                                                                                                                                | Value labels                                                    |
-|------------------|------------------------------------|------------------|
-| ses-y02_iri_pt_q3            | Interpersonal Reactivity Index - Perspective taking scale Q3: I sometimes find it difficult to see things from the other guy's point of view. | 0 = does not describe me very well, 4 = described me very well  |
-| ses-y02_dailyhassles_freq_q4 | Parenting Daily Hassles scale - Frequency Q4: The kids won't listen or do what they are asked without being nagged.                           | 1 = never, 2 = rarely, 3 = sometimes, 4 = often, 5 = constantly |
-| ses-y05_pcg_exb1_perc_to2    | Prosocial Cyberball Task - Exclusion Block 1: Percentage of throws to player 2.                                                               |                                                                 |
-| ses-y05_dd_money_ind_day180  | Delay Discounting Money: Indifference point day 180: Prefer to receive this amount of money now than 10 euros in 180 days.                    |                                                                 |
-| ses-y02_saliva_cort_d1_m1    | Saliva Samples -Cortisol: Mean cortisol in nmol/l day 1, measurement 1.                                                                       |                                                                 |
+|-------------------|-----------------------------------|-------------------|
+| ses-02_iri_pt_q03            | Interpersonal Reactivity Index - Perspective taking scale Q3: I sometimes find it difficult to see things from the other guy's point of view. | 0 = does not describe me very well, 4 = described me very well  |
+| ses-02_dailyhassles_freq_q04 | Parenting Daily Hassles scale - Frequency Q4: The kids won't listen or do what they are asked without being nagged.                           | 1 = never, 2 = rarely, 3 = sometimes, 4 = often, 5 = constantly |
+| ses-03_pcg_exb1_perc_to2     | Prosocial Cyberball Task - Exclusion Block 1: Percentage of throws to player 2.                                                               |                                                                 |
+| ses-03_dd_money_ind_day180   | Delay Discounting Money: Indifference point day 180: Prefer to receive this amount of money now than 10 euros in 180 days.                    |                                                                 |
+| ses-03_saliva_cort_d1_m1     | Saliva Samples -Cortisol: Mean cortisol in nmol/l day 1, measurement 1.                                                                       |                                                                 |
 :::
