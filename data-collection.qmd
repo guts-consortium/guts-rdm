@@ -15,5 +15,3 @@ In the following pages you can find more information about what is important dur
 [GUTS Codebook](codebook.qmd)
 
 [Uploading to YODA](yoda-upload.qmd)
-
-

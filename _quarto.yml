@@ -23,6 +23,7 @@ book:
         - data-formats.qmd
         - metadata.qmd
         - codebook.qmd
+        - yoda-upload.qmd
         
     - part: processing-data.qmd
       chapters:
