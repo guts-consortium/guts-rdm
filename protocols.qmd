@@ -1,0 +1,13 @@
+## GUTS Protocols
+
+In the future, you'll be able to find all protocols here. These protocols will take you through all the steps taken before, during, and after data collection.
+
+|                     |                       |                    Cohort A                    | Cohort B | Cohort C | Cohort D |
+|---------------------|-----------------------|:----------------------------------------------:|----------|----------|----------|
+| **Pre-collection**  | Recruitment           |                                                |          |          |          |
+| **Data collection** | Qualtrics             | [![](icon-folder.png){width="30"}](/test.docx) |          |          |          |
+|                     | ESM                   |                                                |          |          |          |
+|                     | (f)MRI                |                                                |          |          |          |
+|                     | EEG                   |                                                |          |          |          |
+|                     | Physiological samples |                                                |          |          |          |
+| **Post-collection** | Data processing       |                                                |          |          |          |
