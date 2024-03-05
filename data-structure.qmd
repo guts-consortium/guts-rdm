@@ -4,4 +4,4 @@ GUTS' data structure will be based on BIDS principles, with some small adjustmen
 
 The data structure consists of individual-level (neuroimaging) and group-level data, placed in respectively the guts-bids folder and the guts-phenotype folder. **Note that the data structure is not final yet, it may undergo changes in the (near) future.**
 
-![](images/guts-data-structure_v2.jpg){fig-align="center"}
+![](guts-data-structure.png)
