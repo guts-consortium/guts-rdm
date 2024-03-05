@@ -62,10 +62,6 @@ All workspaces within Yoda will start with the prefix `research-`. In the table 
 |                   |                             |                               |
 |                   | research-guts-pilot-uva     | research-guts-uva             |
 +-------------------+-----------------------------+-------------------------------+
-| WP4 Utrecht-UU    | research-guts-pilot-uu-raw  | research-guts-uu-raw          |
-|                   |                             |                               |
-|                   | research-guts-pilot-uu      | research-guts-uu              |
-+-------------------+-----------------------------+-------------------------------+
 :::
 
 ::: {.callout-tip collapse="false" icon="false"}
@@ -100,8 +96,8 @@ In this overview find your research folder (in this example "research-guts-dummy
 Here you can find the data that you have uploaded previously. We will highlight two major actions here and explain them in more detail later:
 
 -   Uploading data: Using the "Upload" button in the top right, you can upload files/folders. You can also drag and drop files directly from your own system into the Yoda portal. There are also other options to upload data, like using curl. An example [on using curl can be found in the following chapter](how-to-save-your-data.qmd). For more [information regarding this example of using curl you can visit this page on github](https://github.com/eduardklap/qualtrics-automation).
-
-<!-- -->
+-   For large data uploads like MRI or EEG data there is a way to use curl to send the data to your Yoda workspace using a variation of the following command:\
+`curl -u [yoda-emailadres] -T [bestand].zip https://[location]-data.irods.surfsara.nl/[research-projectnaam]`
 
 -   Group management: Using the "Go to group manager" button in the top right, you invite members (if you are the group manager, which you are if you requested the workspace) and give different permissions to members (read/write rights etc.).
 :::
