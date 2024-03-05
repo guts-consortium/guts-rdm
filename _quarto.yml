@@ -20,9 +20,12 @@ book:
       
     - part: data-collection.qmd
       chapters:
+        - guts-overview.qmd
+        - codebook.qmd
+        - protocols.qmd
         - data-formats.qmd
         - metadata.qmd
-        - codebook.qmd
+        - yoda-upload.qmd
         
     - part: processing-data.qmd
       chapters:

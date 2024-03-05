@@ -24,7 +24,7 @@ You can visit [this page for general Yoda guidance provided by SURF](https://ser
 
 In the three steps below, we explain how you can request a personal workspace for Yoda, sign into that workspace and upload your data.
 
-::: {.callout-tip collapse="true" icon="false"}
+::: {.callout-tip collapse="false" icon="false"}
 ## 1. Requesting Yoda workspace
 
 Requesting a Yoda workspace differs per location and is handled by each university differently. The most important thing is that the workspaces that will be created, for all data collected in a specific location, follow the same naming convention. In total four workspaces will be needed per location (two for the pilot and two for the main study), which are divided in the following ways:
@@ -37,7 +37,7 @@ Requesting a Yoda workspace differs per location and is handled by each universi
 
     -   The "up to guts standard" data includes data that is converted to the standard required to conduct research. [More information on converting your data to GUTS standards can be found in the following chapter.](how-to-save-your-data.qmd)
 
-All workspaces within Yoda will start with the prefix `-research`. In the table below you will find the final names of the workspaces for each location. They follow these naming conventions:
+All workspaces within Yoda will start with the prefix `research-`. In the table below you will find the final names of the workspaces for each location. They follow these naming conventions:
 
 -   Workspaces for the pilot will follow the convention: `guts-pilot-[location]` and then an added `-raw` for the raw data workspace
 
@@ -96,8 +96,7 @@ In this overview find your research folder (in this example "research-guts-dummy
 Here you can find the data that you have uploaded previously. We will highlight two major actions here and explain them in more detail later:
 
 -   Uploading data: Using the "Upload" button in the top right, you can upload files/folders. You can also drag and drop files directly from your own system into the Yoda portal. There are also other options to upload data, like using curl. An example [on using curl can be found in the following chapter](how-to-save-your-data.qmd). For more [information regarding this example of using curl you can visit this page on github](https://github.com/eduardklap/qualtrics-automation).
-
-For major data uploads like MRI or EEG data there is a way to use curl to send the data to your Yoda workspace using a variation of the following command:\
+-   For large data uploads like MRI or EEG data there is a way to use curl to send the data to your Yoda workspace using a variation of the following command:\
 `curl -u [yoda-emailadres] -T [bestand].zip https://[location]-data.irods.surfsara.nl/[research-projectnaam]`
 
 -   Group management: Using the "Go to group manager" button in the top right, you invite members (if you are the group manager, which you are if you requested the workspace) and give different permissions to members (read/write rights etc.).

@@ -4,4 +4,4 @@ In a Data Management Plan (DMP), a description is given on and how the data will
 
 The initial overall GUTS DMP was written in September 2022 and approved by NWO. We will update the plan regularly.
 
-For specific GUTS projects, the project leads should write a project-specific DMP with more detail about how data will be handled within their project. We are planning to write guidelines for specific projects once the overall data management structure for GUTS is in place (Summer 2024).  
+For specific GUTS projects, the project leads should write a project-specific DMP with more detail about how data will be handled within their project. We are planning to write guidelines for specific projects once the overall data management structure for GUTS is in place (Summer 2024).

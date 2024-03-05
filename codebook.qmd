@@ -1,4 +1,4 @@
-## GUTS Codebook
+## GUTS codebook
 
 Here you can find a preliminary version of all the GUTS measures. For now, you can find an overview of all measure names that you can scroll through. Later, you will be able to find more information about the measures, the items, the labels and levels, etc. **Note that measures may still be changed.**
 
@@ -8,18 +8,18 @@ Here you can find a preliminary version of all the GUTS measures. For now, you c
 import plotly.graph_objs as go
 import pandas as pd
 
-df = pd.read_excel("guts-measure-overview_v2.xlsx", index_col=0) 
+df = pd.read_excel("guts-measure-overview_v4.xlsx", index_col=0) 
 
 fig = go.Figure(data=[go.Table(
     columnwidth=[150, 50],
-    header=dict(values=list(['<b>Measure<b>', "<b>Short name measure<b>", "<b>Data type<b>"]),
-                fill_color='gray',
+    header=dict(values=list(['<b>Measure<b>', "<b>Short name measure<b>", "<b>Data type<b>", "<b>Cohorts<b>"]),
+                fill_color='lightblue',
                 align='left',
                 font=dict(color='black')),
     cells=dict(
-        values=[df['long-name'], df['short-name'], df['data-type']],
+        values=[df['long_name'], df['short_name'], df['data_type'], df['cohort']],
         align='left',
-        fill_color=[['white', 'lightgray']*len(df)],
+        fill_color=[['white', 'lightblue']*len(df)],
         height=30,
         font=dict(color="black")
     )
