@@ -38,7 +38,7 @@ How to create this metadata will be eplained in the page [How to convert your da
 
 ## Metadata Explorer
 
-Our metadata is shown in our metadata explorer \[insert HTML link\] and is divided in the following ways:
+Metadata is shown in the [GUTS metadata explorer](https://guts-consortium.github.io/guts-explorer/) (currently a prototype version) and is divided in the following ways:
 
 1.  [General overview]{.underline} of the data including waves and general description.
 
