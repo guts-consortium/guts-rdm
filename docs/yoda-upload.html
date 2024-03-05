@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codebook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">GUTS Codebook</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">GUTS codebook</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -372,13 +372,6 @@ ul.task-list li input[type="checkbox"] {
 <td><p>research-guts-uva-raw</p>
 <p>research-guts-uva</p></td>
 </tr>
-<tr class="even">
-<td>WP4 Utrecht-UU</td>
-<td><p>research-guts-pilot-uu-raw</p>
-<p>research-guts-pilot-uu</p></td>
-<td><p>research-guts-uu-raw</p>
-<p>research-guts-uu</p></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -424,11 +417,10 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="rdmhandbook-yoda-login06.jpg" class="img-fluid"></p>
 <p>Here you can find the data that you have uploaded previously. We will highlight two major actions here and explain them in more detail later:</p>
 <ul>
-<li>Uploading data: Using the “Upload” button in the top right, you can upload files/folders. You can also drag and drop files directly from your own system into the Yoda portal. There are also other options to upload data, like using curl. An example <a href="./how-to-save-your-data.html">on using curl can be found in the following chapter</a>. For more <a href="https://github.com/eduardklap/qualtrics-automation">information regarding this example of using curl you can visit this page on github</a>.</li>
-</ul>
-<!-- -->
-<ul>
-<li>Group management: Using the “Go to group manager” button in the top right, you invite members (if you are the group manager, which you are if you requested the workspace) and give different permissions to members (read/write rights etc.).</li>
+<li><p>Uploading data: Using the “Upload” button in the top right, you can upload files/folders. You can also drag and drop files directly from your own system into the Yoda portal. There are also other options to upload data, like using curl. An example <a href="./how-to-save-your-data.html">on using curl can be found in the following chapter</a>. For more <a href="https://github.com/eduardklap/qualtrics-automation">information regarding this example of using curl you can visit this page on github</a>.</p>
+<p>For large data uploads like MRI or EEG data there is a way to use curl to send the data to your Yoda workspace using a variation of the following command:<br>
+<code>curl -u [yoda-emailadres] -T [bestand].zip https://[location]-data.irods.surfsara.nl/[research-projectnaam]</code></p></li>
+<li><p>Group management: Using the “Go to group manager” button in the top right, you invite members (if you are the group manager, which you are if you requested the workspace) and give different permissions to members (read/write rights etc.).</p></li>
 </ul>
 </div>
 </div>
