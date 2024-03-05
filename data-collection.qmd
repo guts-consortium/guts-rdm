@@ -8,10 +8,16 @@ In the following pages you can find more information about what is important dur
 
 #### Chapters:
 
+[GUTS overview](guts-overview.qmd)
+
+[GUTS codebook](codebook.qmd)
+
+[GUTS protocols](protocols.qmd)
+
 [Data formats](data-formats.qmd)
 
 [Metadata](metadata.qmd)
 
-[GUTS Codebook](codebook.qmd)
-
 [Uploading to YODA](yoda-upload.qmd)
+
+

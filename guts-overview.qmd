@@ -1,4 +1,4 @@
-## GUTS Overview
+## GUTS overview
 
 ![](guts-cohorts_v2.png)
 
