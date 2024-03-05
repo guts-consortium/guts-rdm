@@ -24,7 +24,7 @@ You can visit [this page for general Yoda guidance provided by SURF](https://ser
 
 In the three steps below, we explain how you can request a personal workspace for Yoda, sign into that workspace and upload your data.
 
-::: {.callout-tip icon="false"}
+::: {.callout-tip collapse="false" icon="false"}
 ## 1. Requesting Yoda workspace
 
 Requesting a Yoda workspace differs per location and is handled by each university differently. The most important thing is that the workspaces that will be created, for all data collected in a specific location, follow the same naming convention. In total four workspaces will be needed per location (two for the pilot and two for the main study), which are divided in the following ways:
