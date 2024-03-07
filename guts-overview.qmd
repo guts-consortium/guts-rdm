@@ -1,5 +1,5 @@
 ## GUTS overview
 
-![](guts-cohorts_v2.png)
+![](images/guts-cohorts_v2.png)
 
-![](guts-session-overview_v3.png)
+![](images/guts-session-overview_v3.png)
