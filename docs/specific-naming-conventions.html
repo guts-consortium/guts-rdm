@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GUTS RDM Handbook - 11&nbsp; Specific naming conventions</title>
+<title>GUTS RDM Handbook - 12&nbsp; Specific naming conventions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./processing-data.html">Data processing</a></li><li class="breadcrumb-item"><a href="./specific-naming-conventions.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Specific naming conventions</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./processing-data.html">Data processing</a></li><li class="breadcrumb-item"><a href="./specific-naming-conventions.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Specific naming conventions</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -193,26 +193,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./processing-documentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Documentation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./general-naming-conventions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Naming conventions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Naming conventions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./specific-naming-conventions.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Specific naming conventions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Specific naming conventions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data structure</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Data structure</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./how-to-save-your-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">How to convert your data to GUTS standards</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">How to convert your data to GUTS standards</span></span></a>
   </div>
 </li>
       </ul>
@@ -242,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Specific naming conventions</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Specific naming conventions</span></h1>
 </div>
 
 
@@ -270,7 +276,7 @@ Measures
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>To adhere to the machine-readable condition, file names of measure data should always include <code>"_task-[short name]_"</code>. The short name <u>(see codebook)</u> of the measure should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index has short name “<code>iri</code>”. Its filename will therefore always include <code>"_task-iri_"</code>.</p>
+<p>To comply with the machine-readable requirement, processed measure file names should always include <code>"_task-[short name]_"</code>. The short name of a measure, as specified in the <em>codebook</em>, should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index (IRI) has been given the short name “<code>iri</code>”. Its file name should therefore always include <code>"_task-iri_"</code>. It is crucial that the short names match the ones in the codebook, as our scripts specifically search for these names.</p>
 </div>
 </div>
 </div>
@@ -287,24 +293,9 @@ Sessions
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Sessions will be named according to the BIDS standard, meaning that they start with <code>'ses-'</code>.</p>
-<p>GUTS is a ten-year project; data collection will start in year 2.</p>
-<p>Cohorts <u><strong>A</strong>, <strong>B</strong>, <strong>D</strong></u> will collect data in year 2, 5 and 8. Their respective sessions will be called:</p>
-<ul>
-<li><code>'ses-01'</code>, <code>'ses-02'</code>, <code>'ses-03'</code>.</li>
-</ul>
-<p>Cohort <u><strong>D</strong></u> will also collect data between session 1 and 2, and between session 2 and 3:</p>
-<ul>
-<li><code>`ses-01a'</code>, <code>'ses-02a'</code></li>
-</ul>
-<p>Cohort <u><strong>C</strong></u> will collect data twice a year in year 2 and 3:</p>
-<p>For the first sessions of a year:</p>
-<ul>
-<li><code>'ses-01'</code><u>,</u> <code>'ses-02'</code></li>
-</ul>
-<p>For the second measurement of a year, which take place 6 months after the first sessions:</p>
-<ul>
-<li><code>`ses-01a'</code>, <code>'ses-02a'</code></li>
-</ul>
+<p>Cohorts <u><strong>A</strong>, <strong>B</strong>, <strong>D</strong></u> are scheduled to collect data in year 2, 5 and 8 of the ten-year GUTS project. Their respective sessions will be named <code>'ses-01'</code>, <code>'ses-02'</code>, <code>'ses-03'</code>.</p>
+<p>Cohort <u><strong>D</strong></u>, in addition to the regular sessions, will collect data between session 1 and 2, and between session 2 and 3: <code>`ses-01a'</code>, <code>'ses-02a'.</code></p>
+<p>Cohort <u><strong>C</strong></u> plans to collect data twice a year in year 2 and 3. The first sessions of a year will be named <code>'ses-01'</code><u>,</u> <code>'ses-02',</code> while the second measurements, taking place six months after the first measurement, will be labeled <code>`ses-01a'</code>, <code>'ses-02a'.</code></p>
 <p><strong>Pilot</strong></p>
 <p>The pilot sessions will be named <code>'ses-pilot'</code></p>
 </div>
@@ -322,8 +313,8 @@ Subject IDs
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The subject ID naming convention differs slightly for each of the data storage locations. To prevent accidental overlap between collected data between WPs, an abbreviation of the location will be added to each subject ID, as can been seen below.</p>
-<p>As approximately 400-800 subjects will participate at each location, we advise to use a number between 0 and 800. The subject id number should always consists of three numbers, e.g., subject 1 will get the number 001, subject 15 will get the number 015.</p>
+<p>The subject ID naming convention varies slightly for each data storage location. To prevent accidental overlap between collected data from different cohorts, an abbreviation of the location will be added to each subject ID, as illustrated below.</p>
+<p>Given that approximately 400-800 subjects will participate at each location, we advise to use a number between 0 and 800. The subject id number should always consist of three digits, e.g., subject 1 will be assigned the number 001, subject 15 will receive the number 015.</p>
 <table class="table">
 <colgroup>
 <col style="width: 41%">
@@ -361,7 +352,7 @@ Subject IDs
 </tbody>
 </table>
 <p><strong>Subject IDs pilot</strong></p>
-<p>Subject IDs during the pilot will follow the convention: <code>'sub-guts-pilot-[location]-#'</code></p>
+<p>During the pilot, <code>'pilot'</code> will be added to the subject ID: <code>'sub-guts-pilot-[location]-#'.</code></p>
 </div>
 </div>
 </div>
@@ -377,14 +368,12 @@ File names
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>To prevent duplicate file names, each data collection site has to add their abbreviation to the file name. For brain imaging data, the location will be included in the subjectid in the file name. For other data the location needs to be added separately. Additionally, file names should include the session and task as described earlier.</p>
-<p><strong>Participant-level</strong> files (individual files) follow the naming convention:</p>
-<p><code>sub-[subjectid]_ses-[session]_task-[short-name]</code></p>
-<p><strong>Group-level files</strong> (file with all participants merged) follow the naming convention:</p>
-<p><code>guts-[location]_ses-[session]_task-[short-name]</code></p>
+<p>To prevent duplicate file names, it is essential that for each data storage location to add their abbreviation to the file name. For participant-level files, such as brain imaging data, the location will be integrated into the subject ID in the file name. For group-level files, the location must be added separately. Additionally, file names should consistently include the session and task, as outlined earlier.</p>
+<p><strong>Participant-level</strong> (individual) files: <code>sub-[subjectid]_ses-[session]_task-[short-name].</code></p>
+<p><strong>Group-level files</strong> (all participants merged): <code>guts-[location]_ses-[session]_task-[short-name].</code></p>
 <p><strong>Raw vs processed files</strong></p>
-<p>Ultimately, it’s most import that the <strong>processed files</strong> follow the correct naming conventions, as we won’t be able to run our scripts otherwise. However, future you will be very grateful if you ensure that the raw output also follows a clear and consistent naming convention, as this will facilitate data-processing.</p>
-<p>Therefore, if you are able to fill in a subject name/session/task name when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynanometer, etc.), please adhere to the naming conventions. <strong>Note that some measures (e.g., MRI) might not have the option to fully decide on output file naming beforehand.</strong></p>
+<p>Ultimately, it is crucial that the <strong>processed files</strong> strictly follow the correct naming conventions to ensure our scripts can be executed properly. However, future you will be grateful if the raw output also adheres to a clear and consistent naming convention, as this will facilitate data processing.</p>
+<p>Therefore, when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynanometer, etc.) and if possible, please ensure adherence to the naming conventions by filling in subject names/session/task names. <strong>Note that for some measures (e.g., MRI), the option to fully decide on output file naming might not be available beforehand.</strong></p>
 <p>Below you can find some examples.</p>
 <table class="table">
 <colgroup>
@@ -501,13 +490,14 @@ Variables
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>We propose the following naming conventions for tabular data. The variable- and value labels can be added to either an SPSS file and later be converted to a .tsv file + .json file, or be manually added to a .json file directly. For more information, about how to make .json files see [].</p>
-<p><code>[session]_[task]_[subpart task]_q/t[question/trial #]</code></p>
+<p>For any measures (with tabular data) that are collected in more than one cohort, the variable names need to be harmonized as this allows us to merge the files of a certain measure from different data storage locations into one file. To facilitate this harmonizing, we propose the naming convention below. Please contact the representatives of overlapping cohorts to ensure equal variable names. For measures with no overlap, specific naming conventions are less crucial. However, we still advise you to use a consistent naming pattern, such as the examples below.</p>
+<p><code>ses-[session]_[short-name]_[subpart-task]_q/t0[question/trial #]</code></p>
 <ul>
 <li><p><strong>Names:</strong> lowercase letters with all distinct information separated by an_underscore</p></li>
 <li><p><strong>Labels:</strong> Full sentences starting with a capital letter.</p></li>
 <li><p><strong>Value labels:</strong> lowercase letters</p></li>
 </ul>
+<p>The variable- and value labels can be added to either an SPSS file and later be converted to a .tsv file + .json file, or be manually added to a .json file directly. For more information, about how to make .json files see []. Below you can find some examples of variable names:</p>
 <table class="table">
 <colgroup>
 <col style="width: 12%">
@@ -792,12 +782,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./general-naming-conventions.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Naming conventions</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Naming conventions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./data-structure.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data structure</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Data structure</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

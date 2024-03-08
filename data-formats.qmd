@@ -13,7 +13,7 @@ The GUTS project follows a multi-method, multi-index approach. As a result, the 
     from IPython.display import display
     from pandas.io.formats import style
      
-    data = [['Qualtrics questionnaire', '.csv or .sav'], ['Demographics', '.csv or .sav'], ['EEG', '.bdf'], ['EEG behavioral', '.csv'], ['(f)MRI', '.PAR + .REC + .nii or .dcm'],['(f)MRI behavioral','eprime: .edat3, opensesame:, presentations:'], ['ESM','.csv or .tsv'], ['Physiological measures','physical saliva and hair samples']]
+    data = [['Qualtrics questionnaire', '.csv or .sav'], ['Demographics', '.csv or .sav'], ['Behavioral', '.csv, .xlsx, .edat3'], ['EEG', '.bdf'], ['EEG behavioral', '.csv'], ['(f)MRI', '.PAR + .REC + .nii or .dcm'],['(f)MRI behavioral','eprime: .edat3, opensesame:, presentations:'], ['ESM','.csv or .tsv'], ['Physiological measures','physical saliva and hair samples']]
      
     df = pd.DataFrame(data, columns=['Data type', 'Data format'])
 
@@ -35,7 +35,7 @@ The GUTS project follows a multi-method, multi-index approach. As a result, the 
     from IPython.display import display
     from pandas.io.formats import style
      
-    data = [['Qualtrics questionnaire', '.tsv'], ['Demographics', '.tsv'], ['EEG', '.bdf (bidsified with BIDScoiner)'], ['EEG behavioral', '.tsv'], ['(f)MRI', '.nii conversion files: inplane and w'],['(f)MRI behavioral','.tsv'], ['ESM','.tsv'], ['Physiological measures','.tsv']]
+    data = [['Qualtrics questionnaire', '.tsv'], ['Demographics', '.tsv'], ['Behavioral', '.tsv'],['EEG', '.bdf (bidsified with BIDScoiner)'], ['EEG behavioral', '.tsv'], ['(f)MRI', '.nii conversion files: inplane and w'],['(f)MRI behavioral','.tsv'], ['ESM','.tsv'], ['Physiological measures','.tsv']]
      
     df = pd.DataFrame(data, columns=['Data type', 'Data format'])
      

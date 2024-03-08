@@ -5,7 +5,7 @@ As mentioned in the general naming conventions section, naming should be both hu
 ::: {.callout-tip collapse="false" appearance="simple" icon="false"}
 ## Measures
 
-To adhere to the machine-readable condition, file names of measure data should always include `"_task-[short name]_"`. The short name [(see codebook)]{.underline} of the measure should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index has short name "`iri`". Its filename will therefore always include `"_task-iri_"`.
+To comply with the machine-readable requirement, processed measure file names should always include `"_task-[short name]_"`. The short name of a measure, as specified in the *codebook*, should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index (IRI) has been given the short name "`iri`". Its file name should therefore always include `"_task-iri_"`. It is crucial that the short names match the ones in the codebook, as our scripts specifically search for these names.
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
@@ -13,25 +13,11 @@ To adhere to the machine-readable condition, file names of measure data should a
 
 Sessions will be named according to the BIDS standard, meaning that they start with `'ses-'`.
 
-GUTS is a ten-year project; data collection will start in year 2.
+Cohorts [**A**, **B**, **D**]{.underline} are scheduled to collect data in year 2, 5 and 8 of the ten-year GUTS project. Their respective sessions will be named `'ses-01'`, `'ses-02'`, `'ses-03'`.
 
-Cohorts [**A**, **B**, **D**]{.underline} will collect data in year 2, 5 and 8. Their respective sessions will be called:
+Cohort [**D**]{.underline}, in addition to the regular sessions, will collect data between session 1 and 2, and between session 2 and 3: `` `ses-01a' ``, `'ses-02a'.`
 
--   `'ses-01'`, `'ses-02'`, `'ses-03'`.
-
-Cohort [**D**]{.underline} will also collect data between session 1 and 2, and between session 2 and 3:
-
--   `` `ses-01a' ``, `'ses-02a'`
-
-Cohort [**C**]{.underline} will collect data twice a year in year 2 and 3:
-
-For the first sessions of a year:
-
--   `'ses-01'`[,]{.underline} `'ses-02'`
-
-For the second measurement of a year, which take place 6 months after the first sessions:
-
--   `` `ses-01a' ``, `'ses-02a'`
+Cohort [**C**]{.underline} plans to collect data twice a year in year 2 and 3. The first sessions of a year will be named `'ses-01'`[,]{.underline} `'ses-02',` while the second measurements, taking place six months after the first measurement, will be labeled `` `ses-01a' ``, `'ses-02a'.`
 
 **Pilot**
 
@@ -41,9 +27,9 @@ The pilot sessions will be named `'ses-pilot'`
 ::: {.callout-tip collapse="true" icon="false"}
 ## Subject IDs
 
-The subject ID naming convention differs slightly for each of the data storage locations. To prevent accidental overlap between collected data between WPs, an abbreviation of the location will be added to each subject ID, as can been seen below.
+The subject ID naming convention varies slightly for each data storage location. To prevent accidental overlap between collected data from different cohorts, an abbreviation of the location will be added to each subject ID, as illustrated below.
 
-As approximately 400-800 subjects will participate at each location, we advise to use a number between 0 and 800. The subject id number should always consists of three numbers, e.g., subject 1 will get the number 001, subject 15 will get the number 015.
+Given that approximately 400-800 subjects will participate at each location, we advise to use a number between 0 and 800. The subject id number should always consist of three digits, e.g., subject 1 will be assigned the number 001, subject 15 will receive the number 015.
 
 +------------------------------------+------------------------------+-------------------+
 | Data storage location              | Subject ID naming convention | Example           |
@@ -59,27 +45,23 @@ As approximately 400-800 subjects will participate at each location, we advise t
 
 **Subject IDs pilot**
 
-Subject IDs during the pilot will follow the convention: `'sub-guts-pilot-[location]-#'`
+During the pilot, `'pilot'` will be added to the subject ID: `'sub-guts-pilot-[location]-#'.`
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## File names
 
-To prevent duplicate file names, each data collection site has to add their abbreviation to the file name. For brain imaging data, the location will be included in the subjectid in the file name. For other data the location needs to be added separately. Additionally, file names should include the session and task as described earlier.
+To prevent duplicate file names, it is essential that for each data storage location to add their abbreviation to the file name. For participant-level files, such as brain imaging data, the location will be integrated into the subject ID in the file name. For group-level files, the location must be added separately. Additionally, file names should consistently include the session and task, as outlined earlier.
 
-**Participant-level** files (individual files) follow the naming convention:
+**Participant-level** (individual) files: `sub-[subjectid]_ses-[session]_task-[short-name].`
 
-`sub-[subjectid]_ses-[session]_task-[short-name]`
-
-**Group-level files** (file with all participants merged) follow the naming convention:
-
-`guts-[location]_ses-[session]_task-[short-name]`
+**Group-level files** (all participants merged): `guts-[location]_ses-[session]_task-[short-name].`
 
 **Raw vs processed files**
 
-Ultimately, it's most import that the **processed files** follow the correct naming conventions, as we won't be able to run our scripts otherwise. However, future you will be very grateful if you ensure that the raw output also follows a clear and consistent naming convention, as this will facilitate data-processing.
+Ultimately, it is crucial that the **processed files** strictly follow the correct naming conventions to ensure our scripts can be executed properly. However, future you will be grateful if the raw output also adheres to a clear and consistent naming convention, as this will facilitate data processing.
 
-Therefore, if you are able to fill in a subject name/session/task name when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynanometer, etc.), please adhere to the naming conventions. **Note that some measures (e.g., MRI) might not have the option to fully decide on output file naming beforehand.**
+Therefore, when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynanometer, etc.) and if possible, please ensure adherence to the naming conventions by filling in subject names/session/task names. **Note that for some measures (e.g., MRI), the option to fully decide on output file naming might not be available beforehand.**
 
 Below you can find some examples.
 
@@ -119,15 +101,17 @@ Below you can find some examples.
 ::: {.callout-tip collapse="true" icon="false"}
 ## Variables
 
-We propose the following naming conventions for tabular data. The variable- and value labels can be added to either an SPSS file and later be converted to a .tsv file + .json file, or be manually added to a .json file directly. For more information, about how to make .json files see \[\].
+For measures, involving tabular data, collected across multiple cohorts, the variable names must be harmonized. This harmonization allows us to easily merge the files belonging to a specific measure from various data storage locations into one file. To facilitate this, we propose the naming convention below. Please collaborate with representatives from overlapping cohorts to ensure uniformity in variable names. For measures with no overlap, the use of specific naming conventions is less crucial. However, we still recommend using a consistent naming pattern, such as the examples provided below.
 
-`[session]_[task]_[subpart task]_q/t[question/trial #]`
+`ses-[session]_[short-name]_[subpart-task]_q/t0[question/trial #]`
 
 -   **Names:** lowercase letters with all distinct information separated by an_underscore
 
 -   **Labels:** Full sentences starting with a capital letter.
 
 -   **Value labels:** lowercase letters
+
+The variable and value labels can be added to an SPSS file and later converted to a .tsv file + .json file, or manually incorporated into a .json file directly. For more information on creating .json files, see \[\]. Below are examples of variable names:
 
 +------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 | Variable name                | Variable label                                                                                                                                | Value labels                                                    |
