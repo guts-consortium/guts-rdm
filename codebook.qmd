@@ -1,6 +1,6 @@
 ## GUTS codebook
 
-Here you can find a preliminary version of all the GUTS measures. For now, you can find an overview of all measure names that you can scroll through. Later, you will be able to find more information about the measures, the items, the labels and levels, etc. **Note that measures may still be changed.**
+Here you can find a preliminary version of all GUTS measures. For now, you can find an overview of which measures are collected by which cohort(s). Later, you will be able to find more information about the measures, the items, the labels and levels, etc. **Note that measures may still be changed.**
 
 ```{python}
 #| echo: false

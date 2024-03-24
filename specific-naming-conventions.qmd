@@ -5,7 +5,7 @@ As mentioned in the general naming conventions section, naming should be both hu
 ::: {.callout-tip collapse="false" appearance="simple" icon="false"}
 ## Measures
 
-To adhere to the machine-readable condition, file names of measure data should always include `"_task-[short name]_"`. The short name [(see codebook)]{.underline} of the measure should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index has short name "`iri`". Its filename will therefore always include `"_task-iri_"`.
+To comply with the machine-readable requirement, processed measure file names should always include `"_task-[short name]_"`. The short name of a measure, as specified in the *codebook*, should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index (IRI) has been given the short name "`iri`". Its file name should therefore always include `"_task-iri_"`. It is crucial that the short names match the ones in the codebook, as our scripts specifically search for these names.
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
@@ -13,25 +13,11 @@ To adhere to the machine-readable condition, file names of measure data should a
 
 Sessions will be named according to the BIDS standard, meaning that they start with `'ses-'`.
 
-GUTS is a ten-year project; data collection will start in year 2.
+Cohorts [**A**, **B**, **D**]{.underline} are scheduled to collect data in year 2, 5 and 8 of the ten-year GUTS project. Their respective sessions will be named `'ses-01'`, `'ses-02'`, `'ses-03'`.
 
-Cohorts [**A**, **B**, **D**]{.underline} will collect data in year 2, 5 and 8. Their respective sessions will be called:
+Cohort [**D**]{.underline}, in addition to the regular sessions, will collect data between session 1 and 2, and between session 2 and 3: `` `ses-01a' ``, `'ses-02a'.`
 
--   `'ses-01'`, `'ses-02'`, `'ses-03'`.
-
-Cohort [**D**]{.underline} will also collect data between session 1 and 2, and between session 2 and 3:
-
--   `` `ses-01a' ``, `'ses-02a'`
-
-Cohort [**C**]{.underline} will collect data twice a year in year 2 and 3:
-
-For the first sessions of a year:
-
--   `'ses-01'`[,]{.underline} `'ses-02'`
-
-For the second measurement of a year, which take place 6 months after the first sessions:
-
--   `` `ses-01a' ``, `'ses-02a'`
+Cohort [**C**]{.underline} plans to collect data twice a year in year 2 and 3. The first sessions of a year will be named `'ses-01'`[,]{.underline} `'ses-02',` while the second measurements, taking place six months after the first measurement, will be labeled `` `ses-01a' ``, `'ses-02a'.`
 
 **Pilot**
 
@@ -41,82 +27,83 @@ The pilot sessions will be named `'ses-pilot'`
 ::: {.callout-tip collapse="true" icon="false"}
 ## Subject IDs
 
-The subject ID naming convention differs slightly for each of the data storage locations. To prevent accidental overlap between collected data between WPs, an abbreviation of the location will be added to each subject ID, as can been seen below.
+The subject ID naming convention varies slightly for each data storage location. To prevent accidental overlap between collected data from different cohorts, an abbreviation of the location will be added to each subject ID, as illustrated below.
 
-As approximately 400-800 subjects will participate at each location, we advise to use a number between 0 and 800. The subject id number should always consists of three numbers, e.g., subject 1 will get the number 001, subject 15 will get the number 015.
+Given that approximately 400-800 subjects will participate at each location, we advise to use a number between 0 and 800. The subject id number should always consist of three digits, e.g., subject 1 will be assigned the number 001, subject 15 will receive the number 015.
 
-| Data storage location              | Subject ID naming convention | Example          |
-|------------------------------------|------------------------------|------------------|
-| Erasmus University Rotterdam (EUR) | sub-guts-eur-#               | sub-guts-eur-001 |
-| Leiden University (LEI)            | sub-guts-lei-#               | sub-guts-lei-001 |
-| Vrije Universiteit Amsterdam (VU)  | sub-guts-vu-#                | sub-guts-vu-001  |
-| Universiteit van Amsterdam (UVA)   | sub-guts-uva-#               | sub-guts-uva-001 |
++------------------------------------+------------------------------+-------------------+
+| Data storage location              | Subject ID naming convention | Example           |
++====================================+==============================+===================+
+| Erasmus University Rotterdam (EUR) | sub-guts-eur-#               | sub-guts-eur-001  |
++------------------------------------+------------------------------+-------------------+
+| Leiden University (LEI)            | sub-guts-lei-#               | sub-guts-lei-001  |
++------------------------------------+------------------------------+-------------------+
+| Vrije Universiteit Amsterdam (VU)  | sub-guts-vu-#                | sub-guts-vu-001   |
++------------------------------------+------------------------------+-------------------+
+| Amsterdam UMC (AUMC)               | sub-guts-aumc-#              | sub-guts-aumc-001 |
++------------------------------------+------------------------------+-------------------+
 
 **Subject IDs pilot**
 
-Subject IDs during the pilot will follow the convention: `'sub-guts-pilot-[location]-#'`
+During the pilot, `'pilot'` will be added to the subject ID: `'sub-guts-pilot-[location]-#'.`
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## File names
 
-To prevent duplicate file names, each data collection site has to add their abbreviation to the file name. For brain imaging data, the location will be included in the subjectid in the file name. For other data the location needs to be added separately. Additionally, file names should include the session and task as described earlier.
+To prevent duplicate file names, it is essential that for each data storage location to add their abbreviation to the file name. For participant-level files, such as brain imaging data, the location will be integrated into the subject ID in the file name. For group-level files, the location must be added separately. Additionally, file names should consistently include the session and task, as outlined earlier.
 
-**Participant-level** files (individual files) follow the naming convention:
+**Participant-level** (individual) files: `sub-[subjectid]_ses-[session]_task-[short-name].`
 
-`sub-[subjectid]_ses-[session]_task-[short-name]`
-
-**Group-level files** (file with all participants merged) follow the naming convention:
-
-`guts-[location]_ses-[session]_task-[short-name]`
+**Group-level files** (all participants merged): `guts-[location]_ses-[session]_task-[short-name].`
 
 **Raw vs processed files**
 
-Ultimately, it's most import that the **processed files** follow the correct naming conventions, as we won't be able to run our scripts otherwise. However, future you will be very grateful if you ensure that the raw output also follows a clear and consistent naming convention, as this will facilitate data-processing.
+Ultimately, it is crucial that the **processed files** strictly follow the correct naming conventions to ensure our scripts can be executed properly. However, future you will be grateful if the raw output also adheres to a clear and consistent naming convention, as this will facilitate data processing.
 
-Therefore, if you are able to fill in a subject name/session/task name when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynanometer, etc.), please adhere to the naming conventions. **Note that some measures (e.g., MRI) might not have the option to fully decide on output file naming beforehand.**
+Therefore, when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynanometer, etc.) and if possible, please ensure adherence to the naming conventions by filling in subject names/session/task names. **Note that for some measures (e.g., MRI), the option to fully decide on output file naming might not be available beforehand.**
 
 Below you can find some examples.
 
-+---------------------------------+--------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| Type                            | Raw    | Raw naming conventions                                                     | Processed | Processed naming conventions                        |
-+=================================+========+============================================================================+===========+=====================================================+
-| **Qualtrics - GUTS wide**       | .sav   | 2024-02-26_guts-lei_ses-02_quests-guts-wide_raw.sav                        | .tsv      | guts-lei_ses-02_task-iri.tsv                        |
-|                                 |        |                                                                            |           |                                                     |
-|                                 |        |                                                                            |           | guts-lei_ses-02_task-ypi.tsv                        |
-+---------------------------------+--------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **Qualtrics - Cohort specific** | .sav   | 2024-02-26_guts-lei_ses-02_quests-guts-specific_raw.sav                    | .tsv      | guts-lei_ses-02_task-iri.tsv                        |
-|                                 |        |                                                                            |           |                                                     |
-|                                 |        |                                                                            |           | guts-lei_ses-02_task-ypi.tsv                        |
-+---------------------------------+--------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **ESM**                         | .csv   | 2024-02-26_guts-eur_ses-01_esm_raw.csv/sub-guts-eur-001_ses-01_esm_raw.csv | .tsv      | guts-eur_ses-01_task-esm-pressure.tsv               |
-+---------------------------------+--------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **(f)MRI**                      | .nii   | sub-guts-eur-014_ses-03_task-fmri-sddt_run-01_raw.nii                      | .nii      | sub-guts-eur-014_ses-03_task-fmri-sddt_run-01.nii   |
-+---------------------------------+--------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-|                                 | .par   | sub-guts-eur-014_ses-03_task-fmri-sddt_run-01_raw.par                      | \-        |                                                     |
-+---------------------------------+--------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-|                                 | .rec   | sub-guts-eur-014_ses-03_task-fmri-sddt_run-01_raw.rec                      | \-        |                                                     |
-+---------------------------------+--------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **EEG**                         | .bdf   | sub-guts-eur-027_ses-01_task-eeg-social-flanker_raw.bdf                    | .bdf      | sub-guts-eur-027_ses-01_task-eeg-social-flanker.bdf |
-+---------------------------------+--------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **Dynanometer**                 | .csv?  | sub-guts-eur-028_ses-03_task-dyno-prosocial-effort_raw.csv                 | .tsv      | guts-eur_ses-03_task-dyno-prosocial-effort.tsv      |
-+---------------------------------+--------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **Behavioral**                  | .edat3 | sub-guts-vu-002_ses-02_task-sddt_raw.edat3                                 | .tsv      | guts-vu_ses-02_task-sddt.tsv                        |
-+---------------------------------+--------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-|                                 | .txt   | sub-guts-vu-002_ses-02_task-sddt_raw.txt                                   | \-        | \-                                                  |
-+---------------------------------+--------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **Physiological**               | labels | sub-guts-uva-005_ses-01_task-saliva-testo_t0                               | .tsv      | guts-uva_ses-01_saliva-testo.tsv                    |
-|                                 |        |                                                                            |           |                                                     |
-|                                 |        | sub-guts-uva-007_ses-01_task-saliva-testo_t30                              |           |                                                     |
-+---------------------------------+--------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
++---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
+| Type                            | Raw      | Raw naming conventions                                                     | Processed | Processed naming conventions                        |
++=================================+==========+============================================================================+===========+=====================================================+
+| **Qualtrics - GUTS wide**       | .sav     | 2024-02-26_guts-lei_ses-02_quests-guts-wide_raw.sav                        | .tsv      | guts-lei_ses-02_task-iri.tsv                        |
+|                                 |          |                                                                            |           |                                                     |
+|                                 |          |                                                                            |           | guts-lei_ses-02_task-ypi.tsv                        |
++---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
+| **Qualtrics - Cohort specific** | .sav     | 2024-02-26_guts-lei_ses-02_quests-guts-specific_raw.sav                    | .tsv      | guts-lei_ses-02_task-iri.tsv                        |
+|                                 |          |                                                                            |           |                                                     |
+|                                 |          |                                                                            |           | guts-lei_ses-02_task-ypi.tsv                        |
++---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
+| **ESM**                         | .csv     | 2024-02-26_guts-eur_ses-01_esm_raw.csv/sub-guts-eur-001_ses-01_esm_raw.csv | .tsv      | guts-eur_ses-01_task-esm-pressure.tsv               |
++---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
+| **(f)MRI**                      | .nii     | sub-guts-eur-014_ses-03_task-fmri-sddt_run-01_raw.nii                      | .nii      | sub-guts-eur-014_ses-03_task-fmri-sddt_run-01.nii   |
++---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
+|                                 | .par     | sub-guts-eur-014_ses-03_task-fmri-sddt_run-01_raw.par                      | \-        |                                                     |
++---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
+|                                 | .rec     | sub-guts-eur-014_ses-03_task-fmri-sddt_run-01_raw.rec                      | \-        |                                                     |
++---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
+| **EEG**                         | .bdf     | sub-guts-eur-027_ses-01_task-eeg-social-flanker_raw.bdf                    | .bdf      | sub-guts-eur-027_ses-01_task-eeg-social-flanker.bdf |
++---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
+| **Dynanometer**                 | .csv?    | sub-guts-eur-028_ses-03_task-dyno-prosocial-effort_raw.csv                 | .tsv      | guts-eur_ses-03_task-dyno-prosocial-effort.tsv      |
++---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
+| **Behavioral**                  | .edat3   | sub-guts-vu-002_ses-02_task-sddt_raw.edat3                                 | .tsv      | guts-vu_ses-02_task-sddt.tsv                        |
++---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
+|                                 | .txt     | sub-guts-vu-002_ses-02_task-sddt_raw.txt                                   | \-        | \-                                                  |
++---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
+| **Physiological**               | labels   | sub-guts-aumc-005_ses-01_task-saliva-testo_t0                              | .tsv      | guts-aumc_ses-01_task-saliva-testo.tsv              |
+|                                 |          |                                                                            |           |                                                     |
+|                                 |          | sub-guts-aumc-007_ses-01_task-saliva-testo_t30                             |           |                                                     |
++---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Variables
 
-We propose the following naming conventions for tabular data. The variable- and value labels can be added to either an SPSS file and later be converted to a .tsv file + .json file, or be manually added to a .json file directly. For more information, about how to make .json files see \[\].
+For measures, involving tabular data, collected across multiple cohorts, the variable names must be harmonized. This harmonization allows us to easily merge the files belonging to a specific measure from various data storage locations into one file. To facilitate this, we propose the naming convention below. Please collaborate with representatives from overlapping cohorts to ensure uniformity in variable names. For measures with no overlap, the use of specific naming conventions is less crucial. However, we still recommend using a consistent naming pattern, such as the examples provided below.
 
-`[session]_[task]_[subpart task]_q/t[question/trial #]`
+`ses-[session]_[short-name]_[subpart-task]_q/t0[question/trial #]`
 
 -   **Names:** lowercase letters with all distinct information separated by an_underscore
 
@@ -124,11 +111,19 @@ We propose the following naming conventions for tabular data. The variable- and 
 
 -   **Value labels:** lowercase letters
 
+The variable and value labels can be added to an SPSS file and later converted to a .tsv file + .json file, or manually incorporated into a .json file directly. For more information on creating .json files, see \[\]. Below are examples of variable names:
+
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 | Variable name                | Variable label                                                                                                                                | Value labels                                                    |
-|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
++==============================+===============================================================================================================================================+=================================================================+
 | ses-02_iri_pt_q03            | Interpersonal Reactivity Index - Perspective taking scale Q3: I sometimes find it difficult to see things from the other guy's point of view. | 0 = does not describe me very well, 4 = described me very well  |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 | ses-02_dailyhassles_freq_q04 | Parenting Daily Hassles scale - Frequency Q4: The kids won't listen or do what they are asked without being nagged.                           | 1 = never, 2 = rarely, 3 = sometimes, 4 = often, 5 = constantly |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 | ses-03_pcg_exb1_perc_to2     | Prosocial Cyberball Task - Exclusion Block 1: Percentage of throws to player 2.                                                               |                                                                 |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 | ses-03_dd-money_ind_day180   | Delay Discounting Money: Indifference point day 180: Prefer to receive this amount of money now than 10 euros in 180 days.                    |                                                                 |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 | ses-03_saliva-cort_d1_m1     | Saliva Samples -Cortisol: Mean cortisol in nmol/l day 1, measurement 1.                                                                       |                                                                 |
++------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 :::
