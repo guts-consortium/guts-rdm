@@ -2,12 +2,6 @@
 
 In the future, you'll be able to find all protocols here. These protocols will take you through all the steps taken before, during, and after data collection.
 
-|                     |                       |                       Cohort A                       | Cohort B | Cohort C | Cohort D |
-|---------------------|-----------------------|:----------------------------------------------------:|----------|----------|----------|
-| **Pre-collection**  | Recruitment           |                                                      |          |          |          |
-| **Data collection** | Qualtrics             | [![](images/icon-folder.png){width="36"}](test.docx) |          |          |          |
-|                     | ESM                   |                                                      |          |          |          |
-|                     | (f)MRI                |                                                      |          |          |          |
-|                     | EEG                   |                                                      |          |          |          |
-|                     | Physiological samples |                                                      |          |          |          |
-| **Post-collection** | Data processing       |                                                      |          |          |          |
+<iframe src="https://muldersf.github.io/guts-rdm-protocols/" frameborder="no" scrolling="no" width="1300px" height="100%" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);-moz-transform-origin: top left; -webkit-transform-origin: top left; -o-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left;">
+
+</iframe>

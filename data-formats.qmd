@@ -9,6 +9,7 @@ The GUTS project follows a multi-method, multi-index approach. As a result, the 
     ```{python}
     #| echo: false
     #| warning: false
+    #| style: "width: 80%;"
     import pandas as pd
     from IPython.display import display
     from pandas.io.formats import style
@@ -30,7 +31,8 @@ The GUTS project follows a multi-method, multi-index approach. As a result, the 
     ```{python}
     #| echo: false
     #| warning: false
-
+    #| style: "width: 80%;"
+    #| 
     import pandas as pd
     from IPython.display import display
     from pandas.io.formats import style

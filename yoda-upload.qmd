@@ -4,19 +4,23 @@
 
 For each data collection location in GUTS there is a local Yoda portal that will be used to upload, store and archive your data. The table below shows which Yoda URL connects to which data collection location within the GUTS consortium and where to find your local Yoda support page.
 
-+-------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
-| **Data location** | **Local Yoda url**                        | **Local Yoda support page**                                                                 |
-+-------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
-| WP1 Amsterdam-VU  | <https://portal.yoda.vu.nl>               | <https://yoda.vu.nl/site/>                                                                  |
-+-------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
-| WP1 Rotterdam-EUR | <https://erasmus-yoda.irods.surfsara.nl/> | <https://www.eur.nl/onderzoek/research-services/research-data-management/tooling/surf-yoda> |
-+-------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
-| WP2 Leiden-UL     | <https://leiden-yoda.irods.surfsara.nl/>  | <https://servicedesk.surf.nl/wiki/display/WIKI/Yoda+user+guide>                             |
-+-------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
-| WP3 Amsterdam-UVA | <https://uva-yoda.irods.surfsara.nl/>     | <https://servicedesk.surf.nl/wiki/display/WIKI/Yoda+user+guide>                             |
-+-------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
-| WP4 Utrecht-UU    | <https://uu-yoda.irods.surfsara.nl/>      | <https://www.uu.nl/en/research/yoda/what-is-yoda>                                           |
-+-------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
+::: {#yoda-table-1 .yoda-table}
+**Data location**
+
++--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
+|                    | **Local Yoda url**                        | **Local Yoda support page**                                                                 |
++--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
+| WP1 Amsterdam-VU   | <https://portal.yoda.vu.nl>               | <https://yoda.vu.nl/site/>                                                                  |
++--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
+| WP1 Rotterdam-EUR  | <https://erasmus-yoda.irods.surfsara.nl/> | <https://www.eur.nl/onderzoek/research-services/research-data-management/tooling/surf-yoda> |
++--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
+| WP2 Leiden-UL      | <https://leiden-yoda.irods.surfsara.nl/>  | <https://servicedesk.surf.nl/wiki/display/WIKI/Yoda+user+guide>                             |
++--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
+| WP3 Amsterdam-AUMC | <https://aumc-yoda.irods.surfsara.nl/>    | <https://servicedesk.surf.nl/wiki/display/WIKI/Yoda+user+guide>                             |
++--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
+| WP4 Utrecht-UU     | <https://uu-yoda.irods.surfsara.nl/>      | <https://www.uu.nl/en/research/yoda/what-is-yoda>                                           |
++--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
+:::
 
 You can visit [this page for general Yoda guidance provided by SURF](https://servicedesk.surf.nl/wiki/display/WIKI/Yoda+user+guide).
 
@@ -43,39 +47,41 @@ All workspaces within Yoda will start with the prefix `research-`. In the table 
 
 -   Workspaces for the main study will follow the convention: `guts-[location]` and then an added `-raw` for the raw data workspace
 
-+-------------------+-----------------------------+-------------------------------+
-| **Data Location** | **Pilot workspace name**    | **Main study workspace name** |
-+-------------------+-----------------------------+-------------------------------+
-| WP1 Amsterdam-VU  | research-guts-pilot-vu-raw  | research-guts-vu-raw          |
-|                   |                             |                               |
-|                   | research-guts-pilot-vu      | research-guts-vu              |
-+-------------------+-----------------------------+-------------------------------+
-| WP1 Rotterdam-EUR | research-guts-pilot-eur-raw | research-guts-eur-raw         |
-|                   |                             |                               |
-|                   | research-guts-pilot-eur     | research-guts-eur             |
-+-------------------+-----------------------------+-------------------------------+
-| WP2 Leiden-UL     | research-guts-pilot-lei-raw | research-guts-lei-raw         |
-|                   |                             |                               |
-|                   | research-guts-pilot-lei     | research-guts-lei             |
-+-------------------+-----------------------------+-------------------------------+
-| WP3 Amsterdam-UVA | research-guts-pilot-uva-raw | research-guts-uva-raw         |
-|                   |                             |                               |
-|                   | research-guts-pilot-uva     | research-guts-uva             |
-+-------------------+-----------------------------+-------------------------------+
+    ::: {#yoda-table-2 .yoda-table}
+    +--------------------+------------------------------+-------------------------------+
+    | **Data Location**  | **Pilot workspace name**     | **Main study workspace name** |
+    +--------------------+------------------------------+-------------------------------+
+    | WP1 Amsterdam-VU   | research-guts-pilot-vu-raw   | research-guts-vu-raw          |
+    |                    |                              |                               |
+    |                    | research-guts-pilot-vu       | research-guts-vu              |
+    +--------------------+------------------------------+-------------------------------+
+    | WP1 Rotterdam-EUR  | research-guts-pilot-eur-raw  | research-guts-eur-raw         |
+    |                    |                              |                               |
+    |                    | research-guts-pilot-eur      | research-guts-eur             |
+    +--------------------+------------------------------+-------------------------------+
+    | WP2 Leiden-UL      | research-guts-pilot-lei-raw  | research-guts-lei-raw         |
+    |                    |                              |                               |
+    |                    | research-guts-pilot-lei      | research-guts-lei             |
+    +--------------------+------------------------------+-------------------------------+
+    | WP3 Amsterdam-AUMC | research-guts-pilot-aumc-raw | research-guts-aumc-raw        |
+    |                    |                              |                               |
+    |                    | research-guts-pilot-aumc     | research-guts-aumc            |
+    +--------------------+------------------------------+-------------------------------+
+    :::
 :::
 
 ::: {.callout-tip collapse="false" icon="false"}
 ## 2. Yoda sign in
 
-![](rdmhandbook-yoda-login.jpg)
+![](images/rdmhandbook-yoda-login.jpg)
 
 If you go to your local Yoda web portal you can find the "Sign in" button in the top right. This takes you to a page where you have to sign in with your institutional email (the same email you would use for other SURFconext or SRAM logins). NOTE: You are only able to sign in if you have been added to a workspace!
 
-![](rdmhandbook-yoda-login02.jpg)
+![](images/rdmhandbook-yoda-login02.jpg)
 
 This sends you on to the SURFconext/SRAM sign in page.
 
-![](rdmhandbook-yoda-login03.jpg)
+![](images/rdmhandbook-yoda-login03.jpg)
 :::
 
 ::: {.callout-tip collapse="false" icon="false"}
@@ -83,15 +89,15 @@ This sends you on to the SURFconext/SRAM sign in page.
 
 After you have signed in you will find that the 'Research' and 'Vault' buttons have appeared in the top left of the screen.
 
-![](rdmhandbook-yoda-login04.jpg)
+![](images/rdmhandbook-yoda-login04.jpg)
 
 If you requested a workspace using the same email address you used to sign in, or you have been added to that workspace, you can find it by clicking on Research on the Top left.
 
-![](rdmhandbook-yoda-login05.jpg){width="997"}
+![](images/rdmhandbook-yoda-login05.jpg)
 
 In this overview find your research folder (in this example "research-guts-dummy").
 
-![](rdmhandbook-yoda-login06.jpg)
+![](images/rdmhandbook-yoda-login06.jpg)
 
 Here you can find the data that you have uploaded previously. We will highlight two major actions here and explain them in more detail later:
 

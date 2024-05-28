@@ -1,0 +1,120 @@
+/*-- scss:defaults --*/
+$h2-font-size:          1.6rem !default;
+$headings-font-weight:  500 !default;
+$background-color:      #f0f0f0 !default; 
+$page-background-color: #f0f0f0 !default;
+$sidebar-background-color: #f0f0f0 !default;
+$content-background-image: url('images/rdm-background.jpg') !default;
+
+
+/*-- scss:rules --*/
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+}
+
+#metadata-table {
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+#raw-table {
+  background-color: #ffffff;
+}
+
+#metadata-table .odd {
+  background-color: #dddddd;
+}
+
+#metadata-table .even {
+  background-color: #f7f7f7;
+}
+
+li::marker {
+  font-size: 14.5px; 
+}
+.naming-convention-table {
+  font-size: 14.5px;
+  /* width: 80%; */
+  /* margin: 0 auto; */
+}
+.naming-convention-table .even {
+  background-color: #dddddd;
+}
+
+.naming-convention-table .odd {
+  background-color: #f7f7f7;
+}
+
+.naming-convention-table .header {
+  background-color: #dddddd;
+}
+
+.blockquote {
+  border-radius: 8px;
+}
+
+.documentation-list {
+  font-size: 14.5px;
+  border-radius: 20px !important;
+}
+.yoda-table {
+  font-size: 14.5px;
+}
+
+.yoda-table .even {
+  background-color: #f7f7f7;
+}
+
+.yoda-table .odd {
+  background-color: #dddddd;
+}
+#quarto-content {
+  background-size: cover;
+  background-image: contain;
+  padding-left: 20px;
+}
+
+#title-block-header {
+  margin-top: 15px;
+}
+
+.sidebar-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.callout {
+  background-color: #ffffff;
+}
+
+.blockquote {
+  background: #ffffff;
+}
+
+body {
+  background-color: $page-background-color; 
+  background-image: $content-background-image;
+  background-size: 120%;
+}
+
+#quarto-sidebar {
+  background-color: rgba(240, 240, 240, 0.7);
+  margin-top: 18px;
+  margin-bottom: 70px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#quarto-document-content {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 1000px;
+  background-color: rgba(240, 240, 240, 0.7);
+  margin-left: 15px;
+  padding-left: 30px;
+  padding-right:30px;
+}
+
+#quarto-margin-sidebar {
+  display: none;
+}

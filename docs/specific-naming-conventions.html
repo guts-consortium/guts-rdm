@@ -221,6 +221,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">How to convert your data to GUTS standards</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./how-to-add-metadata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">How to add metadata to your data</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -315,6 +321,7 @@ Subject IDs
 <div class="callout-body-container callout-body">
 <p>The subject ID naming convention varies slightly for each data storage location. To prevent accidental overlap between collected data from different cohorts, an abbreviation of the location will be added to each subject ID, as illustrated below.</p>
 <p>Given that approximately 400-800 subjects will participate at each location, we advise to use a number between 0 and 800. The subject id number should always consist of three digits, e.g., subject 1 will be assigned the number 001, subject 15 will receive the number 015.</p>
+<div id="naming-convention-table-1" class="naming-convention-table">
 <table class="table">
 <colgroup>
 <col style="width: 41%">
@@ -351,6 +358,7 @@ Subject IDs
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Subject IDs pilot</strong></p>
 <p>During the pilot, <code>'pilot'</code> will be added to the subject ID: <code>'sub-guts-pilot-[location]-#'.</code></p>
 </div>
@@ -375,6 +383,7 @@ File names
 <p>Ultimately, it is crucial that the <strong>processed files</strong> strictly follow the correct naming conventions to ensure our scripts can be executed properly. However, future you will be grateful if the raw output also adheres to a clear and consistent naming convention, as this will facilitate data processing.</p>
 <p>Therefore, when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynanometer, etc.) and if possible, please ensure adherence to the naming conventions by filling in subject names/session/task names. <strong>Note that for some measures (e.g., MRI), the option to fully decide on output file naming might not be available beforehand.</strong></p>
 <p>Below you can find some examples.</p>
+<div class="naming-convention-table">
 <table class="table">
 <colgroup>
 <col style="width: 17%">
@@ -478,6 +487,7 @@ File names
 </div>
 </div>
 </div>
+</div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -490,18 +500,20 @@ Variables
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>For any measures (with tabular data) that are collected in more than one cohort, the variable names need to be harmonized as this allows us to merge the files of a certain measure from different data storage locations into one file. To facilitate this harmonizing, we propose the naming convention below. Please contact the representatives of overlapping cohorts to ensure equal variable names. For measures with no overlap, specific naming conventions are less crucial. However, we still advise you to use a consistent naming pattern, such as the examples below.</p>
-<p><code>ses-[session]_[short-name]_[subpart-task]_q/t0[question/trial #]</code></p>
+<p>For measures, involving tabular data, collected across multiple cohorts, the variable names must be harmonized. This harmonization allows us to easily merge the files belonging to a specific measure from various data storage locations into one file. To facilitate this, we propose the naming convention below. Please collaborate with representatives from overlapping cohorts to ensure uniformity in variable names. For measures with no overlap, the use of specific naming conventions is less crucial. However, we still recommend using a consistent naming pattern, such as the examples provided below.</p>
+<p><code>s[session]_[shortname]_[subpart-task]_q/t0[question/trial #]</code></p>
 <ul>
 <li><p><strong>Names:</strong> lowercase letters with all distinct information separated by an_underscore</p></li>
 <li><p><strong>Labels:</strong> Full sentences starting with a capital letter.</p></li>
 <li><p><strong>Value labels:</strong> lowercase letters</p></li>
 </ul>
-<p>The variable- and value labels can be added to either an SPSS file and later be converted to a .tsv file + .json file, or be manually added to a .json file directly. For more information, about how to make .json files see []. Below you can find some examples of variable names:</p>
+<p>The variable and value labels can be added to an SPSS file and later converted to a .tsv file + .json file, or manually incorporated into a .json file directly. For more information on creating .json files, see Chapter 15. Below are examples of variable names:</p>
+<p><strong>*Note that hyphens/dashes are not allowed in SPSS and should therefore not be used in variable names.</strong></p>
+<div id="naming-convention-table-3" class="naming-convention-table">
 <table class="table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 59%">
+<col style="width: 11%">
+<col style="width: 60%">
 <col style="width: 27%">
 </colgroup>
 <thead>
@@ -513,32 +525,33 @@ Variables
 </thead>
 <tbody>
 <tr class="odd">
-<td>ses-02_iri_pt_q03</td>
+<td>s02_iri_pt_q03</td>
 <td>Interpersonal Reactivity Index - Perspective taking scale Q3: I sometimes find it difficult to see things from the other guy’s point of view.</td>
 <td>0 = does not describe me very well, 4 = described me very well</td>
 </tr>
 <tr class="even">
-<td>ses-02_dailyhassles_freq_q04</td>
+<td>s02_dailyhassles_freq_q04</td>
 <td>Parenting Daily Hassles scale - Frequency Q4: The kids won’t listen or do what they are asked without being nagged.</td>
 <td>1 = never, 2 = rarely, 3 = sometimes, 4 = often, 5 = constantly</td>
 </tr>
 <tr class="odd">
-<td>ses-03_pcg_exb1_perc_to2</td>
+<td>s03_pcg_exb1_perc_to2</td>
 <td>Prosocial&nbsp;Cyberball&nbsp;Task&nbsp;-&nbsp;Exclusion&nbsp;Block&nbsp;1: Percentage&nbsp;of&nbsp;throws&nbsp;to player 2.</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>ses-03_dd-money_ind_day180</td>
+<td>s03_ddmoney_ind_day180</td>
 <td>Delay Discounting Money: Indifference point day 180: Prefer to receive this amount of money now than 10 euros in 180 days.</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>ses-03_saliva-cort_d1_m1</td>
+<td>s03_salivacort_d1_m1</td>
 <td>Saliva Samples&nbsp;-Cortisol: Mean cortisol in nmol/l day 1, measurement 1.</td>
 <td></td>
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 </div>
 </div>
