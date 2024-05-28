@@ -17,8 +17,7 @@ This not only ensures transparency about the manner in which the data was used b
 
 **Pregistration & Publication package**
 
-For each paper or publication, you will be creating a **preregistration** and a **publication package.** Preregistrations will be published on the GUTS OSF page, where you will also find some preregistration templates. Guidelines may vary per institution, but a preregistration typically
-includes:
+For each paper or publication, you will be creating a **preregistration** and a **publication package.** Preregistrations will be published on the GUTS OSF page, where you will also find some preregistration templates. Guidelines may vary per institution, but a preregistration typically includes:
 
 ::: {#documentation-list-1 .documentation-list}
 > 1.  Basic metadata (e.g. title, description, study information, etc.)

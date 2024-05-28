@@ -7,19 +7,14 @@ For each data collection location in GUTS there is a local Yoda portal that will
 ::: {#yoda-table-1 .yoda-table}
 **Data location**
 
-+--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
+|                    |                                           |                                                                                             |
+|--------------------|-------------------------------------------|---------------------------------------------------------------------------------------------|
 |                    | **Local Yoda url**                        | **Local Yoda support page**                                                                 |
-+--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
 | WP1 Amsterdam-VU   | <https://portal.yoda.vu.nl>               | <https://yoda.vu.nl/site/>                                                                  |
-+--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
 | WP1 Rotterdam-EUR  | <https://erasmus-yoda.irods.surfsara.nl/> | <https://www.eur.nl/onderzoek/research-services/research-data-management/tooling/surf-yoda> |
-+--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
 | WP2 Leiden-UL      | <https://leiden-yoda.irods.surfsara.nl/>  | <https://servicedesk.surf.nl/wiki/display/WIKI/Yoda+user+guide>                             |
-+--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
 | WP3 Amsterdam-AUMC | <https://aumc-yoda.irods.surfsara.nl/>    | <https://servicedesk.surf.nl/wiki/display/WIKI/Yoda+user+guide>                             |
-+--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
 | WP4 Utrecht-UU     | <https://uu-yoda.irods.surfsara.nl/>      | <https://www.uu.nl/en/research/yoda/what-is-yoda>                                           |
-+--------------------+-------------------------------------------+---------------------------------------------------------------------------------------------+
 :::
 
 You can visit [this page for general Yoda guidance provided by SURF](https://servicedesk.surf.nl/wiki/display/WIKI/Yoda+user+guide).
