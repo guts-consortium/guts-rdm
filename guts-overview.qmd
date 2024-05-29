@@ -1,5 +1,5 @@
 ## GUTS overview
 
-![](images/guts-cohorts_v2.png)
+![](images/guts-cohorts.png){style="margin-top: 40px;" fig-align="center" width="820"}
 
-![](images/guts-session-overview_v3.png)
+![](images/guts-sessions.png){fig-align="center" width="820"}

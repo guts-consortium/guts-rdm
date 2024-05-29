@@ -1,0 +1,57 @@
+::: {#mainbox style="style"}
+## Documentation
+
+When working with data, it is crucial that you document the manner in which data will be used (preregistration) and that you keep track of all adjustments made while processing data.
+
+This not only ensures transparency about the manner in which the data was used but is also beneficial to researchers. To illustrate, when in the future questions arise about a published article (e.g., analyses), documented steps can be easily retraced to **provide answers** and/or **locate potential mishaps**. Additionally, proper documentation facilitates **replication** as all necessary steps are documented. Your documentation will be part of your publication package.
+
+::: {.callout-tip collapse="false"}
+# Some tips
+
+-   **Start early and document while you are working with the data.** Do not wait until after your project is finished to try and trace back what happened while processing and analyzing data.
+
+-   **Script** (R, SPSS, Python, Matlab, etc) what you can and add clear comments to your code. If something crashes and/or a file gets lost, your adjustments to the data can be rerun and no adjustments get lost. Additionally, other researchers get a clear insight in your data processing.
+
+-   **Keep log files.** You can use these files to document discrepancies in data, reason for missing/non-valid data, problems that were encountered (and how they were fixed), etc.
+:::
+
+**Pregistration & Publication package**
+
+For each paper or publication, you will be creating a **preregistration** and a **publication package.** Preregistrations will be published on the GUTS OSF page, where you will also find some preregistration templates. Guidelines may vary per institution, but a preregistration typically includes:
+
+::: {#documentation-list-1 .documentation-list}
+> 1.  Basic metadata (e.g. title, description, study information, etc.)
+>
+> 2.  Your research plan (e.g. study type, randomization, etc.)
+>
+> 3.  Sampling
+>
+> 4.  Variables
+>
+> 5.  Analysis plan (e.g. statistical models, data exclusion, etc.)
+>
+> 6.  Other information (e.g. cited literature)
+:::
+
+Publication packages can also be published on the GUTS OSF page, or you can choose a different site based on your institution's guidelines. However, it's crucial to note that **data will not be shared on the OSF page or any other site apart from Yoda**. Although guidelines may vary between institutions, a publication package will typically contain the following:
+
+::: {#documentation-list-2 .documentation-list}
+> 1.  A published manuscript.
+>
+> 2.  Used tasks and questionnaires.
+>
+> 3.  Raw data.
+>
+> 4.  Computer code.
+>
+> 5.  Processed data files.
+>
+> 6.  Supplementary information.
+>
+> 7.  An approved ethics protocol.
+:::
+
+::: {.callout-note collapse="false" icon="false"}
+# Coming soon: Guidelines per institute
+:::
+:::

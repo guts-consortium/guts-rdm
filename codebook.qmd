@@ -2,36 +2,6 @@
 
 Here you can find a preliminary version of all GUTS measures. For now, you can find an overview of which measures are collected by which cohort(s). Later, you will be able to find more information about the measures, the items, the labels and levels, etc. **Note that measures may still be changed.**
 
-```{python}
-#| echo: false
-#| warning: false
-import plotly.graph_objs as go
-import pandas as pd
+<iframe src="https://muldersf.github.io/guts-rdm-codebook/" frameborder="no" scrolling="yes" width="1300px" height="750px" style="-webkit-transform:scale(1);-moz-transform-scale(1);margin-left: -200px; margin-top: -10px">
 
-df = pd.read_excel("guts-measure-overview_v4.xlsx", index_col=0) 
-
-fig = go.Figure(data=[go.Table(
-    columnwidth=[150, 50],
-    header=dict(values=list(['<b>Measure<b>', "<b>Short name measure<b>", "<b>Data type<b>", "<b>Cohorts<b>"]),
-                fill_color='lightblue',
-                align='left',
-                font=dict(color='black')),
-    cells=dict(
-        values=[df['long_name'], df['short_name'], df['data_type'], df['cohort']],
-        align='left',
-        fill_color=[['white', 'lightblue']*len(df)],
-        height=30,
-        font=dict(color="black")
-    )
-)])
-
-fig.update_layout(
-    height=500,
-    margin=dict(r=20, l=20, t=50, b=20),  # Adjusted margin values
-    font=dict(size=14),
-    title_text="<b>GUTS measures<b>",
-    title_xanchor="left"
-)
-
-fig.show()
-```
+</iframe>

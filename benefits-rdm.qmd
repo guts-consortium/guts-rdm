@@ -6,15 +6,15 @@
 
 **Here we provide a non-exhaustive list of benefits:**
 
--   proper data storage and backup **prevents data loss**
-
--   making data understandable for others (and your future self) **allows reuse and collaboration**
-
--   proper data management is **key to Open Science**, since transparency and reuse of data is only possible using well-documented data
-
--   good RDM also helps to **prevent misconduct** since it allows you to show the integrity of the data collection process
-
--   it makes research go more smoothly, **allowing you as a researcher to focus on the problems of science** rather than data administravia [@briney2020]
+> -   proper data storage and backup **prevents data loss**
+>
+> -   making data understandable for others (and your future self) **allows reuse and collaboration**
+>
+> -   proper data management is **key to Open Science**, since transparency and reuse of data is only possible using well-documented data
+>
+> -   good RDM also helps to **prevent misconduct** since it allows you to show the integrity of the data collection process
+>
+> -   it makes research go more smoothly, **allowing you as a researcher to focus on the problems of science** rather than data administravia [@briney2020]
 
 ## Data management in GUTS
 

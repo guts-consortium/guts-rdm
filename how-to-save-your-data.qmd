@@ -7,8 +7,10 @@ This chapter has been written in order to ensure that all GUTS data can be consi
 -   Questionnaires
 -   (f)MRI
 -   EEG
+-   Behavioral data
+-   Physiological data (e.g., ecg, skin conductance, dynanometer output)
 -   ESM
--   Biological and Genetic data
+-   Hormone and Genetic data
 :::
 
 ::: {.column width="50%"}
@@ -17,7 +19,7 @@ Picture: [Data Conversion](https://imgs.xkcd.com/comics/data_trap.png) / xkcd / 
 :::
 :::
 
-::: {.callout-note collapse="false"}
+::: {.callout-note collapse="true"}
 ## Questionnaire data
 
 [Step 1.]{.underline}\
@@ -89,23 +91,39 @@ All data coming in from Qualtrics will have to be pseudoanonymized. Make sure to
 ::: {.callout-note collapse="true"}
 # (f)MRI data
 
-BIDSCoiner, Coming Soon TM
+Raw output from (f)MRI data might differ between locations, e.g., only DICOM files or .nii, .par and .rec files. Bidsifying (organizing and naming of files according to the BIDS standard), however, should happen in a similar way for all outputs. There are several programs one can use to bidsify data to limit manual labor. See the [BIDS website](https://bids.neuroimaging.io/benefits.html#converters) for more information about options. Please refer to Chapter 12. Specific naming conventions and Chapter 13. Data structure while BIDSyfing. After BIDSifying, a pipeline ([fMRI Prep](https://fmriprep.org/en/stable/)/[HALFpipe](https://github.com/HALFpipe/HALFpipe)) can be used for further (pre-)processing. A pipeline is currently being developed and will be shared once finished.
+
+![](images/bids-dir-ex.png){#bids-dir-ex style="border-radius: 15px;" width="471"}
+
+*Example of a prebidsified and a bidsified data structure*
 :::
 
 ::: {.callout-note collapse="true"}
 # EEG data
 
-Coming Soon TM
+Raw output from EEG data might differ between locations depending on programs/materials used. However, BIDSified data should end up looking the same. There are several ways in which EEG data can be automatically BIDSified. (see the [BIDS](https://bids.neuroimaging.io/benefits.html#converters) website). After BIDSifying, a pipeline can be used for further (pre-)processing. This pipeline is currently being developed and will be shared once finished.
+:::
+
+::: {.callout-note collapse="true"}
+# Behavioral tasks
+
+Behavioral tasks can yield data from tasks during EEG, ECG, (f)MRI, Dynamometer, but also from tasks conducted solely on a computer/e-prime without being linked to any sort of biological/physiological information. For all behavioral tasks, a group-level file has to be created so that group analyses can be performed based on all participants' scores, for example. Additionally, individual files of behavioral tasks will be processed and relocated according to BIDS to facilitate individual analyses.
+:::
+
+::: {.callout-note collapse="true"}
+# Physiological data
+
+Physiological data could include ECG data, skin conductance data, and grip force data (dynamometer). The raw output will differ depending on the programs/materials used. Nonetheless, all output should be BIDSified (named and located according to BIDS standards) before further (pre-)processing.
 :::
 
 ::: {.callout-note collapse="true"}
 # ESM data
 
-Coming Soon TM
+ESM data will be processed similarly to the Qualtrics questionnaire data.
 :::
 
 ::: {.callout-note collapse="true"}
 # Biological and Genetic data
 
-Coming Soon TM
+Hair and saliva samples will be send to a lab for analysis. After analysis, you will receive files that should be processed to adhere to the guts standard.
 :::

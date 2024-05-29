@@ -29,10 +29,12 @@ book:
         
     - part: processing-data.qmd
       chapters:
+        - processing-documentation.qmd
         - general-naming-conventions.qmd
         - specific-naming-conventions.qmd
         - data-structure.qmd
         - how-to-save-your-data.qmd
+        - how-to-add-metadata.qmd
       
     - glossary.qmd  
 
@@ -42,7 +44,9 @@ bibliography: references.bib
 
 format:
   html:
-    theme: flatly
+    theme: 
+      - flatly
+      - custom.scss
   pdf:
     documentclass: scrreprt
 
