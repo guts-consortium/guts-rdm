@@ -36,6 +36,8 @@ Picture: [Data Conversion](https://imgs.xkcd.com/comics/data_trap.png) / xkcd / 
 
 Examples of data cleaning scripts (R) coming soon.
 
+There is also an R script available that can (automatically) retrieve and save Qualtrics survey results in R, as well as upload the retrieved data to Yoda. Please find it [here](https://github.com/eduardklap/qualtrics-automation).
+
 ::: {.callout-tip collapse="true" icon="false"}
 ## [Step 1: Exporting questionnaires from Qualtrics.]{.underline}
 
