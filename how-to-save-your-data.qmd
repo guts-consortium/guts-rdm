@@ -20,7 +20,7 @@ Picture: [Data Conversion](https://imgs.xkcd.com/comics/data_trap.png) / xkcd / 
 :::
 
 ::: {.callout-caution collapse="true"}
-## Processed data should not contain sensitive participant data (IP addresses, first- and last names, date-of-birth, postal codes, etc.) 
+## Processed data should not contain sensitive participant data (IP addresses, first- and last names, date-of-birth, postal codes, etc.)
 
 -   Sensitive tabular information should be saved in a different (secured!) location.
 
@@ -28,13 +28,13 @@ Picture: [Data Conversion](https://imgs.xkcd.com/comics/data_trap.png) / xkcd / 
 :::
 
 ::: {.callout-caution collapse="true"}
-## Participant id columns have to be named "participant_id" according to BIDS standards.
+## Participant id columns have to be named "participant_id" according to BIDS standards
 :::
 
 ::: {.callout-note collapse="true"}
 ## Questionnaire data
 
-Examples of data cleaning scripts (R) coming soon.
+You can find some example data cleaning scripts (R) [here](data-cleaning-code.zip).
 
 There is also an R script available that can (automatically) retrieve and save Qualtrics survey results in R, as well as upload the retrieved data to Yoda. Please find it [here](https://github.com/eduardklap/qualtrics-automation).
 
@@ -119,7 +119,9 @@ In addition to processed files, there is the option to create a derivative file 
 
 And would be placed here:
 
-`research-guts-[loc]/derivatives/phenotype/quests/guts-[loc]_ses-01_task-sdq_der.tsv`
+`research-guts-[loc]/derivatives/phenotype/quest/guts-[loc]_ses-01_task-sdq_desc-totalscores.tsv*`
+
+\*desc stands for description and describes what kind of data is derived from the primary file.
 :::
 :::
 

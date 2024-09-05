@@ -59,6 +59,18 @@ To prevent duplicate file names, it is essential that for each data storage loca
 
 **Group-level files** (all participants merged): `guts-[location]_ses-[session]_task-[short-name].`
 
+::: callout-note
+## Demographics and participation
+
+The demographics file will be called:
+
+`guts-[location]_demographics.tsv`
+
+The participation file will be called:
+
+`guts-[location]_participation.tsv`
+:::
+
 **Raw vs processed files**
 
 Ultimately, it is crucial that the **processed files** strictly follow the correct naming conventions to ensure our scripts can be executed properly. However, future you will be grateful if the raw output also adheres to a clear and consistent naming convention, as this will facilitate data processing.
@@ -115,9 +127,15 @@ For measures, involving tabular data, collected across multiple cohorts, the var
 
 -   **Value labels:** lowercase letters
 
+::: callout-note
+## Demographics
+
+The shortname can be omitted in the demographics file. Questions that are asked only once do not need a session prefix (e.g., sex), questions that are asked multiple sessions, do need a session prefix (e.g., s01_age_years, s01_gender_q01, s01_health_etc).
+:::
+
 The variable and value labels can be added to an SPSS file and later converted to a .tsv file + .json file, or manually incorporated into a .json file directly. For more information on creating .json files, see Chapter 15. Below are examples of variable names:
 
-**\*Note that hyphens/dashes are not allowed in SPSS and should therefore not be used in variable names.**
+**\*Note that hyphens/dashes are not allowed in SPSS and should therefore not be used in variable names. Make sure to omit the hyphen from your shortname.**
 
 ::: {#naming-convention-table-3 .naming-convention-table}
 +---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
@@ -131,7 +149,7 @@ The variable and value labels can be added to an SPSS file and later converted t
 +---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 | s03_ddmoney_ind_day180    | Delay Discounting Money: Indifference point day 180: Prefer to receive this amount of money now than 10 euros in 180 days.                    |                                                                 |
 +---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-| s03_salivacort_d1_m1      | Saliva Samples -Cortisol: Mean cortisol in nmol/l day 1, measurement 1.                                                                       |                                                                 |
+| s03_salivacort_d1_m1      | Saliva Samples - Cortisol: Mean cortisol in nmol/l day 1, measurement 1.                                                                      |                                                                 |
 +---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 :::
 :::

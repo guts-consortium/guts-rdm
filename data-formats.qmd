@@ -1,6 +1,9 @@
 ## Data formats
 
-The GUTS project follows a multi-method, multi-index approach. As a result, the GUTS data consists of various data types and formats. Below you can find an overview of all data types and formats during the two phases of data processing.
+The GUTS project follows a multi-method, multi-index approach. As a result, the GUTS data consists of various data types and formats. Below you can find an overview of all data formats during the two phases of data processing. In addition, you can find an overview of all data types and data categories(constructs).
+
+::: {.callout-note collapse="true"}
+## Data formats
 
 1.  **Raw data**
 
@@ -46,3 +49,49 @@ The GUTS project follows a multi-method, multi-index approach. As a result, the 
     styled_df 
 
     ```
+:::
+
+::: {.callout-note collapse="true"}
+## Data types (modes of collection)
+
+```{python}
+#| echo: false
+#| warning: false
+#| style: "width: 80%;"
+#| 
+import pandas as pd
+from IPython.display import display
+from pandas.io.formats import style
+ 
+data = [['behavioral', 'beh'], ['questionnaire', 'quest'], ['neurobiological (fmri/eeg)', 'neurobio'],['physiological (heartrate/skin conductance/respiration', 'physio'], ['ambulatory', 'ambu'], ['biosample (hair/ saliva)', 'biosample'],['interview','int']]
+ 
+df = pd.DataFrame(data, columns=['Data type', 'Abbreviation'])
+ 
+styled_df = df.style.hide()
+
+styled_df
+```
+:::
+
+::: {.callout-note collapse="true"}
+## Data categories (constructs)
+
+```{python}
+#| echo: false
+#| warning: false
+#| style: "width: 80%;"
+#| 
+import pandas as pd
+from IPython.display import display
+from pandas.io.formats import style
+ 
+data = [['parenting', 'risk-taking'], ['academics', 'social-relations'], ['ego-networks', 'social-networks'],['self-regulation', 'mental-wellbeing'], ['societal-outcomes', 'empathy'], ['aggression', 'risk-factors'],['social-media','environmental-factors'], ['prosocial-behavior', 'background'],['physical-wellbeing','biological']]
+ 
+df = pd.DataFrame(data, columns=['Data categories', ''])
+ 
+styled_df = df.style.hide()
+
+styled_df
+```
+:::
+
