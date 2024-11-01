@@ -291,7 +291,9 @@ Measures
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>To comply with the machine-readable requirement, processed measure file names should always include <code>"_task-[short name]_"</code>. The short name of a measure, as specified in the <em>codebook</em>, should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index (IRI) has been given the short name “<code>iri</code>”. Its file name should therefore always include <code>"_task-iri_"</code>. It is crucial that the short names match the ones in the codebook, as our scripts specifically search for these names.</p>
+<p>To comply with the machine-readable requirement, processed measure file names should always include <code>"_task-[short name]_" *</code>. The short name of a measure, as specified in the <em>codebook</em>, should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index (IRI) has been given the short name “<code>iri</code>”. Its file name should therefore always include <code>"_task-iri_"</code>. It is crucial that the short names match the ones in the codebook, as our scripts specifically search for these names.</p>
+<p>*An exception to the rule is non-tabular structural mri data.</p>
+<p><strong>Note that only letters and numbers are allowed in short names.</strong></p>
 </div>
 </div>
 </div>
@@ -329,47 +331,56 @@ Subject IDs
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The subject ID naming convention varies slightly for each data storage location. To prevent accidental overlap between collected data from different cohorts, an abbreviation of the location will be added to each subject ID, as illustrated below.</p>
-<p>Given that approximately 400-800 subjects will participate at each location, we advise to use a number between 0 and 800. The subject id number should always consist of three digits, e.g., subject 1 will be assigned the number 001, subject 15 will receive the number 015.</p>
+<p>Given that approximately 400-1000 subjects will participate at each location, we advise to use a number between 0 and 1000. For parents of subjects, the subjectid should start with ‘5’. The subject id number should always consist of four digits, e.g., subject 1 will be assigned the number 0001, subject 15 will receive the number 0015. A parent would get the subjectid 5001, 5002, 5003, etc.</p>
+<p>Note that all data from questionnaires that are answered&nbsp;<u><strong>by</strong></u>&nbsp;the parents&nbsp;<u><strong>about</strong></u>&nbsp;the child should fall under the subject id of the child. All data from questionnaires answered by parents about themselves should remain under their own subject id.</p>
+<p><strong>Family ID</strong></p>
+<p>To be able to identify any sibling and parent-child relationships within our data, subjects get a familyid. For example, if subjects gutslei0001, gutslei0002, and gutslei50001 are part of one and the same family, all of them will be appointed family id 0001.</p>
 <div id="naming-convention-table-1" class="naming-convention-table">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 41%">
-<col style="width: 34%">
-<col style="width: 22%">
+<col style="width: 35%">
+<col style="width: 30%">
+<col style="width: 18%">
+<col style="width: 13%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Data storage location</th>
 <th>Subject ID naming convention</th>
-<th>Example</th>
+<th>participant_id</th>
+<th>family_id</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Erasmus University Rotterdam (EUR)</td>
-<td>sub-guts-eur-#</td>
-<td>sub-guts-eur-001</td>
+<td>sub-gutseur#</td>
+<td>sub-gutseur0001</td>
+<td>0001</td>
 </tr>
 <tr class="even">
 <td>Leiden University (LEI)</td>
-<td>sub-guts-lei-#</td>
-<td>sub-guts-lei-001</td>
+<td>sub-gutslei#</td>
+<td>sub-gutslei0001</td>
+<td>0001</td>
 </tr>
 <tr class="odd">
 <td>Vrije Universiteit Amsterdam (VU)</td>
-<td>sub-guts-vu-#</td>
-<td>sub-guts-vu-001</td>
+<td>sub-gutsvu#</td>
+<td>sub-gutsvu0001</td>
+<td>0001</td>
 </tr>
 <tr class="even">
 <td>Amsterdam UMC (AUMC)</td>
-<td>sub-guts-aumc-#</td>
-<td>sub-guts-aumc-001</td>
+<td>sub-gutsaumc#</td>
+<td>sub-gutsaumc0001</td>
+<td>0001</td>
 </tr>
 </tbody>
 </table>
 </div>
 <p><strong>Subject IDs pilot</strong></p>
-<p>During the pilot, <code>'pilot'</code> will be added to the subject ID: <code>'sub-guts-pilot-[location]-#'.</code></p>
+<p>During the pilot, <code>'pilot'</code> will be added to the subject ID: <code>'sub-gutspilot[location]#'.</code></p>
 </div>
 </div>
 </div>
@@ -386,8 +397,8 @@ File names
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>To prevent duplicate file names, it is essential that for each data storage location to add their abbreviation to the file name. For participant-level files, such as brain imaging data, the location will be integrated into the subject ID in the file name. For group-level files, the location must be added separately. Additionally, file names should consistently include the session and task, as outlined earlier.</p>
-<p><strong>Participant-level</strong> (individual) files: <code>sub-[subjectid]_ses-[session]_task-[short-name].</code></p>
-<p><strong>Group-level files</strong> (all participants merged): <code>guts-[location]_ses-[session]_task-[short-name].</code></p>
+<p><strong>Participant-level</strong> (individual) files: <code>sub-[subjectid]_ses-[session]_task-[shortname].</code></p>
+<p><strong>Group-level files</strong> (all participants merged): <code>guts[location]_ses-[session]_task-[shortname].</code></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -399,23 +410,23 @@ Demographics and participation
 </div>
 <div class="callout-body-container callout-body">
 <p>The demographics file will be called:</p>
-<p><code>guts-[location]_demographics.tsv</code></p>
+<p><code>guts[location]_demographics.tsv</code></p>
 <p>The participation file will be called:</p>
-<p><code>guts-[location]_participation.tsv</code></p>
+<p><code>guts[location]_participation.tsv</code></p>
 </div>
 </div>
 <p><strong>Raw vs processed files</strong></p>
 <p>Ultimately, it is crucial that the <strong>processed files</strong> strictly follow the correct naming conventions to ensure our scripts can be executed properly. However, future you will be grateful if the raw output also adheres to a clear and consistent naming convention, as this will facilitate data processing.</p>
-<p>Therefore, when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynanometer, etc.) and if possible, please ensure adherence to the naming conventions by filling in subject names/session/task names. <strong>Note that for some measures (e.g., MRI), the option to fully decide on output file naming might not be available beforehand.</strong></p>
+<p>Therefore, when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynamometer, etc.) and if possible, please ensure adherence to the naming conventions by filling in subject names/session/task names. <strong>Note that for some measures (e.g., MRI), the option to fully decide on output file naming might not be available beforehand.</strong></p>
 <p>Below you can find some examples.</p>
 <div class="naming-convention-table">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 17%">
 <col style="width: 5%">
-<col style="width: 40%">
+<col style="width: 42%">
 <col style="width: 6%">
-<col style="width: 28%">
+<col style="width: 26%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -430,82 +441,82 @@ Demographics and participation
 <tr class="odd">
 <td><strong>Qualtrics - GUTS wide</strong></td>
 <td>.sav</td>
-<td>2024-02-26_guts-lei_ses-02_quests-guts-wide_raw.sav</td>
+<td>2024-02-26_gutslei_ses-02_quests-guts-wide_raw.sav</td>
 <td>.tsv</td>
-<td><p>guts-lei_ses-02_task-iri.tsv</p>
-<p>guts-lei_ses-02_task-ypi.tsv</p></td>
+<td><p>gutslei_ses-02_task-iri.tsv</p>
+<p>gutslei_ses-02_task-ypi.tsv</p></td>
 </tr>
 <tr class="even">
 <td><strong>Qualtrics - Cohort specific</strong></td>
 <td>.sav</td>
-<td>2024-02-26_guts-lei_ses-02_quests-guts-specific_raw.sav</td>
+<td>2024-02-26_gutslei_ses-02_quests-guts-specific_raw.sav</td>
 <td>.tsv</td>
-<td><p>guts-lei_ses-02_task-iri.tsv</p>
-<p>guts-lei_ses-02_task-ypi.tsv</p></td>
+<td><p>gutslei_ses-02_task-iri.tsv</p>
+<p>gutslei_ses-02_task-ypi.tsv</p></td>
 </tr>
 <tr class="odd">
 <td><strong>ESM</strong></td>
 <td>.csv</td>
-<td>2024-02-26_guts-eur_ses-01_esm_raw.csv/sub-guts-eur-001_ses-01_esm_raw.csv</td>
+<td>2024-02-26_gutseur_ses-01_esm_raw.csv/sub-gutseur0001_ses-01_task-e sm_raw.csv</td>
 <td>.tsv</td>
-<td>guts-eur_ses-01_task-esm-pressure.tsv</td>
+<td>gutseur_ses-01_task-esm-pressure.tsv</td>
 </tr>
 <tr class="even">
 <td><strong>(f)MRI</strong></td>
 <td>.nii</td>
-<td>sub-guts-eur-014_ses-03_task-fmri-sddt_run-01_raw.nii</td>
+<td>sub-gutseur0014_ses-03_task-fmrisddt_run-01_raw.nii</td>
 <td>.nii</td>
-<td>sub-guts-eur-014_ses-03_task-fmri-sddt_run-01.nii</td>
+<td>sub-gutseur0014_ses-03_task-fmrisddt_run-01.nii</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>.par</td>
-<td>sub-guts-eur-014_ses-03_task-fmri-sddt_run-01_raw.par</td>
+<td>sub-gutseur0014_ses-03_task-fmrisddt_run-01_raw.par</td>
 <td>-</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
 <td>.rec</td>
-<td>sub-guts-eur-014_ses-03_task-fmri-sddt_run-01_raw.rec</td>
+<td>sub-gutseur0014_ses-03_task-fmrisddt_run-01_raw.rec</td>
 <td>-</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><strong>EEG</strong></td>
 <td>.bdf</td>
-<td>sub-guts-eur-027_ses-01_task-eeg-social-flanker_raw.bdf</td>
+<td>sub-gutseur0027_ses-01_task-eegflanker_raw.bdf</td>
 <td>.bdf</td>
-<td>sub-guts-eur-027_ses-01_task-eeg-social-flanker.bdf</td>
+<td>sub-gutseur0027_ses-01_task-eegflanker.bdf</td>
 </tr>
 <tr class="even">
 <td><strong>Dynanometer</strong></td>
 <td>.csv?</td>
-<td>sub-guts-eur-028_ses-03_task-dyno-prosocial-effort_raw.csv</td>
+<td>sub-gutseur0028_ses-03_task-dynosocialeffort_raw.csv</td>
 <td>.tsv</td>
-<td>guts-eur_ses-03_task-dyno-prosocial-effort.tsv</td>
+<td>gutseur_ses-03_task-dynosocialeffort.tsv</td>
 </tr>
 <tr class="odd">
 <td><strong>Behavioral</strong></td>
 <td>.edat3</td>
-<td>sub-guts-vu-002_ses-02_task-sddt_raw.edat3</td>
+<td>sub-gutsvu0002_ses-02_task-behsddt_raw.edat3</td>
 <td>.tsv</td>
-<td>guts-vu_ses-02_task-sddt.tsv</td>
+<td>gutsvu_ses-02_task-behsddt.tsv</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>.txt</td>
-<td>sub-guts-vu-002_ses-02_task-sddt_raw.txt</td>
+<td>sub-gutsvu0002_ses-02_task-behsddt_raw.txt</td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr class="odd">
 <td><strong>Physiological</strong></td>
 <td>labels</td>
-<td><p>sub-guts-aumc-005_ses-01_task-saliva-testo_t0</p>
-<p>sub-guts-aumc-007_ses-01_task-saliva-testo_t30</p></td>
+<td><p>sub-gutsaumc0005_ses-01_task-salivatesto_t0</p>
+<p>sub-gutsaumc0007_ses-01_task-salivatesto_t30</p></td>
 <td>.tsv</td>
-<td>guts-aumc_ses-01_task-saliva-testo.tsv</td>
+<td>gutsaumc_ses-01_task-salivatesto.tsv</td>
 </tr>
 </tbody>
 </table>
@@ -546,7 +557,7 @@ Demographics
 </div>
 </div>
 <p>The variable and value labels can be added to an SPSS file and later converted to a .tsv file + .json file, or manually incorporated into a .json file directly. For more information on creating .json files, see Chapter 15. Below are examples of variable names:</p>
-<p><strong>*Note that hyphens/dashes are not allowed in SPSS and should therefore not be used in variable names. Make sure to omit the hyphen from your shortname.</strong></p>
+<p><strong>*Note that hyphens/dashes are not allowed in SPSS and should therefore not be used in variable names.</strong></p>
 <div id="naming-convention-table-3" class="naming-convention-table">
 <table class="caption-top table">
 <colgroup>

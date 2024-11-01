@@ -5,7 +5,11 @@ As mentioned in the general naming conventions section, naming should be both hu
 ::: {.callout-tip collapse="false" appearance="simple" icon="false"}
 ## Measures
 
-To comply with the machine-readable requirement, processed measure file names should always include `"_task-[short name]_"`. The short name of a measure, as specified in the *codebook*, should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index (IRI) has been given the short name "`iri`". Its file name should therefore always include `"_task-iri_"`. It is crucial that the short names match the ones in the codebook, as our scripts specifically search for these names.
+To comply with the machine-readable requirement, processed measure file names should always include `"_task-[short name]_" *`. The short name of a measure, as specified in the *codebook*, should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index (IRI) has been given the short name "`iri`". Its file name should therefore always include `"_task-iri_"`. It is crucial that the short names match the ones in the codebook, as our scripts specifically search for these names.
+
+\*An exception to the rule is non-tabular structural mri data.
+
+**Note that only letters and numbers are allowed in short names.**
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
@@ -29,25 +33,31 @@ The pilot sessions will be named `'ses-pilot'`
 
 The subject ID naming convention varies slightly for each data storage location. To prevent accidental overlap between collected data from different cohorts, an abbreviation of the location will be added to each subject ID, as illustrated below.
 
-Given that approximately 400-800 subjects will participate at each location, we advise to use a number between 0 and 800. The subject id number should always consist of three digits, e.g., subject 1 will be assigned the number 001, subject 15 will receive the number 015.
+Given that approximately 400-1000 subjects will participate at each location, we advise to use a number between 0 and 1000. For parents of subjects, the subjectid should start with '5'. The subject id number should always consist of four digits, e.g., subject 1 will be assigned the number 0001, subject 15 will receive the number 0015. A parent would get the subjectid 5001, 5002, 5003, etc.
+
+Note that all data from questionnaires that are answered [**by**]{.underline} the parents [**about**]{.underline} the child should fall under the subject id of the child. All data from questionnaires answered by parents about themselves should remain under their own subject id.
+
+**Family ID**
+
+To be able to identify any sibling and parent-child relationships within our data, subjects get a familyid. For example, if subjects gutslei0001, gutslei0002, and gutslei50001 are part of one and the same family, all of them will be appointed family id 0001.
 
 ::: {#naming-convention-table-1 .naming-convention-table}
-+------------------------------------+------------------------------+-------------------+
-| Data storage location              | Subject ID naming convention | Example           |
-+====================================+==============================+===================+
-| Erasmus University Rotterdam (EUR) | sub-guts-eur-#               | sub-guts-eur-001  |
-+------------------------------------+------------------------------+-------------------+
-| Leiden University (LEI)            | sub-guts-lei-#               | sub-guts-lei-001  |
-+------------------------------------+------------------------------+-------------------+
-| Vrije Universiteit Amsterdam (VU)  | sub-guts-vu-#                | sub-guts-vu-001   |
-+------------------------------------+------------------------------+-------------------+
-| Amsterdam UMC (AUMC)               | sub-guts-aumc-#              | sub-guts-aumc-001 |
-+------------------------------------+------------------------------+-------------------+
++------------------------------------+------------------------------+------------------+-------------+
+| Data storage location              | Subject ID naming convention | participant_id   | family_id   |
++====================================+==============================+==================+=============+
+| Erasmus University Rotterdam (EUR) | sub-gutseur#                 | sub-gutseur0001  | 0001        |
++------------------------------------+------------------------------+------------------+-------------+
+| Leiden University (LEI)            | sub-gutslei#                 | sub-gutslei0001  | 0001        |
++------------------------------------+------------------------------+------------------+-------------+
+| Vrije Universiteit Amsterdam (VU)  | sub-gutsvu#                  | sub-gutsvu0001   | 0001        |
++------------------------------------+------------------------------+------------------+-------------+
+| Amsterdam UMC (AUMC)               | sub-gutsaumc#                | sub-gutsaumc0001 | 0001        |
++------------------------------------+------------------------------+------------------+-------------+
 :::
 
 **Subject IDs pilot**
 
-During the pilot, `'pilot'` will be added to the subject ID: `'sub-guts-pilot-[location]-#'.`
+During the pilot, `'pilot'` will be added to the subject ID: `'sub-gutspilot[location]#'.`
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
@@ -55,62 +65,62 @@ During the pilot, `'pilot'` will be added to the subject ID: `'sub-guts-pilot-[l
 
 To prevent duplicate file names, it is essential that for each data storage location to add their abbreviation to the file name. For participant-level files, such as brain imaging data, the location will be integrated into the subject ID in the file name. For group-level files, the location must be added separately. Additionally, file names should consistently include the session and task, as outlined earlier.
 
-**Participant-level** (individual) files: `sub-[subjectid]_ses-[session]_task-[short-name].`
+**Participant-level** (individual) files: `sub-[subjectid]_ses-[session]_task-[shortname].`
 
-**Group-level files** (all participants merged): `guts-[location]_ses-[session]_task-[short-name].`
+**Group-level files** (all participants merged): `guts[location]_ses-[session]_task-[shortname].`
 
 ::: callout-note
 ## Demographics and participation
 
 The demographics file will be called:
 
-`guts-[location]_demographics.tsv`
+`guts[location]_demographics.tsv`
 
 The participation file will be called:
 
-`guts-[location]_participation.tsv`
+`guts[location]_participation.tsv`
 :::
 
 **Raw vs processed files**
 
 Ultimately, it is crucial that the **processed files** strictly follow the correct naming conventions to ensure our scripts can be executed properly. However, future you will be grateful if the raw output also adheres to a clear and consistent naming convention, as this will facilitate data processing.
 
-Therefore, when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynanometer, etc.) and if possible, please ensure adherence to the naming conventions by filling in subject names/session/task names. **Note that for some measures (e.g., MRI), the option to fully decide on output file naming might not be available beforehand.**
+Therefore, when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynamometer, etc.) and if possible, please ensure adherence to the naming conventions by filling in subject names/session/task names. **Note that for some measures (e.g., MRI), the option to fully decide on output file naming might not be available beforehand.**
 
 Below you can find some examples.
 
 ::: naming-convention-table
-+---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| Type                            | Raw      | Raw naming conventions                                                     | Processed | Processed naming conventions                        |
-+=================================+==========+============================================================================+===========+=====================================================+
-| **Qualtrics - GUTS wide**       | .sav     | 2024-02-26_guts-lei_ses-02_quests-guts-wide_raw.sav                        | .tsv      | guts-lei_ses-02_task-iri.tsv                        |
-|                                 |          |                                                                            |           |                                                     |
-|                                 |          |                                                                            |           | guts-lei_ses-02_task-ypi.tsv                        |
-+---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **Qualtrics - Cohort specific** | .sav     | 2024-02-26_guts-lei_ses-02_quests-guts-specific_raw.sav                    | .tsv      | guts-lei_ses-02_task-iri.tsv                        |
-|                                 |          |                                                                            |           |                                                     |
-|                                 |          |                                                                            |           | guts-lei_ses-02_task-ypi.tsv                        |
-+---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **ESM**                         | .csv     | 2024-02-26_guts-eur_ses-01_esm_raw.csv/sub-guts-eur-001_ses-01_esm_raw.csv | .tsv      | guts-eur_ses-01_task-esm-pressure.tsv               |
-+---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **(f)MRI**                      | .nii     | sub-guts-eur-014_ses-03_task-fmri-sddt_run-01_raw.nii                      | .nii      | sub-guts-eur-014_ses-03_task-fmri-sddt_run-01.nii   |
-+---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-|                                 | .par     | sub-guts-eur-014_ses-03_task-fmri-sddt_run-01_raw.par                      | \-        |                                                     |
-+---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-|                                 | .rec     | sub-guts-eur-014_ses-03_task-fmri-sddt_run-01_raw.rec                      | \-        |                                                     |
-+---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **EEG**                         | .bdf     | sub-guts-eur-027_ses-01_task-eeg-social-flanker_raw.bdf                    | .bdf      | sub-guts-eur-027_ses-01_task-eeg-social-flanker.bdf |
-+---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **Dynanometer**                 | .csv?    | sub-guts-eur-028_ses-03_task-dyno-prosocial-effort_raw.csv                 | .tsv      | guts-eur_ses-03_task-dyno-prosocial-effort.tsv      |
-+---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **Behavioral**                  | .edat3   | sub-guts-vu-002_ses-02_task-sddt_raw.edat3                                 | .tsv      | guts-vu_ses-02_task-sddt.tsv                        |
-+---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-|                                 | .txt     | sub-guts-vu-002_ses-02_task-sddt_raw.txt                                   | \-        | \-                                                  |
-+---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
-| **Physiological**               | labels   | sub-guts-aumc-005_ses-01_task-saliva-testo_t0                              | .tsv      | guts-aumc_ses-01_task-saliva-testo.tsv              |
-|                                 |          |                                                                            |           |                                                     |
-|                                 |          | sub-guts-aumc-007_ses-01_task-saliva-testo_t30                             |           |                                                     |
-+---------------------------------+----------+----------------------------------------------------------------------------+-----------+-----------------------------------------------------+
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
+| Type                            | Raw      | Raw naming conventions                                                         | Processed | Processed naming conventions                    |
++=================================+==========+================================================================================+===========+=================================================+
+| **Qualtrics - GUTS wide**       | .sav     | 2024-02-26_gutslei_ses-02_quests-guts-wide_raw.sav                             | .tsv      | gutslei_ses-02_task-iri.tsv                     |
+|                                 |          |                                                                                |           |                                                 |
+|                                 |          |                                                                                |           | gutslei_ses-02_task-ypi.tsv                     |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
+| **Qualtrics - Cohort specific** | .sav     | 2024-02-26_gutslei_ses-02_quests-guts-specific_raw.sav                         | .tsv      | gutslei_ses-02_task-iri.tsv                     |
+|                                 |          |                                                                                |           |                                                 |
+|                                 |          |                                                                                |           | gutslei_ses-02_task-ypi.tsv                     |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
+| **ESM**                         | .csv     | 2024-02-26_gutseur_ses-01_esm_raw.csv/sub-gutseur0001_ses-01_task-e sm_raw.csv | .tsv      | gutseur_ses-01_task-esm-pressure.tsv            |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
+| **(f)MRI**                      | .nii     | sub-gutseur0014_ses-03_task-fmrisddt_run-01_raw.nii                            | .nii      | sub-gutseur0014_ses-03_task-fmrisddt_run-01.nii |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
+|                                 | .par     | sub-gutseur0014_ses-03_task-fmrisddt_run-01_raw.par                            | \-        |                                                 |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
+|                                 | .rec     | sub-gutseur0014_ses-03_task-fmrisddt_run-01_raw.rec                            | \-        |                                                 |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
+| **EEG**                         | .bdf     | sub-gutseur0027_ses-01_task-eegflanker_raw.bdf                                 | .bdf      | sub-gutseur0027_ses-01_task-eegflanker.bdf      |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
+| **Dynanometer**                 | .csv?    | sub-gutseur0028_ses-03_task-dynosocialeffort_raw.csv                           | .tsv      | gutseur_ses-03_task-dynosocialeffort.tsv        |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
+| **Behavioral**                  | .edat3   | sub-gutsvu0002_ses-02_task-behsddt_raw.edat3                                   | .tsv      | gutsvu_ses-02_task-behsddt.tsv                  |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
+|                                 | .txt     | sub-gutsvu0002_ses-02_task-behsddt_raw.txt                                     | \-        | \-                                              |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
+| **Physiological**               | labels   | sub-gutsaumc0005_ses-01_task-salivatesto_t0                                    | .tsv      | gutsaumc_ses-01_task-salivatesto.tsv            |
+|                                 |          |                                                                                |           |                                                 |
+|                                 |          | sub-gutsaumc0007_ses-01_task-salivatesto_t30                                   |           |                                                 |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
 :::
 :::
 
@@ -135,7 +145,7 @@ The shortname can be omitted in the demographics file. Questions that are asked 
 
 The variable and value labels can be added to an SPSS file and later converted to a .tsv file + .json file, or manually incorporated into a .json file directly. For more information on creating .json files, see Chapter 15. Below are examples of variable names:
 
-**\*Note that hyphens/dashes are not allowed in SPSS and should therefore not be used in variable names. Make sure to omit the hyphen from your shortname.**
+**\*Note that hyphens/dashes are not allowed in SPSS and should therefore not be used in variable names.**
 
 ::: {#naming-convention-table-3 .naming-convention-table}
 +---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
