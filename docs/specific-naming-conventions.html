@@ -338,10 +338,10 @@ Subject IDs
 <div id="naming-convention-table-1" class="naming-convention-table">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 36%">
+<col style="width: 35%">
 <col style="width: 30%">
 <col style="width: 18%">
-<col style="width: 11%">
+<col style="width: 13%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -398,7 +398,7 @@ File names
 <div class="callout-body-container callout-body">
 <p>To prevent duplicate file names, it is essential that for each data storage location to add their abbreviation to the file name. For participant-level files, such as brain imaging data, the location will be integrated into the subject ID in the file name. For group-level files, the location must be added separately. Additionally, file names should consistently include the session and task, as outlined earlier.</p>
 <p><strong>Participant-level</strong> (individual) files: <code>sub-[subjectid]_ses-[session]_task-[shortname].</code></p>
-<p><strong>Group-level files</strong> (all participants merged): <code>guts-[location]_ses-[session]_task-[shortname].</code></p>
+<p><strong>Group-level files</strong> (all participants merged): <code>guts[location]_ses-[session]_task-[shortname].</code></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -410,9 +410,9 @@ Demographics and participation
 </div>
 <div class="callout-body-container callout-body">
 <p>The demographics file will be called:</p>
-<p><code>guts-[location]_demographics.tsv</code></p>
+<p><code>guts[location]_demographics.tsv</code></p>
 <p>The participation file will be called:</p>
-<p><code>guts-[location]_participation.tsv</code></p>
+<p><code>guts[location]_participation.tsv</code></p>
 </div>
 </div>
 <p><strong>Raw vs processed files</strong></p>
@@ -441,25 +441,25 @@ Demographics and participation
 <tr class="odd">
 <td><strong>Qualtrics - GUTS wide</strong></td>
 <td>.sav</td>
-<td>2024-02-26_guts-lei_ses-02_quests-guts-wide_raw.sav</td>
+<td>2024-02-26_gutslei_ses-02_quests-guts-wide_raw.sav</td>
 <td>.tsv</td>
-<td><p>guts-lei_ses-02_task-iri.tsv</p>
-<p>guts-lei_ses-02_task-ypi.tsv</p></td>
+<td><p>gutslei_ses-02_task-iri.tsv</p>
+<p>gutslei_ses-02_task-ypi.tsv</p></td>
 </tr>
 <tr class="even">
 <td><strong>Qualtrics - Cohort specific</strong></td>
 <td>.sav</td>
-<td>2024-02-26_guts-lei_ses-02_quests-guts-specific_raw.sav</td>
+<td>2024-02-26_gutslei_ses-02_quests-guts-specific_raw.sav</td>
 <td>.tsv</td>
-<td><p>guts-lei_ses-02_task-iri.tsv</p>
-<p>guts-lei_ses-02_task-ypi.tsv</p></td>
+<td><p>gutslei_ses-02_task-iri.tsv</p>
+<p>gutslei_ses-02_task-ypi.tsv</p></td>
 </tr>
 <tr class="odd">
 <td><strong>ESM</strong></td>
 <td>.csv</td>
-<td>2024-02-26_guts-eur_ses-01_esm_raw.csv/sub-gutseur0001_ses-01_task-e sm_raw.csv</td>
+<td>2024-02-26_gutseur_ses-01_esm_raw.csv/sub-gutseur0001_ses-01_task-e sm_raw.csv</td>
 <td>.tsv</td>
-<td>guts-eur_ses-01_task-esm-pressure.tsv</td>
+<td>gutseur_ses-01_task-esm-pressure.tsv</td>
 </tr>
 <tr class="even">
 <td><strong>(f)MRI</strong></td>
@@ -494,14 +494,14 @@ Demographics and participation
 <td>.csv?</td>
 <td>sub-gutseur0028_ses-03_task-dynosocialeffort_raw.csv</td>
 <td>.tsv</td>
-<td>guts-eur_ses-03_task-dynosocialeffort.tsv</td>
+<td>gutseur_ses-03_task-dynosocialeffort.tsv</td>
 </tr>
 <tr class="odd">
 <td><strong>Behavioral</strong></td>
 <td>.edat3</td>
 <td>sub-gutsvu0002_ses-02_task-behsddt_raw.edat3</td>
 <td>.tsv</td>
-<td>guts-vu_ses-02_task-behsddt.tsv</td>
+<td>gutsvu_ses-02_task-behsddt.tsv</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -516,7 +516,7 @@ Demographics and participation
 <td><p>sub-gutsaumc0005_ses-01_task-salivatesto_t0</p>
 <p>sub-gutsaumc0007_ses-01_task-salivatesto_t30</p></td>
 <td>.tsv</td>
-<td>guts-aumc_ses-01_task-salivatesto.tsv</td>
+<td>gutsaumc_ses-01_task-salivatesto.tsv</td>
 </tr>
 </tbody>
 </table>
