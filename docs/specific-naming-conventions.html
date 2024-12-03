@@ -291,7 +291,7 @@ Measures
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>To comply with the machine-readable requirement, processed measure file names should always include <code>"_task-[short name]_" *</code>. The short name of a measure, as specified in the <em>codebook</em>, should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index (IRI) has been given the short name “<code>iri</code>”. Its file name should therefore always include <code>"_task-iri_"</code>. It is crucial that the short names match the ones in the codebook, as our scripts specifically search for these names.</p>
+<p>To comply with the machine-readable requirement, processed measure file names should always include the key ‘task’: <code>"_task-[short name]_" *</code>. The short name of a measure, as specified in the <em>codebook</em>, should be used to ensure each collection site uses the same measure name. For example, the Interpersonal Reactivity Index (IRI) has been given the short name “<code>iri</code>”. Its file name should therefore always include <code>"_task-iri_"</code>. It is crucial that the short names match the ones in the codebook, as our scripts specifically search for these names.</p>
 <p>*An exception to the rule is non-tabular structural mri data.</p>
 <p><strong>Note that only letters and numbers are allowed in short names.</strong></p>
 </div>
@@ -309,7 +309,7 @@ Sessions
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Sessions will be named according to the BIDS standard, meaning that they start with <code>'ses-'</code>.</p>
+<p>Sessions will be named according to the BIDS standard, meaning that they start with the key <code>'ses'</code>.</p>
 <p>Cohorts <u><strong>A</strong>, <strong>B</strong>, <strong>D</strong></u> are scheduled to collect data in year 2, 5 and 8 of the ten-year GUTS project. Their respective sessions will be named <code>'ses-01'</code>, <code>'ses-02'</code>, <code>'ses-03'</code>.</p>
 <p>Cohort <u><strong>D</strong></u>, in addition to the regular sessions, will collect data between session 1 and 2, and between session 2 and 3: <code>`ses-01a'</code>, <code>'ses-02a'.</code></p>
 <p>Cohort <u><strong>C</strong></u> plans to collect data twice a year in year 2 and 3. The first sessions of a year will be named <code>'ses-01'</code><u>,</u> <code>'ses-02',</code> while the second measurements, taking place six months after the first measurement, will be labeled <code>`ses-01a'</code>, <code>'ses-02a'.</code></p>
@@ -330,11 +330,11 @@ Subject IDs
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The subject ID naming convention varies slightly for each data storage location. To prevent accidental overlap between collected data from different cohorts, an abbreviation of the location will be added to each subject ID, as illustrated below.</p>
+<p>The subject ID naming convention varies slightly for each data storage location. To prevent accidental overlap between collected data from different cohorts, an abbreviation of the location will be added to each subject ID, as illustrated below. In file names, subject IDs get the BIDS key ‘sub’.</p>
 <p>Given that approximately 400-1000 subjects will participate at each location, we advise to use a number between 0 and 1000. For parents of subjects, the subjectid should start with ‘5’. The subject id number should always consist of four digits, e.g., subject 1 will be assigned the number 0001, subject 15 will receive the number 0015. A parent would get the subjectid 5001, 5002, 5003, etc.</p>
 <p>Note that all data from questionnaires that are answered&nbsp;<u><strong>by</strong></u>&nbsp;the parents&nbsp;<u><strong>about</strong></u>&nbsp;the child should fall under the subject id of the child. All data from questionnaires answered by parents about themselves should remain under their own subject id.</p>
 <p><strong>Family ID</strong></p>
-<p>To be able to identify any sibling and parent-child relationships within our data, subjects get a familyid. For example, if subjects gutslei0001, gutslei0002, and gutslei50001 are part of one and the same family, all of them will be appointed family id 0001.</p>
+<p>To be able to identify any sibling and parent-child relationships within our data, subjects get a familyid. For example, if subjects gutslei0001, gutslei0002, and gutslei5001 are part of one and the same family, all of them will be appointed family id 0001.</p>
 <div id="naming-convention-table-1" class="naming-convention-table">
 <table class="caption-top table">
 <colgroup>
