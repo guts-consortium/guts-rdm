@@ -57,7 +57,7 @@ To be able to identify any sibling and parent-child relationships within our dat
 
 **Subject IDs pilot**
 
-During the pilot, `'pilot'` will be added to the subject ID: `'gutspilot[location]#'.`
+During the pilot, `'pilot'` will be added to the subject ID: `'sub-gutspilot[location]#'.`
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
