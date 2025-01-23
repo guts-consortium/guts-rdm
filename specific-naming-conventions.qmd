@@ -83,44 +83,42 @@ The participation file will be called:
 
 **Raw vs processed files**
 
-Ultimately, it is crucial that the **processed files** strictly follow the correct naming conventions to ensure our scripts can be executed properly. However, future you will be grateful if the raw output also adheres to a clear and consistent naming convention, as this will facilitate data processing.
+Ultimately, it is crucial that the **processed files** strictly follow the correct naming conventions to ensure our scripts can be executed properly. We have not set up fixed naming conventions for raw data, however, future you will be grateful if the raw output also adheres to a clear and consistent naming convention, as this will facilitate data processing.
 
-Therefore, when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynamometer, etc.) and if possible, please ensure adherence to the naming conventions by filling in subject names/session/task names. **Note that for some measures (e.g., MRI), the option to fully decide on output file naming might not be available beforehand.**
+Therefore, when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynamometer, etc.) and if possible, please include subject names/session/task names in the filename. **Note that for some measures (e.g., MRI), the option to fully decide on output file naming might not be available beforehand.**
 
 Below you can find some examples.
 
 ::: naming-convention-table
-+---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
-| Type                            | Raw      | Raw naming conventions                                                         | Processed | Processed naming conventions                    |
-+=================================+==========+================================================================================+===========+=================================================+
-| **Qualtrics - GUTS wide**       | .sav     | 2024-02-26_gutslei_ses-02_quests-guts-wide_raw.sav                             | .tsv      | gutslei_ses-02_task-iri.tsv                     |
-|                                 |          |                                                                                |           |                                                 |
-|                                 |          |                                                                                |           | gutslei_ses-02_task-ypi.tsv                     |
-+---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
-| **Qualtrics - Cohort specific** | .sav     | 2024-02-26_gutslei_ses-02_quests-guts-specific_raw.sav                         | .tsv      | gutslei_ses-02_task-iri.tsv                     |
-|                                 |          |                                                                                |           |                                                 |
-|                                 |          |                                                                                |           | gutslei_ses-02_task-ypi.tsv                     |
-+---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
-| **ESM**                         | .csv     | 2024-02-26_gutseur_ses-01_esm_raw.csv/sub-gutseur0001_ses-01_task-e sm_raw.csv | .tsv      | gutseur_ses-01_task-esm-pressure.tsv            |
-+---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
-| **(f)MRI**                      | .nii     | sub-gutseur0014_ses-03_task-fmrisddt_run-01_raw.nii                            | .nii      | sub-gutseur0014_ses-03_task-fmrisddt_run-01.nii |
-+---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
-|                                 | .par     | sub-gutseur0014_ses-03_task-fmrisddt_run-01_raw.par                            | \-        |                                                 |
-+---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
-|                                 | .rec     | sub-gutseur0014_ses-03_task-fmrisddt_run-01_raw.rec                            | \-        |                                                 |
-+---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
-| **EEG**                         | .bdf     | sub-gutseur0027_ses-01_task-eegflanker_raw.bdf                                 | .bdf      | sub-gutseur0027_ses-01_task-eegflanker.bdf      |
-+---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
-| **Dynanometer**                 | .csv?    | sub-gutseur0028_ses-03_task-dynosocialeffort_raw.csv                           | .tsv      | gutseur_ses-03_task-dynosocialeffort.tsv        |
-+---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
-| **Behavioral**                  | .edat3   | sub-gutsvu0002_ses-02_task-behsddt_raw.edat3                                   | .tsv      | gutsvu_ses-02_task-behsddt.tsv                  |
-+---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
-|                                 | .txt     | sub-gutsvu0002_ses-02_task-behsddt_raw.txt                                     | \-        | \-                                              |
-+---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
-| **Physiological**               | labels   | sub-gutsaumc0005_ses-01_task-salivatesto_t0                                    | .tsv      | gutsaumc_ses-01_task-salivatesto.tsv            |
-|                                 |          |                                                                                |           |                                                 |
-|                                 |          | sub-gutsaumc0007_ses-01_task-salivatesto_t30                                   |           |                                                 |
-+---------------------------------+----------+--------------------------------------------------------------------------------+-----------+-------------------------------------------------+
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+------------------------------------------------------+
+| Type                            | Raw      | Example raw naming conventions                                                 | Processed | Processed naming conventions                         |
++=================================+==========+================================================================================+===========+======================================================+
+| **Qualtrics - GUTS wide**       | .sav     | 2024-02-26_gutslei_ses-02_quests-guts-wide_raw.sav                             | .tsv      | gutslei_ses-02_task-iri.tsv                          |
+|                                 |          |                                                                                |           |                                                      |
+|                                 |          |                                                                                |           | gutslei_ses-02_task-ypi.tsv                          |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+------------------------------------------------------+
+| **Qualtrics - Cohort specific** | .sav     | 2024-02-26_gutslei_ses-02_quests-guts-specific_raw.sav                         | .tsv      | gutslei_ses-02_task-iri.tsv                          |
+|                                 |          |                                                                                |           |                                                      |
+|                                 |          |                                                                                |           | gutslei_ses-02_task-ypi.tsv                          |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+------------------------------------------------------+
+| **ESM**                         | .csv     | 2024-02-26_gutseur_ses-01_esm_raw.csv/sub-gutseur0001_ses-01_task-e sm_raw.csv | .tsv      | gutseur_ses-01_task-esm-pressure.tsv                 |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+------------------------------------------------------+
+| **(f)MRI**                      | .nii     | sub-gutseur0014_ses-03_task-fmrisddt_run-01_bold.nii                           | .nii      | sub-gutseur0014_ses-03_task-fmrisddt_run-01_bold.nii |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+------------------------------------------------------+
+|                                 | .rec     | sub-gutseur0014_ses-03_task-fmrisddt_run-01_bold.rec                           | \-        |                                                      |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+------------------------------------------------------+
+| **EEG**                         | .bdf     | sub-gutseur0027_ses-01_task-eegflanker_eeg.bdf                                 | .bdf      | sub-gutseur0027_ses-01_task-eegflanker_eeg.bdf       |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+------------------------------------------------------+
+| **Dynamometer**                 | .acq     | sub-gutseur0028_ses-03_task-dynosocialeffort_physio.acq                        | .acq      | gutseur_ses-03_task-dynosocialeffort_physio.acq      |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+------------------------------------------------------+
+| **Behavioral**                  | .edat3   | sub-gutsvu0002_ses-02_task-behsddt_raw.edat3                                   | .tsv      | gutsvu_ses-02_task-behsddt.tsv                       |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+------------------------------------------------------+
+|                                 | .txt     | sub-gutsvu0002_ses-02_task-behsddt_raw.txt                                     | \-        | \-                                                   |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+------------------------------------------------------+
+| **Physiological**               | labels   | sub-gutsaumc0005_ses-01_task-salivatesto_t0                                    | .tsv      | gutsaumc_ses-01_task-salivatesto.tsv                 |
+|                                 |          |                                                                                |           |                                                      |
+|                                 |          | sub-gutsaumc0007_ses-01_task-salivatesto_t30                                   |           |                                                      |
++---------------------------------+----------+--------------------------------------------------------------------------------+-----------+------------------------------------------------------+
 :::
 :::
 

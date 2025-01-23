@@ -416,23 +416,23 @@ Demographics and participation
 </div>
 </div>
 <p><strong>Raw vs processed files</strong></p>
-<p>Ultimately, it is crucial that the <strong>processed files</strong> strictly follow the correct naming conventions to ensure our scripts can be executed properly. However, future you will be grateful if the raw output also adheres to a clear and consistent naming convention, as this will facilitate data processing.</p>
-<p>Therefore, when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynamometer, etc.) and if possible, please ensure adherence to the naming conventions by filling in subject names/session/task names. <strong>Note that for some measures (e.g., MRI), the option to fully decide on output file naming might not be available beforehand.</strong></p>
+<p>Ultimately, it is crucial that the <strong>processed files</strong> strictly follow the correct naming conventions to ensure our scripts can be executed properly. We have not set up fixed naming conventions for raw data, however, future you will be grateful if the raw output also adheres to a clear and consistent naming convention, as this will facilitate data processing.</p>
+<p>Therefore, when setting up a task (e.g., (f)MRI, EEG, E-Prime, Dynamometer, etc.) and if possible, please include subject names/session/task names in the filename. <strong>Note that for some measures (e.g., MRI), the option to fully decide on output file naming might not be available beforehand.</strong></p>
 <p>Below you can find some examples.</p>
 <div class="naming-convention-table">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 17%">
 <col style="width: 5%">
-<col style="width: 42%">
+<col style="width: 41%">
 <col style="width: 6%">
-<col style="width: 26%">
+<col style="width: 28%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Type</th>
 <th>Raw</th>
-<th>Raw naming conventions</th>
+<th>Example raw naming conventions</th>
 <th>Processed</th>
 <th>Processed naming conventions</th>
 </tr>
@@ -464,53 +464,46 @@ Demographics and participation
 <tr class="even">
 <td><strong>(f)MRI</strong></td>
 <td>.nii</td>
-<td>sub-gutseur0014_ses-03_task-fmrisddt_run-01_raw.nii</td>
+<td>sub-gutseur0014_ses-03_task-fmrisddt_run-01_bold.nii</td>
 <td>.nii</td>
-<td>sub-gutseur0014_ses-03_task-fmrisddt_run-01.nii</td>
+<td>sub-gutseur0014_ses-03_task-fmrisddt_run-01_bold.nii</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td>.par</td>
-<td>sub-gutseur0014_ses-03_task-fmrisddt_run-01_raw.par</td>
-<td>-</td>
-<td></td>
-</tr>
-<tr class="even">
 <td></td>
 <td>.rec</td>
-<td>sub-gutseur0014_ses-03_task-fmrisddt_run-01_raw.rec</td>
+<td>sub-gutseur0014_ses-03_task-fmrisddt_run-01_bold.rec</td>
 <td>-</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>EEG</strong></td>
 <td>.bdf</td>
-<td>sub-gutseur0027_ses-01_task-eegflanker_raw.bdf</td>
+<td>sub-gutseur0027_ses-01_task-eegflanker_eeg.bdf</td>
 <td>.bdf</td>
-<td>sub-gutseur0027_ses-01_task-eegflanker.bdf</td>
-</tr>
-<tr class="even">
-<td><strong>Dynanometer</strong></td>
-<td>.csv?</td>
-<td>sub-gutseur0028_ses-03_task-dynosocialeffort_raw.csv</td>
-<td>.tsv</td>
-<td>gutseur_ses-03_task-dynosocialeffort.tsv</td>
+<td>sub-gutseur0027_ses-01_task-eegflanker_eeg.bdf</td>
 </tr>
 <tr class="odd">
+<td><strong>Dynamometer</strong></td>
+<td>.acq</td>
+<td>sub-gutseur0028_ses-03_task-dynosocialeffort_physio.acq</td>
+<td>.acq</td>
+<td>gutseur_ses-03_task-dynosocialeffort_physio.acq</td>
+</tr>
+<tr class="even">
 <td><strong>Behavioral</strong></td>
 <td>.edat3</td>
 <td>sub-gutsvu0002_ses-02_task-behsddt_raw.edat3</td>
 <td>.tsv</td>
 <td>gutsvu_ses-02_task-behsddt.tsv</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td></td>
 <td>.txt</td>
 <td>sub-gutsvu0002_ses-02_task-behsddt_raw.txt</td>
 <td>-</td>
 <td>-</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Physiological</strong></td>
 <td>labels</td>
 <td><p>sub-gutsaumc0005_ses-01_task-salivatesto_t0</p>
