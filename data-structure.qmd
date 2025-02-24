@@ -3,7 +3,7 @@
 GUTS' data structure will be based on BIDS principles, with some small adjustments to ensure a logical workflow. Below you can find a preliminary version of the intended GUTS data structure for **processed files**.
 
 ::: {#frame style="height: 900px; overflow: auto;"}
-<iframe src="https://muldersf.github.io/guts-rdm-data-structure/" frameborder="no" scrolling="no" width="160%" height="120%" style="-webkit-transform:scale(0.75);-moz-transform:scale(0.9);-moz-transform-origin: top left; -webkit-transform-origin: top left; -o-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left;">
+<iframe src="https://muldersf.github.io/guts-rdm-data-structure/" frameborder="no" scrolling="no" width="150%" height="100%" style="-webkit-transform:scale(0.75);-moz-transform:scale(0.7);-moz-transform-origin: top left; -webkit-transform-origin: top left; -o-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left;">
 
 </iframe>
 :::

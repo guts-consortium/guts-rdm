@@ -332,7 +332,7 @@ Subject IDs
 <div class="callout-body-container callout-body">
 <p>The subject ID naming convention varies slightly for each data storage location. To prevent accidental overlap between collected data from different cohorts, an abbreviation of the location will be added to each subject ID, as illustrated below. In file names, subject IDs get the BIDS key ‘sub’.</p>
 <p>Given that approximately 400-1000 subjects will participate at each location, we advise to use a number between 0 and 1000. For parents of subjects, the subjectid should start with ‘5’. The subject id number should always consist of four digits, e.g., subject 1 will be assigned the number 0001, subject 15 will receive the number 0015. A parent would get the subjectid 5001, 5002, 5003, etc.</p>
-<p>Note that all data from questionnaires that are answered&nbsp;<u><strong>by</strong></u>&nbsp;the parents&nbsp;<u><strong>about</strong></u>&nbsp;the child should fall under the subject id of the child. All data from questionnaires answered by parents about themselves should remain under their own subject id.</p>
+<p>Note that all data from questionnaires that are answered&nbsp;<u><strong>by</strong></u>&nbsp;the parents&nbsp;<u><strong>about</strong></u>&nbsp;the child should fall under the subject id of the child <strong>(advised to add an identifier in the variable names for these cases, e.g., _p suffix).</strong> All data from questionnaires answered by parents about themselves should remain under their own subject id.</p>
 <p><strong>Family ID</strong></p>
 <p>To be able to identify any sibling and parent-child relationships within our data, subjects get a familyid. For example, if subjects gutslei0001, gutslei0002, and gutslei5001 are part of one and the same family, all of them will be appointed family id 0001.</p>
 <div id="naming-convention-table-1" class="naming-convention-table">
@@ -554,9 +554,9 @@ Demographics
 <div id="naming-convention-table-3" class="naming-convention-table">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 11%">
-<col style="width: 60%">
-<col style="width: 27%">
+<col style="width: 10%">
+<col style="width: 55%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -569,7 +569,7 @@ Demographics
 <tr class="odd">
 <td>s02_iri_pt_q03</td>
 <td>Interpersonal Reactivity Index - Perspective taking scale Q3: I sometimes find it difficult to see things from the other guy’s point of view.</td>
-<td>0 = does not describe me very well, 4 = described me very well</td>
+<td>0 = does not describe me very well, 4 = describes me very well</td>
 </tr>
 <tr class="even">
 <td>s02_dailyhassles_freq_q04</td>
@@ -590,6 +590,11 @@ Demographics
 <td>s03_salivacort_d1_m1</td>
 <td>Saliva Samples&nbsp;- Cortisol: Mean cortisol in nmol/l day 1, measurement 1.</td>
 <td></td>
+</tr>
+<tr class="even">
+<td>s01_obvl_q01_p</td>
+<td>Opvoedingsbelasting vragenlijst Q1: Raising my child is a difficult task.</td>
+<td>1 = does not apply, 2 = applies a little, 3 = applies quite a bit, 4 = fully applies</td>
 </tr>
 </tbody>
 </table>
