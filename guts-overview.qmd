@@ -1,5 +1,7 @@
 ## GUTS overview
 
-![](images/guts-cohorts.png){style="margin-top: 40px;" fig-align="center" width="820"}
+![](images/rdm-handbook_guts-overview-01.png)
 
-![](images/guts-sessions.png){fig-align="center" width="820"}
+![](images/rdm-handbook_guts-overview-02c.png)
+
+![](images/rdm-handbook_guts-overview-03c.png)
