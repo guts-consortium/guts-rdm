@@ -13,7 +13,7 @@ In general, good file names are (see also @klapwijk2023):
     >
     > Deliberately use delimiters. Use a hyphen (-) to mean "different words that are part of the same chunk", and underscore (\_) to separate different chunks of metadata
     >
-    > -   For example, file names in the [BIDS specification](https://bids.neuroimaging.io/) nicely follow this principle: the file `sub-01_ses-02_task-feedback_run-01.nii` contains instances of the "subject", "ses(sion)", "task" an "run" entities, making it evident from the filename alone that it contains the `nii` (nifti) feedback task data for run `01` from session `02` of subject `01`
+    > -   For example, file names in the [BIDS specification](https://bids.neuroimaging.io/) nicely follow this principle: the file `sub-01_ses-02_task-feedback_run-01.nii.gz` contains instances of the "subject", "ses(sion)", "task" an "run" entities, making it evident from the filename alone that it contains the `nii.gz` (nifti) feedback task data for run `01` from session `02` of subject `01`
     :::
 
 -   **Human-readable:**
