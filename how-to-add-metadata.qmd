@@ -15,9 +15,8 @@ Below you can find examples of what a JSON file could look like. You could also 
 |----------------------------------------------------|---------------------------------------------------|
 | ![](images/json-example-quests.png){.json-example} | ![](images/json-example-beh-1.png){.json-example} |
 
-> **Automate json creation.** Tabular doesn't automatically get a JSON file. Therefore, we provide you with a script you can run to create basic json files (and .tsv files) from .sav files. [**Click here to download a beta version of the script.**](downloads/json-creation-and-conversion.rar)
+> **Automate json creation.** Tabular doesn't automatically get a JSON file. Therefore, there is a script available you can run to create basic json files (and .tsv files) from .sav or .tsv files. The JSON files will be created from the data files, the item-level metadata and the GUTS overview. If the data files do not correspond to their respective item-level metadata files, JSON files cannot be created. 
 >
-> If your data consists of non-sav (.csv/.xlsx/.tsv) files, you could still use the script but there won't be any variable information in the JSON output as this is non-existent in the original file. You could also opt to convert the non .sav files to .sav files first and add variable and value information there and then run the script on the .sav files, or you could run the script on the non .sav files and add variable/value information to the output JSON file manually.
 :::
 
 ::: {.callout-tip appearance="simple" icon="false"}

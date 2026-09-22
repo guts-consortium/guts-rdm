@@ -2,7 +2,7 @@
 
 This chapter has been written in order to ensure that all GUTS data can be considered as one massive dataset, by having all sites convert their data in the same way. The following data types will be covered:
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 -   Questionnaires
 -   (f)MRI
@@ -17,7 +17,7 @@ This chapter has been written in order to ensure that all GUTS data can be consi
 ![](https://imgs.xkcd.com/comics/data_trap.png)\
 Picture: [Data Conversion](https://imgs.xkcd.com/comics/data_trap.png) / xkcd / [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)
 :::
-:::
+:::::
 
 ::: {.callout-caution collapse="true"}
 ## Processed data should not contain sensitive participant data (IP addresses, first- and last names, date-of-birth, postal codes, etc.)
@@ -31,7 +31,7 @@ Picture: [Data Conversion](https://imgs.xkcd.com/comics/data_trap.png) / xkcd / 
 ## Participant id columns have to be named "participant_id" according to BIDS standards
 :::
 
-::: {.callout-note collapse="true"}
+:::::::::::: {.callout-note collapse="true"}
 ## Questionnaire data
 
 You can find some example data cleaning scripts (R) [here](data-cleaning-code.zip).
@@ -43,11 +43,11 @@ There is also an R script available that can (automatically) retrieve and save Q
 
 Export the raw data from qualtrics as a .sav file and rename the file to
 
-`[date]_guts-[location]_ses-[session]_quests-[questionnaire]_raw.sav`, e.g.:
+`[date]_guts[location]_ses-[session]_quests-[questionnaire]_raw.sav`, e.g.:
 
-`2024-02-26_guts-lei_ses-02_quests-guts-wide_raw.sav`
+`2024-02-26_gutslei_ses-02_quests-guts-wide_raw.sav`
 
-`2024-02-26_guts-eur_ses-01_quests-part-02_raw.sav`
+`2024-02-26_gutseur_ses-01_quests-part-02_raw.sav`
 
 The extension .sav is used to ensure that Qualtrics gives the right output, as .csv or .tsv sometimes gives faulty output. The cleaned file will not be a .sav file.
 
@@ -57,7 +57,7 @@ Make a copy of this file and store it in a secure folder. This way you have one 
 ::: {.callout-tip collapse="true" icon="false"}
 ## [Step 2: Setting up scripts and opening file.]{.underline}
 
-Open the .sav file in Rstudio, SPSS, or any other preferred program. Before making any adjustments to your file, make sure to open a script file in which you can save every step taken while processing (e.g., R script/R Markdown file + R Project) in R, SPSS Syntax). Your scripts could be saved in the same folder as your data or in a subfolder called scripts (e.g., `guts-eur_ses-01_quests-part-02_script-raw-to-processed.r`)
+Open the .sav file in Rstudio, SPSS, or any other preferred program. Before making any adjustments to your file, make sure to open a script file in which you can save every step taken while processing (e.g., R script/R Markdown file + R Project) in R, SPSS Syntax). Your scripts could be saved in the same folder as your data or in a subfolder called scripts (e.g., `gutseur_ses-01_quests-part-02_script-raw-to-processed.r`)
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
@@ -83,7 +83,7 @@ Processed data on Yoda should not contain any identifiable information, such as 
 ::: {.callout-tip collapse="true" icon="false"}
 ## [Step 6/7: Check for correct variable names, variable labels, values, and value labels.]{.underline}
 
-Ensure that all variable names adhere to the GUTS naming conventions. Additionally, make sure that variable labels correspond to naming conventions and, in case of overlap, are equal for each cohort. The same holds for values and value labels; ensure they correspond to official values, whether the correct values and value labels were exported from Qualtrics correctly, and that they are equal for each cohort.
+Ensure that all variable names adhere to the GUTS naming conventions. Additionally, make sure that variable labels correspond to naming conventions and, in case of overlap, are equal for each cohort. The same holds for values and value labels - **All variable names, values, value labels need to correspond to the item-level metadata that can be found on the GUTS Sharepoint.** Additionally, ensure that the values and labels correspond to official values, whether the correct values and value labels were exported from Qualtrics correctly, and that they are equal for each cohort.
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
@@ -91,7 +91,7 @@ Ensure that all variable names adhere to the GUTS naming conventions. Additional
 
 Each questionnaire should get their own file, according to the following naming convention:
 
-`guts-[location]_ses-[session]_task-[short-name]`
+`guts[location]_ses-[session]_task-[short-name]`
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
@@ -99,7 +99,7 @@ Each questionnaire should get their own file, according to the following naming 
 
 Processed files on Yoda should be in tsv format. You can choose to also keep a sav file to be able to automatically create JSON files (see Chapter 15).
 
-`research-guts-[loc]/phenotype/quests/guts-[loc]_ses-[ses]_task-[shortname].tsv`
+`research-guts-[loc]/phenotype/quests/guts[loc]_ses-[ses]_task-[shortname].tsv`
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
@@ -119,11 +119,11 @@ In addition to processed files, there is the option to create a derivative file 
 
 And would be placed here:
 
-`research-guts-[loc]/derivatives/phenotype/quest/guts-[loc]_ses-01_task-sdq_desc-totalscores.tsv*`
+`research-guts-[loc]/derivatives/phenotype/quest/guts[loc]_ses-01_task-sdq_desc-totalscores.tsv*`
 
 \*desc stands for description and describes what kind of data is derived from the primary file.
 :::
-:::
+::::::::::::
 
 ::: {.callout-note collapse="true"}
 # (f)MRI data
